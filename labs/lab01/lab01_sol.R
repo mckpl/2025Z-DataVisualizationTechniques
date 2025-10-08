@@ -6,7 +6,7 @@
 
 # 0. Prowadzący  -------------------------------------------------------------
 
-# Anna Kozak/Maciej Chrabąszcz/Hubert Ruczyński/Katarzyna Woźnica
+# Anna Kozak/Antoni Chudy/Iza Danielewska/Dawid Płudowski/Katarzyna Woźnica
 # Kontakt: MS Teams lub mail
 
 
@@ -22,7 +22,7 @@
 # 2. Materiały ------------------------------------------------------------
 
 # Repozytorium na GitHub
-# https://github.com/kozaka93/2024Z-DataVisualizationTechniques
+# https://github.com/kozaka93/2025Z-DataVisualizationTechniques
 
 
 # 3. Jak działa GitHub? ---------------------------------------------------
@@ -169,3 +169,4 @@ proton(action = "login", login = "slap", password = "DHbb7QXppuHnaXGN")
 
 
 # 5. Umieszczamy rozwiązanie na repozytorium ------------------------------
+
