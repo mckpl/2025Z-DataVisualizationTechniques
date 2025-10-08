@@ -39,7 +39,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">15.10, 09.10, 10.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: dplyr, tidyr, forcats</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab02">R: dplyr, tidyr, forcats</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
