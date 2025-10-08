@@ -32,7 +32,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">08.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Wstęp, zasady zaliczenia, eksploracja danych, narzędzia, przedstawienie tematyki projektów</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L01-Intro.pdf">Wstęp, zasady zaliczenia</a>, <a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L01-DataViz.pdf">eksploracja danych, narzędzia, przedstawienie tematyki projektów</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
