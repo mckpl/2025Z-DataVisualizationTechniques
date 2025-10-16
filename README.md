@@ -46,14 +46,14 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">15.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">projekt</td>
-    <td class="tg-c3ow">P1: pomysł, źródło danych</td>
+    <td class="tg-c3ow"><i>P1: pomysł, źródło danych</i></td>
     <td class="tg-c3ow">P1 (1p)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">22.10, 16.10, 17.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: ggplot2 - wstęp i gramatyka</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab03">R: ggplot2 - wstęp i gramatyka</a></td>
     <td class="tg-c3ow">PD1 (6p)</td>
   </tr>
   <tr>
