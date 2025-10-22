@@ -122,7 +122,7 @@ ANS_TASK_08 <- NA
 
 
 # Zadanie 9 (0.5 + 0.5) ---------------------------------------------------
-# Czy rozkład aparmatemtów w Seatle, które nie mają podanej ceny w bazie danych
+# Czy rozkład (położenie) aparmatemtów w mieście Seatle, które nie mają podanej ceny w bazie danych
 # jest równomierny?
 
 ## Rozwiązanie
@@ -153,5 +153,6 @@ names(solutions) <- c("Task01", "Task02", "Task03",
 
 # Proszę zmienić tylko nazwę pliku w komendzie saveRDS na swoje Nazwisko i Imię (bez polskich znaków)
 saveRDS(solutions, file = "NazwiskoImie.rds")
+
 
 
