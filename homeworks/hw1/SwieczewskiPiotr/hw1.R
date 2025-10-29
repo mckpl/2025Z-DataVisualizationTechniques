@@ -250,3 +250,4 @@ saveRDS(solutions, file = "SwieczewskiPiotr.rds")
 
 
 
+
