@@ -67,21 +67,21 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">29.10, 23.10, 24.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: ggplot2 - modyfikacje wykresów, stylów</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab04">R: ggplot2 - modyfikacje wykresów, stylów</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
     <td class="tg-c3ow">29.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">projekt</td>
-    <td class="tg-c3ow">P1: Prosta eksploracja danych, pomysły na wykresy, prototypy wykresów </td>
+    <td class="tg-c3ow"><i>P1: Prosta eksploracja danych, pomysły na wykresy, prototypy wykresów</i></td>
     <td class="tg-c3ow">P1 (2p)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">05.11, 30.10, 31.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: mapy I</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab05">R: mapy I</a></td>
     <td class="tg-c3ow">PD2 (6p)</td>
   </tr>
   <tr>
