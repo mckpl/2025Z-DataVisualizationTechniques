@@ -239,3 +239,4 @@ names(solutions) <- c("Task01", "Task02", "Task03",
 
 # Proszę zmienić tylko nazwę pliku w komendzie saveRDS na swoje Nazwisko i Imię (bez polskich znaków)
 saveRDS(solutions, file = "PiotrowskiKacperK.rds")
+
