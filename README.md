@@ -95,7 +95,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow"> 12.11, 06.11, 07.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: ggplot2 - zaawansowany oraz rozszerzenia: patchwork, ggrepel</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab06">R: ggplot2 - zaawansowany oraz rozszerzenia: patchwork, ggrepel</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
