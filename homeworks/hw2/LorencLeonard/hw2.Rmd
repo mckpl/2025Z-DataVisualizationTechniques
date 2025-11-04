@@ -1,0 +1,235 @@
+---
+title: "Praca domowa 2"
+author: "Leonard Lorenc"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+grupy<- rep("math",dim(df)[1])
+grupy<- c(grupy,rep("reading",dim(df)[1]))
+grupy<- c(grupy,rep("writing",dim(df)[1]))
+wyniki <- df %>% select(math.score,writing.score,reading.score)
+summary(wyniki)
+do_wykresu <-c(df$math.score,df$reading.score,df$writing.score)
+
+do_wykresu<-cbind(do_wykresu,grupy)
+colnames(do_wykresu)<-c("wynik","rodzaj")
+do_wykresu<-data.frame(do_wykresu)
+do_wykresu<-do_wykresu %>% mutate(wynik = as.numeric(wynik))
+
+do_wykresu %>% ggplot(aes(x = wynik,group=rodzaj,color=rodzaj))+
+  geom_density()+ labs(
+    title = "Rozklady gestosci wedlug rodzaju egzaminu",
+    x = "Wyniki egzaminów",
+    y = "Gestosc",
+    color = "Rodzaj")+
+  theme_minimal()
+```
+
+**Komentarz:**
+#Możemy zobaczyć że mediany i średnie dla writing i reading są mniej więcej takie same jednak
+# math ma trochę niższe i jednocześnie w math.score pojawiają się wyniki równe 0
+#jednak ogólny rozkład wyników jest bardzo podobny co widać po różnicach Q3 - Q1
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+do_wykresu_plec<- cbind(do_wykresu,gender =df$gender)
+
+do_wykresu_plec %>%ggplot(aes(x = wynik,group=rodzaj,color=rodzaj))+
+  geom_density()+facet_wrap(~ gender)+labs(
+    title = "Rozklady gestosci wedlug rodzaju egzaminu oraz plci",
+    x = "Wyniki egzaminów",
+    y = "Gestosc",
+    color = "Rodzaj")+
+  theme_minimal()
+
+do_wykresu_plec %>% group_by(gender,rodzaj) %>%  summarise(
+    across(
+      where(is.numeric),
+      list(
+        mean = ~mean(.),
+        q1   = ~quantile(., 0.25),
+        median = ~median(.),
+        q3   = ~quantile(., 0.75),
+        min  = ~min(.),
+        max  = ~max(.)
+      ),
+      .names = "{.col}_{.fn}"
+    )) 
+```
+
+**Komentarz:**
+# Możemy zobaczyć że wyniki Pań z czytania i pisania mogą być trochę lepsze od Panów 
+# natomiast wyniki Panów z matematyki są minimalnie lepsze
+# W ogólności nie ma znaczącej różnicy poza tym że najniższy wyniki Panów z matematyki to 27 a u Pań 0
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+do_wykresu_kurs <- cbind(do_wykresu,kurs=df$test.preparation.course)
+
+do_wykresu_kurs %>%ggplot(aes(x = wynik,group=rodzaj,color=rodzaj))+
+  geom_density()+facet_wrap(~ kurs)+ labs(
+    title = "Rozklady gestosci wedlug rodzaju egzaminu i ukonczonege kursu przygotowawczego",
+    x = "Wyniki egzaminów",
+    y = "Gestosc",
+    color = "Rodzaj")+
+  theme_minimal()
+
+do_wykresu_kurs %>% group_by(kurs,rodzaj) %>%  summarise(
+    across(
+      where(is.numeric),
+      list(
+        mean = ~mean(.),
+        q1   = ~quantile(., 0.25),
+        median = ~median(.),
+        q3   = ~quantile(., 0.75),
+        min  = ~min(.),
+        max  = ~max(.)
+      ),
+      .names = "{.col}_{.fn}"
+    )
+  )
+
+```
+
+**Komentarz:**
+# Tak uczniowie po kursie osiągają lepsze wyniki zarówno mediana i średnie ze wszystkich przedmiotów są wyższe , i np jeśli przyjmiemy próg zdawalności 30 punktów to wszyscy po kursie zdali pisanie i czytanie czego nie można powiedzieć o tych bez kursu
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+do_wykresu_rodz<- cbind(do_wykresu,wyk_rodzica = df$parental.level.of.education)
+
+do_wykresu_rodz<- do_wykresu_rodz %>% group_by(wyk_rodzica,rodzaj) %>% 
+  summarise(srednia = mean(wynik))
+do_wykresu_rodz
+
+do_wykresu_rodz %>% ggplot(aes(x=rodzaj,y=srednia,fill=reorder(wyk_rodzica,srednia)))+
+  geom_bar(position="dodge",stat="identity")+ labs(
+    title = "Sredni wynik egzaminu w zaleznosci od wyksztalcenia rodzicow",
+    x = "Rodzaj",
+    y = "Sredni wynik",
+    fill = "Poziom wyksztalcenia rodzicow")+
+  theme_minimal()
+
+
+```
+
+**Komentarz:**
+## srednie wyniki wydają się rosnąc jak zwiększa się wykształcenie rodziców największy wpływ ma to na wyniki z pisania i czytania 
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+plec_wyk <- df %>% select(math.score,parental.level.of.education,gender)
+plec_wyk %>% ggplot(aes(x = gender,y=math.score,fill=reorder(parental.level.of.education,math.score,fun=mean)))+
+  geom_boxplot()+ labs(
+    title = "Wynik egzaminu z matematyki w zaleznosci od plci i wyksztalcenia rodzica",
+    x = "Plec",
+    y = "Wynik egzaminu",
+    fill = "Poziom wyksztalcenia rodzicow")+
+    theme_minimal()
+
+
+```
+
+**Komentarz:**
+# wyniki z matematyki nie pokazuja roznic w zaleznosci od wyksztalcenia rodzica wzgledem plci 
+# w obu grupach kolejnosc jest taka sama
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+
+df %>%
+  ggplot() +
+  geom_point(aes(x = math.score, y = writing.score, color = "Pisanie"), alpha = 0.6) +
+  geom_point(aes(x = math.score, y = reading.score, color = "Czytanie"), alpha = 0.6) +
+  
+  # add linear trends for both relationships
+  geom_smooth(aes(x = math.score, y = writing.score, color = "Pisanie"),
+              method = "lm", se = FALSE, linewidth = 1) +
+  geom_smooth(aes(x = math.score, y = reading.score, color = "Czytanie"),
+              method = "lm", se = FALSE, linewidth = 1) +
+
+  labs(
+    title = "Wynikami z matematyki wzgledem wynikow z czytania i pisania",
+    x = "Wynik z matematyki",
+    y = "Wynik",
+    color = "Rodzaj"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    legend.position = "right"
+  )
+
+
+```
+
+**Komentarz:**
+# Relacja pomiedzy przedmiotami jest liniowa i prawie taka sama
