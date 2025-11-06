@@ -88,7 +88,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">05.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Kolory i skale, mapy - czy to takie skomplikowane?</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L3-colors_scales.pdf">Kolory i skale,</a> <a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L3-maps.pdf">mapy - czy to takie skomplikowane?</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
