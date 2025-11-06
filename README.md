@@ -162,7 +162,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">10.12</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Wizualizacja grafów, teksu</td>
+    <td class="tg-c3ow">-</td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
@@ -190,7 +190,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">07.01</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Dashboardy, historia, IBCS</td>
+    <td class="tg-c3ow">Wizualizacja grafów, teksu, dashboardy, historia, IBCS</td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
