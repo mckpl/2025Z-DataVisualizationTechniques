@@ -1,0 +1,194 @@
+---
+title: "Praca domowa 2"
+author: "Anna Garbacz"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane
+
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+
+| Zmienna | Opis |
+|----|----|
+| **gender** | płeć |
+| **race.ethnicity** | pochodzenie etniczne |
+| **parental.level.of.education** | wykształcenie rodziców |
+| **lunch** | jaki obiad jedli uczniowie w dniu egzaminu |
+| **test.preparation.course** | czy uczeń odbył kurs przygotowujący |
+| **math.score** | wynik egzaminu z matematyki |
+| **reading.score** | wynik egzaminu z czytania |
+| **writing.score** | wynik egzaminu z pisania |
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df,aes(x=math.score))+
+  geom_histogram()+
+  labs(title="Rozkład wyników z matematyki",
+       x="wynik",
+       y="ilość")
+
+ggplot(df,aes(x=reading.score))+
+  geom_histogram()+
+  labs(title="Rozkład wyników z czytania",
+       x="wynik",
+       y="ilość")
+
+ggplot(df,aes(x=writing.score))+
+  geom_histogram()+
+  labs(title="Rozkład wyników z pisania",
+       x="wynik",
+       y="ilość")
+```
+
+**Komentarz: Rozkłady wyników każdego z przedmiotów są zbliżone rozkładu normalnego, lekkim przesunięciem w stronę wyższych wyników.**
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df,aes(x=math.score,y=gender))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z matematyki w zależności od płci",
+       x="wynik",
+       y="płeć")
+ggplot(df,aes(x=writing.score,y=gender))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z pisania w zależności od płci",
+       x="wynik",
+       y="płeć")
+ggplot(df,aes(x=reading.score,y= gender))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z czytanie w zależności od płci",
+       x="wynik",
+       y="płeć")
+
+```
+
+**Komentarz: Istnieje zauważalna różnica. Uczniowie uzsyskują lepsze wyniki z matematyki, natomiast uczennice lepsze wyniki z czytania i pisania.**
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+  ggplot(df,aes(x=math.score,y=test.preparation.course))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z matematyki w zależności od przystąpienia do kursu",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=12))
+ggplot(df,aes(x=reading.score,y=test.preparation.course))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z czytania w zależności od przystąpienia do kursu",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=12))
+ggplot(df,aes(x=writing.score,y=test.preparation.course))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z pisania w zależności od przystąpienia do kursu",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=12))
+```
+
+**Komentarz: Tak, w każdej z trzech kategorii uczniowie, którzy ukończyli kurs przygotowawczy osiągają lepsze wyniki, najmniejsza różnica w wynikach występuje w przypadku egzaminu z matematyki.**
+
+## Zadanie 4
+
+Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df<-df %>% 
+  mutate(parental.level.of.education=factor(parental.level.of.education,levels = c("master's degree","bachelor's degree","associate's degree","some college","high school","some high school")))
+ 
+
+df %>% 
+  mutate(mean_score=round((math.score+reading.score+writing.score)/3,3)) %>%
+  ggplot(aes(x=mean_score,y=parental.level.of.education))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu średniego wyniku w zależności od poziomu wykształcenia rodziców",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=11))
+  
+
+
+
+```
+
+**Komentarz: Im wyższe wykształcenie rodzica, tym lepsze średnie wyniki ucznia.**
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki?
+
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df,aes(x=math.score,y=parental.level.of.education,color=gender))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyniku z matematyki
+w zależności od poziomu wykształcenia rodziców i płci",
+       x="wynik",
+       y="wykształcenie rodziców",
+       color="płeć")+
+  theme(plot.title = element_text(size=11))
+
+```
+
+**Komentarz: Wyższe wykształcenie rodzica i bycie mężczyzną wiąże się z otrzymaniem lepszego wyniku z matematyki.**
+
+## Zadanie 6
+
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df,aes(x=math.score,y=reading.score))+
+   geom_point()+
+  geom_smooth(method = "lm")+
+  labs(title="Wykres zależności między wynikami z matematyki i czytania",
+       x="wynik z matematyki",
+       y="wynik z czytania")
+  ggplot(df,aes(x=math.score,y=writing.score))+
+  geom_point()+
+  geom_smooth(method="lm")+
+  labs(title="Wykres zależności między wynikami z matematyki i pisania",
+       x="wynik z matematyki",
+       y="wynik z pisania")
+
+
+ 
+```
+
+**Komentarz: Wyniki z matematyki rosną wprost proporcjonalnie do wyników z czytania lub pisania. Natomiast łatwiej jest otrzymać lepsze wyniki z czytania, pisania niż z matematyki.**
