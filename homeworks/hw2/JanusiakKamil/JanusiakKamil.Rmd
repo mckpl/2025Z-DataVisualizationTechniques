@@ -227,10 +227,6 @@ wyk6<-ggplot(df6,aes(x=math.score,y=wynik))+
 wyk6
 
 
-
-?geom_smooth
-
-
 ```
 
 **Komentarz:** Wyniki z matematyki są liniowo zależne od zarówno wyników z Czytania, jak i pisania. Oczywiście, nie jest to ścisła liniowa zależność, a pewne uogólnienie.
