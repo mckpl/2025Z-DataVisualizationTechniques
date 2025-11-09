@@ -60,42 +60,42 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">22.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Sposoby badania rozkładu jednej zmiennej (ilościowej i jakościowej), sposoby badania rozkładu dwóch i więcej zmiennych. Gramatyka języka wizualizacji</td>
+    <td class="tg-c3ow"><a href="https://www.data-to-viz.com/">Sposoby badania rozkładu jednej zmiennej (ilościowej i jakościowej), sposoby badania rozkładu dwóch i więcej zmiennych.</a> <a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L02-grammar.pdf">Gramatyka języka wizualizacji</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
     <td class="tg-c3ow">29.10, 23.10, 24.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: ggplot2 - modyfikacje wykresów, stylów</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab04">R: ggplot2 - modyfikacje wykresów, stylów</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
     <td class="tg-c3ow">29.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">projekt</td>
-    <td class="tg-c3ow">P1: Prosta eksploracja danych, pomysły na wykresy, prototypy wykresów </td>
+    <td class="tg-c3ow"><i>P1: Prosta eksploracja danych, pomysły na wykresy, prototypy wykresów</i></td>
     <td class="tg-c3ow">P1 (2p)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">05.11, 30.10, 31.10</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: mapy I</td>
-    <td class="tg-c3ow">PD2 (6p)</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab05">R: mapy I</a></td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/issues/140">PD2</a> (6p)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">05.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Kolory i skale, mapy - czy to takie skomplikowane?</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L03-colors_scales.pdf">Kolory i skale,</a> <a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L03-maps.pdf">mapy - czy to takie skomplikowane?</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
     <td class="tg-c3ow"> 12.11, 06.11, 07.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: ggplot2 - zaawansowany oraz rozszerzenia: patchwork, ggrepel</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab06">R: ggplot2 - zaawansowany oraz rozszerzenia: patchwork, ggrepel</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
@@ -162,7 +162,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">10.12</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Wizualizacja grafów, teksu</td>
+    <td class="tg-c3ow">-</td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
@@ -190,7 +190,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">07.01</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Dashboardy, historia, IBCS</td>
+    <td class="tg-c3ow">Wizualizacja grafów, teksu, dashboardy, historia, IBCS</td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
