@@ -1,0 +1,220 @@
+---
+title: "Praca domowa 2"
+author: "Karolina Jagielak"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane
+
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+
+| Zmienna | Opis |
+|----|----|
+| **gender** | płeć |
+| **race.ethnicity** | pochodzenie etniczne |
+| **parental.level.of.education** | wykształcenie rodziców |
+| **lunch** | jaki obiad jedli uczniowie w dniu egzaminu |
+| **test.preparation.course** | czy uczeń odbył kurs przygotowujący |
+| **math.score** | wynik egzaminu z matematyki |
+| **reading.score** | wynik egzaminu z czytania |
+| **writing.score** | wynik egzaminu z pisania |
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df_long <- df%>%
+  pivot_longer(cols = c(math.score, reading.score, writing.score), names_to = "Przedmioty",values_to = "Wynik")%>%
+  mutate(Przedmioty = recode(Przedmioty,"reading.score" = "Czytanie","writing.score" = "Pisanie", "math.score"= "Matematyka"))
+
+ggplot(df_long, aes(x = Wynik)) +
+  geom_histogram(binwidth = 5 , fill = "grey", color = "black") +
+  facet_wrap(~Przedmioty)+
+  theme_minimal() +
+  labs(title = "Rozkłady wyników uczniów z trzech przedmiotów",
+       x = "Wynik", y = "Liczba uczniów") 
+
+```
+
+**Komentarz:**
+
+Na przedstawionym wykresie rozkładów wyników uczniów z trzech przedmiotów, Czytania, Matematyki i Pisania, można zauważyć wyraźne różnice w osiąganych rezultatach.
+
+Uczniowie uzyskali lepsze wyniki z Czytania i Pisania niż z Matematyki. Dla tych dwóch przedmiotów wartości najczęściej występujące wynoszą około 75 punktów, podczas gdy dla Matematyki maksimum rozkładu jest przesunięte w lewo i wynosi około 60 punktów. Oznacza to, że przeciętnie uczniowie osiągają niższe rezultaty z Matematyki.
+
+Rozkłady wyników dla Czytania i Pisania są do siebie bardzo zbliżone pod względem kształtu i położenia, co sugeruje, że kompetencje językowe uczniów w obu obszarach są na podobnym poziomie. W przypadku Matematyki widoczny jest niższy poziom centralny wyników, przy jednocześnie podobnym stopniu rozproszenia, jak w pozostałych przedmiotach.
+
+Wszystkie trzy histogramy mają kształt zbliżony do rozkładu normalnego, co świadczy o równomiernym rozkładzie wyników wokół wartości średnich oraz o braku znacznych wartości odstających.
+
+Podsumowując, analiza wskazuje, że:
+
+• uczniowie lepiej radzą sobie z Czytaniem i Pisaniem,
+
+• słabiej wypadają w Matematyce,
+
+• rozkłady wyników są symetryczne i zbliżone do normalnych,
+
+• wyniki z przedmiotów czytania i pisania są do siebie bardzo podobne.
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df_long, aes(x = Przedmioty, y = Wynik )) + 
+  geom_violin(trim = TRUE, color= "black", fill = "grey" ,alpha = 0.7) +
+  geom_boxplot(width = 0.1)+
+  facet_grid(gender~.) +
+  theme_minimal() +
+  labs(title = "Rozkłady wyników uczniów ze względu na płeć",
+       x = "Przedmiot", y = "Wynik") 
+
+```
+
+**Komentarz:**
+
+Na wykresie można zauważyć, że dziewczęta uzyskują wyższe wyniki z Czytania i Pisania niż chłopcy. Świadczą o tym wyższe mediany oraz fakt, że rozkłady wyników dziewcząt są bardziej skoncentrowane w obszarze wyższych wartości. Oznacza to, że uczennice częściej osiągają dobre i bardzo dobre wyniki w tych obszarach, co może wskazywać na lepiej rozwinięte kompetencje językowe.
+
+W przypadku Matematyki sytuacja wygląda odwrotnie, mediana wyników jest nieco wyższa u chłopców, co sugeruje, że przeciętnie osiągają oni lepsze rezultaty z tego przedmiotu. Dodatkowo u dziewcząt widoczne są wartości skrajne (outliery), obejmujące bardzo niskie wyniki (np. bliskie 0 lub 8 punktów), które nie występują wśród chłopców.
+
+Jeśli chodzi o kształt rozkładów, można zauważyć, że:
+
+• u dziewcząt są one bardziej strome i skupione wokół mediany, co oznacza większą spójność wyników, większość uczennic osiąga zbliżone rezultaty;
+
+• u chłopców rozkłady są bardziej płynne i gładkie, co wskazuje na większe zróżnicowanie wyników, w tej grupie obserwuje się zarówno wysokie, jak i niższe wyniki w podobnych proporcjach.
+
+Podsumowując, dziewczęta osiągają lepsze i bardziej jednolite wyniki w przedmiotach humanistycznych, natomiast chłopcy uzyskują nieco lepsze rezultaty z Matematyki, przy jednocześnie większej zmienności wyników ogółem.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df_long, aes(x = test.preparation.course, y = Wynik) )+
+  geom_boxplot() +
+  facet_grid(~Przedmioty) +
+  labs(
+    title = "Porównanie wyników z przedmiotów w zależności od ukończenia \nkursu przygotowawczego",
+    x = "Ukończył kurs przygotowawczy?",
+    y = "Wyniki z przedmiotów"
+  ) + theme_minimal()+theme(legend.position = "none")
+```
+
+**Komentarz:**
+
+Na wykresie można zauważyć, że we wszystkich analizowanych przedmiotach mediany wyników są wyższe wśród uczniów, którzy uczestniczyli w kursach przygotowawczych, w porównaniu z osobami, które w nich nie brały udziału. Wskazuje to, że udział w kursach przygotowawczych wiąże się z lepszymi rezultatami nauczania i może mieć pozytywny wpływ na osiągnięcia uczniów.
+
+Jednocześnie można zauważyć, że różnica między medianami jest najmniejsza w przypadku Matematyki. Sugeruje to, że kursy przygotowawcze miały mniejsze znaczenie w poprawie wyników z tego przedmiotu niż w przypadku Czytania i Pisania, gdzie różnice pomiędzy grupami są bardziej wyraźne.
+
+Rozkłady wyników dla obu grup są zbliżone pod względem kształtu i rozproszenia, co oznacza, że kursy wpłynęły głównie na przesunięcie wartości centralnych, a nie na zwiększenie lub zmniejszenie zróżnicowania wyników. Można więc wnioskować, że udział w kursach pomagał uczniom osiągać lepsze wyniki, ale nie wpływał istotnie na ogólną zmienność rezultatów w grupie.
+
+Podsumowując, kursy przygotowawcze sprzyjały poprawie wyników, szczególnie w przedmiotach humanistycznych (Czytanie, Pisanie), natomiast efekt ten był słabszy w przypadku Matematyki, co może wynikać z innego charakteru nabywanych kompetencji lub różnic w skuteczności metodyki nauczania.
+
+## Zadanie 4
+
+Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+library(forcats)
+
+df <- df%>%
+  mutate(srednia_ocen = (math.score + reading.score + writing.score)/3 )
+ggplot(df, aes(x = fct_reorder(parental.level.of.education, srednia_ocen, .fun = median), y = srednia_ocen )) +
+  geom_boxplot()+
+  theme_minimal()+
+  labs(title = "Wpływ wykształcenia rodziców na średni wynik uczniów",x = "Wykształcenie rodzica",
+        y = "Średnie wyniki z trzech przedmiotów")
+
+```
+
+**Komentarz:**
+
+Obserwując wykres, można zauważyć rosnący trend median średnich wyników uczniów wraz ze wzrostem poziomu wykształcenia rodziców. Im wyższe wykształcenie rodzica, tym wyższa mediana wyników uczniów. Oznacza to, że dzieci rodziców z wykształceniem wyższym osiągają przeciętnie lepsze rezultaty niż uczniowie, których rodzice ukończyli jedynie szkołę średnią lub jej nie ukończyli.
+
+Kolejną zauważalną zależnością jest różnica w rozpiętości wyników oraz obecności wartości odstających. Dla niższych poziomów wykształcenia, high school, some high school oraz some college, rozpiętość wyników jest większa, co świadczy o większym zróżnicowaniu osiągnięć uczniów w tych grupach. Z kolei dla poziomu master’s degree rozpiętość jest najmniejsza, co sugeruje, że uczniowie tych rodziców uzyskują bardziej stabilne, jednorodne wyniki.
+
+Podsumowując, dane wskazują na pozytywną zależność między poziomem wykształcenia rodziców a osiągnięciami uczniów, przy czym wyższe wykształcenie rodziców wiąże się nie tylko z lepszymi średnimi wynikami, ale także z mniejszym zróżnicowaniem rezultatów wśród dzieci.
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki?
+
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+ggplot(df, aes(x = parental.level.of.education, y = math.score)) +
+  geom_boxplot()+
+  facet_wrap(~gender) +
+  coord_flip() +
+  theme_minimal() +
+  labs(
+    title = "Porównanie wyników z matematyki w zależności od płci\n i wykształcenia rodzica.",
+    y = "Wynik z matematyki",
+    x = "Wykształcenie rodzica"
+  )
+```
+
+**Komentarz:**
+
+W przypadku mężczyzn można zauważyć, że poziom wykształcenia rodziców ma wpływ na wyniki z matematyki. Porównując mediany ocen, widać, że najwyższe wartości występują, gdy rodzic posiada tytuł master’s degree, a najniższe, gdy ukończył jedynie high school.
+
+W przypadku kobiet nie obserwuje się wyraźnej zależności między poziomem wykształcenia rodziców a wynikami z matematyki. Mediany ocen są bardzo zbliżone, niezależnie od poziomu wykształcenia rodzica, natomiast rozrzut ocen jest znacznie większy niż u mężczyzn. Można zatem przypuszczać, że na wyniki kobiet wpływają inne czynniki niż wykształcenie rodziców.
+
+## Zadanie 6
+
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+# Zależność między wynikiem z Matematyki a Czytaniem
+ggplot(df, aes (x = math.score, y = reading.score))+
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, color = "red")+
+  theme_minimal() +
+  labs(title = "Zależność pomiędzy wynikiem z Matematyki a Czytania",
+       x = "Wynik z Matematyki",
+       y = "Wynik z Czytania")
+
+# Zależność między wynikiem z Matematyki a Pisania
+ggplot(df, aes(x = math.score, y = writing.score)) +
+  geom_point()+
+  geom_smooth(method = "lm", se= TRUE, color = "green")+
+  theme_minimal() +
+  labs(title = "Zależność pomiędzy wynikiem z Matematyki a Pisaniem",
+       x = "Wynik z Matematyki",
+       y = "Wynik z Pisania")
+
+```
+
+**Komentarz:**
+
+Tak, istnieje zależność między wynikami z matematyki a wynikiem z czytania bądź pisania. Z wykresów stworzonych za pomocą kodu powyżej można zauważyć, że im wyższy wynik z matematyki, tym wyższe są również oceny z czytania bądż pisania. To znaczy że uczniowie osiągający dobre z wyniki z matematyki mają tendecje do osiągania również wysokich ocen z pisania i czytania.
