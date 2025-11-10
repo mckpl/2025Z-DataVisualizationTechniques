@@ -1,0 +1,210 @@
+---
+title: "Praca domowa 2"
+author: "Wioletta Rapacz"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+#score <- pivot_longer(df,cols=ends_with(".score"), names_to="przedmiot", #values_to="wynik")
+dane1 <- stack(df,select=c(math.score,writing.score,reading.score))
+#czy można używać tidyr???
+dane1 %>% 
+  ggplot(aes(x=values, color=ind))+
+  geom_density()+
+  labs(title="Rozkład wyników uczniów z matematyki, czytania i pisania", x="wynik[%]", y="gęstość występowania", color="Przedmioty")+
+  scale_color_discrete(labels=c("math.score" = "matematyka", 
+               "reading.score" = "czytanie", 
+               "writing.score" = "pisanie"))+
+  theme( plot.title = element_text(hjust=0.5))
+ 
+
+
+```
+
+**Komentarz:**
+Na wykresie widać, że punkt dla którego funkcja gęstości osiąga maksimum jest przesunięty dla egzaminu z matematyki w lewo w stosunku do dwóch pozostałych egzaminów, czyli najczęstszy wynik z matematyki był średnio gorszy niż z czytania i pisania.
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+dane2 <- df %>% 
+  pivot_longer(cols=ends_with("score"),names_to="egzaminy", values_to="wynik")
+
+dane2 %>% 
+  ggplot(aes(y=wynik,color=gender, x =  egzaminy))+
+  geom_boxplot()+
+  labs(title="Płeć a wyniki egzaminów",x="typ egzaminu", y="wynik[%]", color="płeć")+
+    scale_color_manual(labels=c("female" = "kobieta", 
+               "male" = "mężczyzna"),values = c( "male"="blue", "female"="red"))+
+  theme(legend.position = "bottom", plot.title = element_text(hjust=0.5))+
+     scale_x_discrete(labels = c(
+    "math.score" = "matematyka",
+    "reading.score" = "czytanie",
+    "writing.score" = "pisanie"
+  ))
+  
+
+```
+
+**Komentarz:**
+Istnieje zauważalna różnica w wynikach uczniów i ucznnic. Jak widać na wykresach IQR wyników uczennic z czytania i pisania plasuje się wyżej niż uczniów, skąd można wysnuć wniosek, że większość uczennic uzyskało lepszy wynik niż większość uczniów. Odwrotnie jest z wynikami z matematyki, gdzie to uczniowie osiągali często lepsze wyniki.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+dane3 <- df %>% 
+  pivot_longer(cols=ends_with("score"),names_to="egzaminy", values_to="wynik")
+dane3 %>% 
+  ggplot(aes(y=wynik,color=test.preparation.course, x =  egzaminy))+
+  geom_boxplot()+
+  labs(title="Ukończenie kursu przygotowawczego a wyniki egzaminów",x="typ egzaminu", y="wynik z egzaminu [%]", color="Ukończenie kursu")+
+    scale_color_discrete(labels=c("completed" = "ukończony", 
+               "none" = "none"))+
+ theme(legend.position = "bottom", plot.title = element_text(hjust=0.5))+
+       scale_x_discrete(labels = c(
+    "math.score" = "matematyka",
+    "reading.score" = "czytanie",
+    "writing.score" = "pisanie"
+  ))
+
+```
+
+**Komentarz:**
+We wszystkich typach egzaminów istnieje zauważalna różnica między rozkładem wyników uczniów, którzy ukończyli kurs przygotowawczy. Mediana ich wyników jest większa, jednocześnie nie ma wiele wartości skrajnych, skąd można wysnuć wniosek, że większość z nich osiągneła lepszy wynik niż większość uczniów, którzy nie ukończyli kursów.
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+dane4 <- df %>% 
+  group_by(parental.level.of.education) %>% 
+  summarise(śr_mat=mean(math.score),śr_czy=mean(reading.score),śr_pis=mean(writing.score)) %>% pivot_longer(cols=starts_with("śr"),names_to="egzaminy", values_to="wyniki")
+
+dane4 %>% 
+  ggplot(aes(y=wyniki, x=egzaminy, fill= factor(
+    parental.level.of.education,
+    levels = c(
+      "some high school",
+      "high school",
+      "some college",
+      "associate's degree",
+      "bachelor's degree",
+      "master's degree"))))+
+  geom_col(position="dodge")+
+  labs(title="Wykształcenie rodziców a średnie wyniki uczniów", x="typ egzaminu", y="wyniki[%]")+
+  scale_fill_discrete(name="Poziom wykształcenia rodziców")+
+  theme(legend.position = "bottom", plot.title = element_text(hjust=0.5))+
+#  coord_cartesian(ylim=c(0,100))+
+   scale_x_discrete(labels = c(
+    "śr_mat" = "matematyka",
+    "śr_czy" = "czytanie",
+    "śr_pis" = "pisanie"
+  ))
+
+```
+
+**Komentarz:**
+Na ogół im wyższe wykształcenie rodzica tym średnio lepsze wyniki dzieci z egzaminów, jest to zauważalne dla każdego typu egzaminu. Największy przeskok istnieje między dziećmi osób które posiadały jakieś wykształcenie wyższe, a tymi, którzy nie posiadali (some highschool, highschool). Ciekawą obeserwacją jest to, że dzieci osób z jakimś wykształceniem "średnim" (ciężko przenieść jednoznacznie system amerykański na polski) poradziły sobie lepiej niż te osób z wykształceniem średnim. Najbardziej zauważalne różnice są dla egzaminu z pisania.
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+dane32 <- df %>% 
+  mutate(wyksztalcenie= case_when(parental.level.of.education=="associate's degree" ~ "undergrad degree",
+                                  parental.level.of.education=="bachelor's degree" ~"undergrad degree",
+                                  TRUE ~ parental.level.of.education))
+
+
+
+dane32 %>% 
+  ggplot(aes(y=math.score, fill=gender, x= factor(
+    wyksztalcenie,
+    levels = c(
+      "some high school",
+      "high school",
+      "some college",
+     "undergrad degree",
+      "master's degree")) ))+
+  geom_boxplot()+  
+  labs(title="Płeć i wykształcenie rodziców a wynik egzaminu z matematyki",y="wynik z matematyki[%]", x="wykształcenie rodziców", fill="Płeć")+
+    scale_fill_discrete(labels=c("male" = "mężczyzna", 
+               "female" = "kobieta"))+
+ theme( plot.title = element_text(hjust=0.5))
+  
+  
+  
+```
+
+**Komentarz:**
+Widać, że uczniowie mieli w większości lepszy wynik z matematyki niż uczennice. Ponadto wpływ miało, w różny sposób w zależności od płci, wykształcenie rodziców, im wyższe tym lepsze wyniki, aczkolwiek nie jest to duża różnica. Dla uczniów największa różnica jest zauważalna dla osób których rodzice mają "master's degree", różnica ta jest mniejsza w przypadku uczennic, u których z kolei widać większą rozpiętość między 2 i 3 kwartylem, co oznacza, że wyniki były bardziej rozrzucone.
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+dane6 <- df %>% 
+  pivot_longer(cols=c("reading.score","writing.score"),names_to="czp",values_to="wartosc")
+
+dane6 %>% 
+  ggplot(aes(x=math.score, y=wartosc))+
+  geom_point()+
+  facet_wrap(~ czp,labeller = labeller(
+      czp = c(
+        reading.score = "egzamin z czytania",
+        writing.score = "egzamin z pisania" )))+
+  labs(title="Wyniki egzaminu z matematyki a inne egzaminy", x="wynik z matematyki[%]", y="wynik[%]", color="Typ egzaminu")+
+  theme(plot.title=element_text(hjust=0.5))
+
+```
+
+**Komentarz:**
+Wyraźnie widać, że w obu przypadkach istnieje liniowy trend, że im wyższy wynik z matematyki, tym wyższy wynik z innych egzaminów.
