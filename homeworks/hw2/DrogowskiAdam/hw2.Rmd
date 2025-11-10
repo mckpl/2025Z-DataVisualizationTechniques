@@ -1,0 +1,238 @@
+---
+title: "Praca domowa 2"
+author: "Adam Drogowski"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Wczytanie danych
+df <- read.csv("https://github.com/kozaka93/2025Z-DataVisualizationTechniques/raw/refs/heads/main/homeworks/hw2/StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+df1 <- df %>%
+  pivot_longer(cols = c(math.score, reading.score, writing.score),
+  names_to = "subject",
+  values_to = "score") %>%
+  mutate(subject = recode(subject,
+    "math.score" = "Matematyka",
+    "reading.score" = "Czytanie",
+    "writing.score" = "Pisanie"))
+  
+ggplot(df1, aes(score)) +
+  geom_density(linewidth = 1) +
+  facet_wrap(~ subject, ncol = 1, scales = "free_y") +
+  labs(title = "Rozklady wynikow",x = "Wynik", y = "")
+
+```
+
+**Komentarz:**
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+df2 <- df %>%
+  group_by(gender) %>%
+  summarise(
+  matematyka = mean(math.score, na.rm = TRUE),
+  czytanie = mean(reading.score, na.rm = TRUE),
+  pisanie = mean(writing.score, na.rm = TRUE)
+  ) %>%
+  pivot_longer(cols = c(matematyka, czytanie, pisanie),
+  names_to = "subject", values_to = "score") 
+
+ggplot(df2, aes(gender,score)) +
+  geom_col() +
+  facet_wrap(~subject, nrow = 1) +
+  labs(title = "Wyniki wedlug plci", x= "płeć", y= "wynik")
+
+
+```
+
+**Komentarz: tak, uczniowe sa sklonni do osiągania lepszych wyników w matematyce zaś uczennice w pozostałych**
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+
+```{r zadanie 3, message=FALSE}
+df3 <- df %>%
+  group_by(test.preparation.course) %>%
+  summarise(
+  matematyka = mean(math.score, na.rm = TRUE),
+  czytanie = mean(reading.score, na.rm = TRUE),
+  pisanie = mean(writing.score, na.rm = TRUE)
+  ) %>%
+  pivot_longer(
+  cols = c(matematyka, czytanie, pisanie),
+  names_to = "subject", values_to = "score"
+)
+
+ggplot(df3, aes(test.preparation.course,score)) +
+  geom_col() +
+  facet_wrap(~subject, nrow = 1) +
+  labs(title = "Wyniki wedlug plci", x= "przygotowani", y= "wynik")
+
+ 
+```
+
+**Komentarz:  jasno widac że po tescie wyniki są wyższe**
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+
+```{r zadanie 4, message=FALSE}
+df4 <- df %>%
+  group_by(parental.level.of.education) %>%
+  summarise(
+    matematyka = mean(math.score, na.rm = TRUE),
+    czytanie = mean(reading.score, na.rm = TRUE),
+    pisanie = mean(writing.score, na.rm = TRUE)
+  ) 
+sort_mat <- df4 %>%
+  arrange(desc(matematyka)) %>%
+  pivot_longer(
+  cols = c(matematyka, czytanie, pisanie),
+  names_to = "subject", values_to = "score")
+  
+sort_read <- df4 %>%
+  arrange(desc(czytanie)) %>%
+  pivot_longer(
+  cols = c(matematyka, czytanie, pisanie),
+  names_to = "subject", values_to = "score")
+  
+sort_write <- df4 %>%
+  arrange(desc(pisanie)) %>%
+  pivot_longer(
+  cols = c(matematyka, czytanie, pisanie),
+  names_to = "subject", values_to = "score")
+
+
+ggplot(bind_rows(sort_mat, sort_read, sort_write), aes(x = reorder(parental.level.of.education, -score), y = score, fill = subject)) +
+  geom_col(position = "dodge") +
+  facet_wrap(~ subject, nrow = 1) +
+  labs(title = "Średnie wyniki wg wykształcenia rodziców",
+       x = "Wykształcenie rodziców",
+       y = "Średni wynik") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+
+  )
+
+
+
+```
+
+**Komentarz: wynik maleje wraz z wyksztalceniem rodzica**
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+
+```{r zadanie 5, message=FALSE}
+df5 <- df %>%
+  group_by(gender, parental.level.of.education) %>%
+  summarise(
+    sredni_wynik = mean(math.score, na.rm = TRUE)
+  ) %>%
+  arrange(desc(sredni_wynik))
+ggplot(df5, aes(
+  x = reorder(parental.level.of.education, -sredni_wynik),
+  y = sredni_wynik,
+  fill = gender
+)) +
+  geom_col(position = "dodge") +
+  scale_fill_manual(
+    values = c("female" = "red", "male" = "green"),
+    name = "Płeć",
+    labels = c("Kobieta", "Mężczyzna")
+  ) +
+  labs(
+    title = "Średnie wyniki z matematyki wg płci i wykształcenia rodziców",
+    x = "Wykształcenie rodziców",
+    y = "Średni wynik z matematyki"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+
+  )
+
+
+```
+
+
+
+**Komentarz:*zdecydowanie aby byc najlepszym z matematyki trzeba byc mezczyzna i miec wyksztalconych rodzicow*
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+
+
+```{r zadanie 6, message=FALSE}
+
+ggplot(df, aes(x = writing.score, y = math.score)) +
+  geom_point(alpha = 0.6, color = "green") +
+  geom_smooth(method = "lm", color = "red", linewidth = 1) +
+  labs(
+    title = "zaleznosc matematyka-pisanie",
+    x = "pisanie",
+    y = "matematyka"
+  )
+
+ggplot(df, aes(x = reading.score, y = math.score)) +
+  geom_point(alpha = 0.6, color = "green") +
+  geom_smooth(method = "lm", color = "red", linewidth = 1) +
+  labs(
+    title = "zaleznosc matematyka-czytanie",
+    x = "czytanie",
+    y = "matematyka"
+  )
+```
+
+**Komentarz:*w obu przypadkach ma duze, wyliczylem wczesniej wsp. korelacji liniowej >0.8 w obu przypadkach*
