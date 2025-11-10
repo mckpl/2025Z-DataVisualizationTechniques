@@ -1,0 +1,181 @@
+---
+title: "Praca domowa 2"
+author: "Nina Onyszczuk"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  tidyr::pivot_longer(cols = ends_with('score'), names_to = 'category', names_pattern = '(.*).score', values_to = 'score') %>% 
+  ggplot(aes(x = score, fill = category))+
+  geom_histogram(color = '#37250b')+
+  labs(title = 'Wyniki egzaminów z matematyki, czytania i pisania',
+       x = 'Wynik egzaminu',
+       y = 'Liczba uczniów')+
+  theme(legend.position = 'none')+
+  scale_fill_manual(values = c('#52503a', '#857b4d', '#8f6c51'))+
+  facet_wrap(~category, 
+             labeller = labeller(category = c('math' = 'Matematyka', 'reading' = 'Czytanie', 'writing' = 'Pisanie')))
+
+```
+
+**Komentarz: Rozkłady wyników egzaminów z poszczególnych przedmiotów są podobne do siebie  wzajemnie.**
+
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  tidyr::pivot_longer(cols = ends_with('score'), names_to = 'category', names_pattern = '(.*).score', values_to = 'score') %>% 
+  ggplot(aes(x = category, y = score, fill = gender))+
+  geom_boxplot(color = '#37250b', outlier.size = 0.5)+
+  labs(title = 'Wyniki egzaminów w zależności od płci',
+       x = 'Egzamin',
+       y = 'Wynik egzaminu',
+       fill = 'Płeć')+
+  scale_fill_manual(labels = c('Uczennice', 'Uczniowie'),values = c('#8f6c51', '#857b4d'))
+
+```
+
+**Komentarz: Istnieje zauważalna różnica w wynikach między uczniami a uczennicami. Uczniowie osiągneli średnio wyższe wyniki z egzaminu z matematyki, gdzie uczennice osiągnęły średnio wyższe wyniki z egzaminów z czytania i pisania.**
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  tidyr::pivot_longer(cols = ends_with('score'), names_to = 'category', names_pattern = '(.*).score', values_to = 'score') %>% 
+  ggplot(aes(x = category, y = score, fill = test.preparation.course))+
+  geom_boxplot(color = '#37250b', outlier.size = 0.5)+
+  labs(title = 'Wyniki egzaminów w zależności od ukończenia testu przygotowawczego',
+       x = 'Egzamin',
+       y = 'Wynik egzaminu',
+       fill = 'Test przygotowawczy')+
+  scale_fill_manual(labels = c('Ukończony', 'Nieukończony'), values = c('#52503a', '#857b4d'))
+
+```
+
+**Komentarz: Uczniowie, którzy ukończyli test przygotowawczy osiągają średnio wyższe wyniki niż uczniowie, którzy tego testu nie ukończyli.**
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  tidyr::pivot_longer(cols = ends_with('score'), names_to = 'category', names_pattern = '(.*).score', values_to = 'score') %>% 
+  ggplot(aes(x = forcats::fct_reorder(parental.level.of.education, score), y = score, fill = category))+
+  geom_boxplot(color = '#37250b', outlier.size = 0.5)+
+  labs(title = 'Wyniki egzaminów w zależności od poziomu wykształcenia rodziców',
+       x = 'Poziom wykształcenia rodziców',
+       y = 'Wynik egzaminu',
+       fill = 'Egzamin')+
+  scale_fill_manual(labels =c('Matematyka', 'Czytanie', 'Pisanie'), 
+                    values = c('#52503a', '#857b4d', '#8f6c51'))+
+  scale_x_discrete(guide = guide_axis(angle = 30))
+
+```
+
+**Komentarz: Uczniowie, których rodzice posiadają wyższy poziom wykształcenia, osiągają średnio wyższe wyniki z egzaminów.**
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  ggplot(aes(x = forcats::fct_reorder(parental.level.of.education, math.score), y = math.score, fill = gender))+
+  geom_boxplot(color = '#37250b', outlier.size = 0.5)+
+  labs(title = 'Wyniki egzaminu z matematyki w zależności od płci oraz poziomu wykształcenia rodziców',
+       x = 'Poziom wykształcenia rodziców',
+       y = 'Wynik egzaminu',
+       fill = 'Płeć')+
+  scale_fill_manual(labels = c('Uczennice', 'Uczniowie'),values = c('#8f6c51', '#857b4d'))+
+  scale_x_discrete(guide = guide_axis(angle = 30))
+
+```
+
+**Komentarz: Zarówno płeć zdającego jak i wykształcenie rodziców wpływają na wyniki egzaminu z matematyki. Uczniowie osiągają wyższe wyniki niż uczennice oraz uczniowie, których rodzice posiadają wyższy poziom wykształcenia, osiągają średnio lepsze wyniki.**
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  tidyr::pivot_longer(cols = c(reading.score, writing.score), names_to = 'category', names_pattern = '(.*).score', values_to = 'score') %>%
+  ggplot(aes(x = math.score, y = score, color = category))+
+  geom_point(size = 0.5)+
+  geom_smooth(method = lm, color = '#37250b', se = FALSE, linewidth = 0.5)+
+  labs(title = 'Zależność między wynikami egzaminów',
+       x = 'Wynik egzaminu z matematyki',
+       y = 'Wynik egzaminu',
+       color = 'Egzamin')+
+  scale_color_manual(labels = c('Czytanie', 'Pisanie'),values = c('#8f6c51', '#857b4d'))+
+  facet_wrap(~category, 
+             labeller = labeller(category = c('reading' = 'Czytanie', 'writing' = 'Pisanie')))
+  
+
+```
+
+**Komentarz: Istnieje zależność między wynikami egzaminu z matematyki a wynikami egzaminu z czytania i pisania. Im wyższy wynik z egzaminu z matematyki, tym wyższe wyniki z egzaminu z czytania i pisania.**
