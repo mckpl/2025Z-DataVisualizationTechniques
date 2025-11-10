@@ -1,0 +1,210 @@
+---
+title: "Praca domowa 2"
+author: "Julia Michalska"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+grupy<- rep("math",dim(df)[1])
+grupy<- c(grupy,rep("reading",dim(df)[1]))
+grupy<- c(grupy,rep("writing",dim(df)[1]))
+wyniki <- df %>% select(math.score,writing.score,reading.score)
+summary(wyniki)
+wykres <-c(df$math.score,df$reading.score,df$writing.score)
+
+wykres<-cbind(wykres,grupy)
+colnames(wykres)<-c("wynik","rodzaj")
+wykres<-data.frame(wykres)
+wykres<-wykres %>% mutate(wynik = as.numeric(wynik))
+
+wykres %>% ggplot(aes(x = wynik,group=rodzaj,color=rodzaj))+
+  geom_density()+ labs(
+    title = "Rozklady wyników wedlug danego egzaminu",
+    x = "Wynik",
+    y = "Częstość wyniku",
+    color = "Rodzaj")+
+  theme_minimal()
+
+```
+
+**Komentarz:**
+# Mediany i średnie z czytania i pisania są zbliżone, z matematyki są trochę niższe.
+# Mimo to ogólny rozkład wyników jest podobny, co widać po zasięgu 1 i 3 kwartyla
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+ggplot(df, aes(x = math.score, y = gender, fill = gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("female" = "pink", "male" = "skyblue")) +
+  labs(title = "Wykres rozkładu wyników z matematyki w zależności od płci",
+       x = "wynik",
+       y = "płeć")
+
+ggplot(df, aes(x = writing.score, y = gender, fill = gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("female" = "pink", "male" = "skyblue")) +
+  labs(title = "Wykres rozkładu wyników z pisania w zależności od płci",
+       x = "wynik",
+       y = "płeć")
+
+ggplot(df, aes(x = reading.score, y = gender, fill = gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("female" = "pink", "male" = "skyblue")) +
+  labs(title = "Wykres rozkładu wyników z czytania w zależności od płci",
+       x = "wynik",
+       y = "płeć")
+
+```
+
+**Komentarz:**
+#Uczniowie uzsyskują lepsze wyniki z matematyki, natomiast uczennice lepsze wyniki z #czytania i pisania.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+ggplot(df,aes(x=math.score,y=test.preparation.course))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z matematyki w zależności od przystąpienia do kursu",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=12))
+ggplot(df,aes(x=reading.score,y=test.preparation.course))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z czytania w zależności od przystąpienia do kursu",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=12))
+ggplot(df,aes(x=writing.score,y=test.preparation.course))+
+  geom_boxplot()+
+  labs(title="Wykres rozkładu wyników z pisania w zależności od przystąpienia do kursu",
+       x="wynik",
+       y="kurs przygotowawczy")+
+  theme(plot.title = element_text(size=12))
+
+```
+
+**Komentarz:**
+# We wszystkich trzech obszarach uczniowie po kursie przygotowawczym uzyskują wyższe wyniki,
+# przy czym najmniejsza przewaga widoczna jest w przypadku testu z matematyki.
+
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+wykres_rodz<- cbind(wykres,wyk_rodzica = df$parental.level.of.education)
+
+wykres_rodz<- wykres_rodz %>% group_by(wyk_rodzica,rodzaj) %>% 
+  summarise(srednia = mean(wynik))
+wykres_rodz
+
+wykres_rodz %>% ggplot(aes(x=rodzaj,y=srednia,fill=reorder(wyk_rodzica,srednia)))+
+  geom_bar(position="dodge",stat="identity")+ labs(
+    title = "Sredni wynik egzaminu w zaleznosci od wyksztalcenia rodzicow",
+    x = "Rodzaj",
+    y = "Sredni wynik",
+    fill = "Poziom wyksztalcenia rodzicow")+
+  theme_minimal()
+
+```
+
+**Komentarz:**
+# Im wyższy poziom wykształcenia rodziców, tym wyższy średni wynik osiągany przez uczniów.
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+ggplot(df, aes(x = reorder(`parental.level.of.education`, `math.score`, FUN = median), y = `math.score`, fill = gender)) +
+  geom_boxplot() +
+  labs(title = "Wynik z matematyki a płeć i wykształcenie rodziców",
+       x = "Wykształcenie rodziców",
+       y = "Wynik z matematyki",
+       fill = "Płeć") +
+  scale_fill_manual(
+    values = c("pink", "skyblue"),
+    labels=c("kobiety", "mężczyźni")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+```
+
+**Komentarz:**
+#Wyniki z matematyki zależą jednocześnie od płci uczniów oraz od wykształcenia ich rodziców.
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+ggplot(df,aes(x=math.score,y=reading.score))+
+   geom_point()+
+  geom_smooth(method = "lm")+
+  labs(title="Wykres zależności między wynikami z matematyki i czytania",
+       x="wynik z matematyki",
+       y="wynik z czytania")
+  ggplot(df,aes(x=math.score,y=writing.score))+
+  geom_point()+
+  geom_smooth(method="lm")+
+  labs(title="Wykres zależności między wynikami z matematyki i pisania",
+       x="wynik z matematyki",
+       y="wynik z pisania")
+
+```
+
+**Komentarz:**
+# Wyniki z matematyki zwiększają się proporcjonalnie do rezultatów z czytania i pisania, 
+# jednak osiągnięcie wysokich rezultatów jest prostsze w przypadku czytania i pisania niż 
+# matematyki.
