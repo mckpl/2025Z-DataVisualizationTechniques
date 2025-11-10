@@ -1,0 +1,186 @@
+---
+title: "Praca domowa 2"
+author: "Filip Łabuś"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Wczytanie danych
+df <- as_tibble(read.csv("StudentsPerformance.csv"))
+df <- df %>% mutate("avg.score" = (math.score+reading.score+writing.score)/3)
+#avg.score to średnia arytmetyczna z 3 rodzajów egzaminu
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+pivot_longer(df, cols =c("math.score", "reading.score", "writing.score"), names_to = "variable", values_to = "value") %>% 
+  ggplot(aes(x = value, fill = variable))+
+  geom_density(alpha = 0.4)+
+  scale_fill_discrete(labels = c(
+    "math.score" = "Matematyka",
+    "reading.score" = "Czytanie",
+    "writing.score" = "Pisanie"))+
+  labs(title = "Rozkład wyników uczniów z egzaminów", 
+       x = "Wynik",
+       y = "Częstość wyniku")+
+  scale_x_continuous(expand = c(0,0))+
+  scale_y_continuous(expand = c(0,0))
+
+
+```
+
+**Komentarz:**
+**Najgorsze wyniki są z egzaminu z Matematyki. Egzaminy z czytania oraz pisania wypadły bardzo podobnie. Niemniej rożnice między egzaminami są niewielkie.**
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+df %>%
+  pivot_longer(cols = c(math.score, reading.score, writing.score, avg.score),
+               names_to = "exam", values_to = "value") %>% 
+  ggplot(aes(x = value, fill = gender)) +
+  geom_density(alpha = 0.5) +
+  facet_wrap(~ exam, nrow = 2, labeller = labeller(exam = c(
+        "math.score" = "Matematyka",
+        "reading.score" = "Czytanie",
+        "writing.score" = "Pisanie",
+        "avg.score" = "Średni wynik")))+
+  scale_fill_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna"))+
+  labs(title = "Rozkład wyników uczniów z egzaminów", 
+       fill = "Płeć",
+       x = "Wynik",
+       y = "Częstość wyniku")
+
+```
+
+**Komentarz:**
+**Kobiety lepiej sobie ogólnie poradziły z egzaminami. Rozpatrując poszczególne przedmioty lepiej poradziły sobie z egzaminami z czytania oraz pisania. Egzamin z Matematyki jednak lepiej wyszedł mężczyznom. Możemy zaobserować, że rozkład wyników mężczyzn jest "szerszy", czyli rozpiętość osiąganych wyników jest większa**
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+df %>%
+  pivot_longer(cols = c(math.score, reading.score, writing.score, avg.score),
+               names_to = "exam", values_to = "value") %>% 
+  ggplot(aes(x = value, fill = test.preparation.course)) +
+  geom_density(alpha = 0.5) +
+  facet_wrap(~ exam, nrow = 2, labeller = labeller(exam = c(
+        "math.score" = "Matematyka",
+        "reading.score" = "Czytanie",
+        "writing.score" = "Pisanie",
+        "avg.score" = "Średni wynik")))+
+  scale_fill_discrete(labels = c("completed" = "ukończony", "none" = "nieukończony"))+
+  labs(title = "Rozkład wyników uczniów z egzaminów", 
+       fill = "Kurs przygotowawczy",
+       x = "Wynik",
+       y = "Częstość wyniku")
+
+```
+
+**Komentarz:**
+**W każdym wypadku jest zauważalna poprawa wyników egzaminu po ukończeniu kursu. Najmniejsza poprawa jest widoczna przy egzaminie z Matematyki. Przy egzaminie z pisania widzimy "zawężenie się" rozkładu wyników, oznacza to, że więcej uczniów uzyskało wynik bliski średniemu (około 77%) niż bez ukończenia kursu.**
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+df %>% mutate(parental.level.of.education = ifelse(parental.level.of.education == "some high school", "high school", parental.level.of.education)) %>% 
+  mutate(parental.level.of.education = ifelse(parental.level.of.education == "some college", "associate's degree", parental.level.of.education)) %>%
+  mutate(parental.level.of.education = factor(parental.level.of.education, 
+  levels = c("high school", "associate's degree", "bachelor's degree", "master's degree"), 
+  labels = c("Szkoła średnia", "College", "Licencjat", "Magister"))) -> df_new
+  df_new %>% ggplot(aes(y = avg.score, x = parental.level.of.education))+
+  geom_violin(fill = "#7c73ff")+
+  labs(title = "Wyniki egzaminów w zależności od wykształcenia rodzica",
+       x = "Wykształcenie rodzica",
+       y = "Wynik")+
+  scale_y_continuous(expand = c(0,0))
+```
+
+**Komentarz:**
+**Połączyłem stopnie wykształcenia "high school" z "some high school" a także "some college" z "associate's degree" z powodu ich równoważności. Widzimy, że najniższe wartości wyników osiąganych na egzaminie były osiągane przez dzieci osób z wykształceniem średnim. Średni wynik w każdej grupie był zbliżony, jednakże na podstawie rozkładu wyników możemy twierdzić,że największy udział wysokich wyników mają dzieci ludzi z wykształceniem bachelor(licencjat/inżynier) lub master(magister). Co ciekawe żadne z dzieci magistrów nie uzyskało maksymalnego wyniku ze wszystkich trzech egzaminów**
+
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+ggplot(df_new, aes(x = parental.level.of.education, y = math.score, fill = gender))+
+  geom_boxplot(position = position_dodge(width = 0.8), width = 0.7, alpha = 0.7)+
+  labs(x = "Wykształcenie rodzica", y = "Wynik", fill = "Płeć",
+       title = "Wyniki z egzaminu z Matematyki w zależności od wykształcenia rodzica oraz płci")+
+  scale_fill_discrete(labels = c("female" = "kobieta", "male" = "mężczyzna"))
+
+  
+
+```
+
+**Komentarz:**
+**Możemy zaobserwować, że ogólnie lepsze wyniki na egzaminie z Matematyki osiągają mężczyźni w porónaniu do wyników kobiet. Ponadto z każdym wyższym stopniem wykształcenia rodziców rozkład wyników jest coraz węższy. Co ciekawe rozkład wyników mężczyzn będących dziećmi magistrów jest wyraźnie skośny, sugerując, że dużo takich uzyskało wysoki wynik z egzaminiu. Podobnej zależności u kobiet już nie widać.**
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+df %>% ggplot(aes(x = math.score, y = reading.score))+
+  geom_point(color = "blue") +
+  labs(title = "Zależność wyniku z egzaminu z czytania od wyniku z Matematyki",
+       x = "Wynik z Matematyki",
+       y = "Wynik z czytania")+
+  scale_y_continuous(expand = c(0,0), limits = c(0,101))+
+  scale_x_continuous(expand = c(0,0), limits = c(0,101))
+
+```
+
+**Komentarz:**
+**Na wykresie przedstawiono wyniki z testu z czytania w zależności od wyniku tesu z Matematyki. Jak widzimy możemy przewidywać, że uzyskanie wyższego wyniku z Matematyki sugeruje uzyskanie wyższego wyniku z czytania. Do podobnych wniosków możemy również dojść robiąc analizując egzamin z pisania.**
+
+
+
+
+
