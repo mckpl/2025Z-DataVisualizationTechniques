@@ -1,0 +1,234 @@
+---
+title: "Praca domowa 2"
+author: "Yauheni Butsialevich"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+```{r zadanie 1, message=FALSE}
+
+# Obliczenie średniej i mediany dla każdego przedmiotu
+summary_stats <- df %>%
+  pivot_longer(cols = c("math.score", "reading.score", "writing.score"), names_to = "subject", values_to = "score") %>%
+  group_by(subject) %>%
+  summarise(
+    mean_score = mean(score),
+    median_score = median(score)
+  )
+
+# Stworzenie obiektu wykresu
+plot1 <- df %>%
+  pivot_longer(cols = c("math.score", "reading.score", "writing.score"), names_to = "subject", values_to = "score") %>%
+  ggplot(aes(x = score, fill = subject)) +
+  geom_density(alpha = 0.6) +
+  facet_wrap(~subject, labeller = labeller(subject = c("math.score" = "Matematyka", "reading.score" = "Czytanie", "writing.score" = "Pisanie"))) +
+  geom_vline(data = summary_stats, aes(xintercept = mean_score, color = "Średnia", linetype = "Średnia"), linewidth = 1) +
+  geom_vline(data = summary_stats, aes(xintercept = median_score, color = "Mediana", linetype = "Mediana"), linewidth = 1) +
+  scale_color_manual(values = c("Średnia" = "blue", "Mediana" = "red")) +
+  scale_linetype_manual(values = c("Średnia" = "dashed", "Mediana" = "dotted")) +
+  scale_x_continuous(breaks = seq(0, 100, by = 10)) +
+  scale_fill_manual(guide = "none", values = c("math.score" = "lightblue", "reading.score" = "lightgreen", "writing.score" = "lightcoral")) +
+  labs(title = "Rozkład wyników z poszczególnych przedmiotów",
+       x = "Wartość",
+       y = "Gęstość",
+       color = NULL,
+       linetype = NULL) +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+print(plot1)
+
+
+```
+
+**
+Rozklady są bardzo podobne i sbliżone do rozkladu normalnego. Są w pewnym stopniu lewostronnie skośne.
+Na wykresach widać, że dla Czytania i Pisania mediana (linia czerwona) jest nieco bardziej po prawej od średniej (linia niebieska), co potwierdza tę skośność. Mediana oraz Srednia wyników z czytania i pisania są wyższe niż z matematyki, co sugeruje, że uczniom generalnie łatwiej przychodziły zadania z przedmiotów humanistycznych.
+**
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+plot2 <- df %>%
+  pivot_longer(cols = c("math.score", "reading.score", "writing.score"), names_to = "subject", values_to = "score") %>%
+  ggplot(aes(x = gender, y = score, fill = gender)) +
+  geom_boxplot() +
+  facet_wrap(~subject, labeller = labeller(subject = c("math.score" = "Matematyka", "reading.score" = "Czytanie", "writing.score" = "Pisanie"))) +
+  scale_x_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna")) +
+  scale_y_continuous(breaks = seq(0, 100, by = 10)) +
+  labs(title = "Porównanie wyników w zależności od płci",
+       x = "Płeć",
+       y = "Wynik",
+       fill = NULL) +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+print(plot2)
+```
+
+**
+Widoczne są zauważalne różnice w wynikach egzaminu w zależności od płci.
+Meżczyzni(male) uzyskuja lepsze wyniki z matematyki, tymczasem kobiety(female)
+maja lepsze wyniki z czytania i pisania. Natomiast miedzykwartylowy odstep(IQR)
+jest podobny we wszystkich przypadkach. Outliery sa widoczne wszedzie ale w przypadku
+kobiet jest ich wiecej.
+**
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+plot3 <- df %>%
+  pivot_longer(cols = c("math.score", "reading.score", "writing.score"), names_to = "subject", values_to = "score") %>%
+  ggplot(aes(x = test.preparation.course, y = score, fill = test.preparation.course)) +
+  geom_boxplot() +
+  facet_wrap(~subject, labeller = labeller(subject = c("math.score" = "Matematyka", "reading.score" = "Czytanie", "writing.score" = "Pisanie"))) +
+  scale_x_discrete(labels = c("completed" = "Ukończony", "none" = "Nie odbył")) +
+  scale_y_continuous(breaks = seq(0, 100, by = 10)) +
+  labs(title = "Wpływ kursu przygotowawczego na wyniki",
+       x = "Kurs przygotowawczy",
+       y = "Wynik",
+       fill = NULL) +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+print(plot3)
+
+```
+
+**
+Zdecydowanie osiągają lepsze wyniki. Uczniowie, którzy ukończyli kurs przygotowawczy, osiągają wyraźnie wyższe mediany wyników we wszystkich trzech kategoriach w porównaniu do uczniów, którzy go nie odbyli. Natomiast najbardziej widoczne to jest w przypadku Czytania i Pisania, gdzie róznica pomiedzy medianami jest powyżej 8 punktów. Sugeruje to, że kurs przygotowawczy ma pozytywny wpływ na wyniki egzaminów.
+**
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+plot4 <- df %>%
+  mutate(average.score = (math.score + reading.score + writing.score) / 3) %>%
+  group_by(parental.level.of.education) %>%
+  summarise(mean.avg.score = mean(average.score)) %>%
+  mutate(parental.level.of.education = factor(parental.level.of.education, 
+                                              levels = c("some high school", "high school", "some college", 
+                                                         "associate's degree", "bachelor's degree", "master's degree"))) %>%
+  ggplot(aes(x = parental.level.of.education, y = mean.avg.score, fill = parental.level.of.education)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Średni wynik ucznia a poziom wykształcenia rodziców",
+       x = "Wykształcenie rodziców",
+       y = "Średni wynik ze wszystkich egzaminów") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
+
+print(plot4)
+
+```
+
+**
+<!-- Istnieje wyraźny pozytywny związek między poziomem wykształcenia rodziców a średnimi wynikami ich dzieci. Im wyższy poziom wykształcenia rodziców, tym wyższy średni wynik osiągany przez uczniów, za wyjątkiem przejścia od "some high school" do "high school", co można wyjaśnić wielkoscią próby. Najwyższe wyniki osiągają dzieci rodziców z tytułem magistra ("master's degree"), a najniższe dzieci rodziców z wykształceniem średnim ("high school"). -->
+**
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+plot5 <- df %>%
+  mutate(parental.level.of.education = factor(parental.level.of.education, 
+                                              levels = c("some high school", "high school", "some college", 
+                                                         "associate's degree", "bachelor's degree", "master's degree"))) %>%
+  ggplot(aes(x = parental.level.of.education, y = math.score, fill = gender)) +
+  geom_boxplot() +
+  scale_y_continuous(breaks = seq(0, 100, by = 10)) +
+  scale_fill_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna")) +
+  labs(title = "Wynik z matematyki w zależności od płci i wykształcenia rodziców",
+       x = "Parental level of education",
+       y = "Math score",
+       fill = NULL) +
+  coord_flip() +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+print(plot5)
+
+```
+
+**
+Tak, oba czynniki mają wpływ. Niezależnie od poziomu wykształcenia rodziców, mężczyźni osiągają średnio lepsze wyniki z matematyki niż kobiety. Jednocześnie, dla obu płci widoczny jest trend wzrostowy – im wyższe wykształcenie rodziców, tym wyższe wyniki z matematyki. Różnica w wynikach między płciami jest widoczna na każdym poziomie wykształcenia rodziców, jednakże w przypadku rodzica z "master's degree" lub "some high school" lub "associate's degree" płeć ma bardzo duży wpływ, i mężczyźni w tym przypadku mają nawet o 7 lub więcej punktów większą medianę.
+**
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+df_long <- df %>%
+  pivot_longer(cols = c("reading.score", "writing.score"), 
+               names_to = "subject", 
+               values_to = "score") %>%
+  mutate(subject = factor(subject, 
+                          levels = c("reading.score", "writing.score"),
+                          labels = c("Czytanie", "Pisanie")))
+
+plot6 <- ggplot(df_long, aes(x = math.score, y = score)) +
+  geom_point(aes(color = subject), alpha = 0.5) +
+  geom_smooth(method = "lm", fill = NA, color = "black", formula = y ~ x, linetype = "dashed") +
+  facet_wrap(~subject, labeller = labeller(subject = c("Czytanie" = "Matematyka vs Czytanie", "Pisanie" = "Matematyka vs Pisanie"))) +
+  scale_color_manual(values = c("Czytanie" = "blue", "Pisanie" = "red"), guide = "none") +
+  labs(title = "Zależność między wynikami z matematyki a wynikami z czytania lub pisania",
+       x = "Wynik z matematyki",
+       y = "Wynik") +
+  theme_minimal()
+
+print(plot6)
+
+```
+
+**
+Widoczna jest silna dodatnia korelacja liniowa(Pearsona) między wynikami z matematyki a wynikami z czytania oraz pisania. Oznacza to, że uczniowie, którzy dobrze radzą sobie z matematyką, mają również tendencję do osiągania wysokich wyników z czytania i pisania. Chmury punktów są gęsto skupione wokół linii regresji, co potwierdza siłę tej zależności.
+**
