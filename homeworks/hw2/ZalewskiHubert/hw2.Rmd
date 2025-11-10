@@ -1,0 +1,225 @@
+---
+title: "Praca domowa 2"
+author: "Hubert Zalewski"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+scores1 <- 
+  bind_rows(
+   df %>% transmute(subject = "Matematyka", scores = math.score, gender = gender),
+   df %>% transmute(subject = "Pisanie", scores = writing.score, gender = gender),
+   df %>% transmute(subject = "Czytanie", scores = reading.score, gender = gender)
+    
+  
+  )
+
+scores1 %>%
+  ggplot(aes(x = subject, y = scores))+
+  geom_boxplot(fill = "lightblue") +
+  labs(title = "Rozkład wyników uczniów z podziałem na przedmioty", x = "przedmiot", y = "wynik") +
+  scale_y_continuous(breaks = seq(0, 100, by = 10))
+
+```
+
+**Komentarz:**
+Na podstawie wykresu stwierdzam, że rozkłady wyników dla wszystkich przedmiotów są do siebie zbliżone - 
+mediany wyników dla czytania i pisania znajdują się na podobnym poziomie (ok. 70 punktów), tak samo jak 
+zasięgi 1 i 3 kwartyla. Dla matematyki widoczna jest mniejsza mediana wyników (ok. 65 punktów), jednakże
+zasięg 1 i 3 kwartyla jest bardzo podobny do pozostałych przedmiotów
+
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+
+
+```{r zadanie 2, message=FALSE}
+scores2 <- scores1
+scores2 %>%
+  mutate(gender = ifelse(gender == "female", "kobiety", "mężczyźni"))%>%
+  ggplot(aes(x = scores, y = gender, fill = gender)) +
+  geom_boxplot() +
+  labs(title = "Rozkład wyników uczniów z podziałem na płeć", x = "wynik", y = "płeć") +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(0, 100, by = 20)) +
+  facet_wrap(~subject)
+
+```
+
+**Komentarz:**
+Na podstawie wykresu widoczna jest różnica wyników pomiędzy grupą kobiet a mężczyzn. Mediana wyników kobiet
+z pisania i czytania jest wyższa od mężczyzn o około 5 i 10 punktów. Również przedział pomiędzy 1 a 3 kwartylem wyników u kobiet jest "przesunięty" wyżej względem wyników dla obu tych przedmiotów. Z matematyki
+mediana wyników mężczyzn jest wyższa od kobiet o około 5 pkt i osiągają średnio wyższe wyniki
+
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+scores3 <- 
+  bind_rows(
+   df %>% transmute(subject = "Matematyka", scores = math.score, course = test.preparation.course),
+   df %>% transmute(subject = "Pisanie", scores = writing.score,  course = test.preparation.course),
+   df %>% transmute(subject = "Czytanie", scores = reading.score,  course = test.preparation.course)
+    
+  
+  )
+
+scores3 %>%
+  mutate(course = ifelse(course == "completed", "kurs ukończony", "brak kursu"))%>%
+  ggplot(aes(x = scores, y = course, fill = course))+
+  geom_violin() +
+  labs(title = "Rozkład wyników uczniów w zależności od ukończenia kursu", x = "wynik", y = "kurs przygotowawczy") +
+  theme(legend.position = "none")+
+  scale_x_continuous(breaks = seq(0, 100, by = 20)) +
+  facet_wrap(~subject)
+
+```
+
+**Komentarz:**
+Na podstawie wykresu można jasno określić, że uczniowie którzy ukończyli kurs osiągają średnio lepsze wyniki z każdego przedmiotu od uczniów, którzy nie ukończyli kursu, znacznie więcej takich uczniów osiąga maksymalny wynik oraz mniej uczniów z ukończonym kursem osiąga wyniki poniżej 40 pkt
+
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+scores4 <- df %>%
+  group_by(parental.level.of.education) %>%
+  summarize(score = mean((math.score + reading.score + writing.score)/3))
+
+  
+  
+scores4 %>%
+  ggplot(aes(x = reorder(parental.level.of.education, -score), y = score)) +
+  labs(title = "Średni wynik ze wszystkich przedmiotów a wykształcenie rodziców", x = "wykształcenie rodzica",y = "wynik")+
+  geom_col(fill = "blue") +
+  scale_x_discrete(labels = c(
+    "master's degree" = "Tytuł magistra",
+    "bachelor's degree" = "Tytuł licencjata",
+    "associate's degree" = "Stopień policealny",
+    "some college" = "Wyższe niepełne",
+    "some high school" = "Średnie niepełne",
+    "high school" = "Średnie"
+  )) +
+  scale_y_continuous(breaks = seq(0, 100, by = 10)) +
+  coord_cartesian(ylim = c(0,80))
+  
+
+```
+
+**Komentarz:**
+Na podstawie wykresu wnioskuje, że im wyższy stopień wykształcenia rodzica tym lepsze średnie z wyników dzieci. Dla wykształcenia wyższego jest to około 74 punkty, dla stopnia policealnego i nieukończonych studiów wyższych jest to około 70 punktów a dla uczniów których rodzice ukończyli lub tylko rozpoczeli stopień średni jest to około 65 punktów
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+scores5 <- df 
+scores5 %>%
+  ggplot(aes(x = parental.level.of.education, y = math.score, fill = gender)) +
+  geom_boxplot() + 
+  labs(title = "Wyniki z matematyki w zależności od wykształcenia rodziców i płci uczniów", x = "wykształcenie rodzica",y = "wynik", fill = "płeć")+
+  scale_x_discrete(labels = c(
+    "master's degree" = "Tytuł magistra",
+    "bachelor's degree" = "Tytuł licencjata",
+    "associate's degree" = "Stopień policealny",
+    "some college" = "Wyższe niepełne",
+    "some high school" = "Średnie niepełne",
+    "high school" = "Średnie"
+  )) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_discrete(labels = c("female" = "kobiety", "male" = "mężczyźni"))
+  
+
+```
+
+**Komentarz:**
+Płeć i wykształcenie rodziców ma wpływ na wyniki z matematyki - mężczyzni osiągają średnio lepsze wyniki z matematyki od kobiet, w każdej z kategorii wykształcenia rodziców (wyższa mediana i przesunięty w góre zakres międzykwartylowy). Widoczna jest również zależność wyników z matematyki i poziomu wykształcenia rodziców podobna do tej z zad. 5 - im wyższe wykształcenie rodzica tym uczeń średnio osiąga wyższy wynik. 
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+czytanie <- df %>%
+  transmute( matematyka = math.score,
+             wynik_inne = reading.score,
+             przedmiot = "czytanie"
+    
+  )
+pisanie <- df %>%
+  transmute( matematyka = math.score,
+             wynik_inne = writing.score,
+             przedmiot = "pisanie"
+    
+  )
+
+scores6 <-
+  bind_rows(pisanie, czytanie)
+
+scores6 %>%
+  ggplot(aes(x = matematyka, y = wynik_inne, color = przedmiot)) +
+  geom_point(alpha = 0.9)+
+  labs(title = "wykres zależności wyniku z matematyki a wyniku z czytania lub pisania", x= "wynik z matematyki", y = "wynik z czytania lub pisania")+
+  scale_color_brewer(palette = "Set1") +
+  geom_smooth(method = "lm")+
+  theme_minimal()
+
+
+
+```
+
+**Komentarz:**
+Na podstawie wykresu widać zależność wyniku z matematyki a reszta wyników - kropki i linie trendu układają się rosnąco, co oznacza, że wraz ze wzrostem wyniku z matematyki, rosną wyniki z reszty przedmiotów. Nie ma widocznej różnicy w tym, czy jest to wynik z czytania czy pisania - oba zachowują się bardzo podobnie względem wyniku z matematyki
