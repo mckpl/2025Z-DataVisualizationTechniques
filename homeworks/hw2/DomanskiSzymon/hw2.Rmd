@@ -1,0 +1,211 @@
+---
+title: "Praca domowa 2"
+author: "Szymon Domański"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+  knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Wczytanie danych
+df <- read.csv("C:/Users/szymo/Desktop/DomanskiSzymon/StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+
+df %>% 
+  select(math.score:writing.score) %>% 
+  pivot_longer(cols = math.score:writing.score, names_to = "test.type", values_to = "score") %>% 
+  ggplot(aes(x = score)) + 
+  geom_density(color = "navy", fill = 'blue', alpha = 0.3) +
+  facet_wrap(~test.type, labeller = labeller(
+               test.type = c(
+                 "math.score" = "Math score",
+                 "reading.score" = "Reading score",
+                 "writing.score" = "Writing score"
+               ))) + 
+  labs(title = "Distributions of students’ performance across three subjects.",
+       x = "",
+       y = "Density") 
+```
+
+**Komentarz: Rozkłady dla wszystkich trzech przedmiotów mają rozkład bliski rozkładowi normalnemu o największej gęstości w okolicy wyniku 65%.**
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+
+df %>% 
+  select(gender, math.score:writing.score) %>% 
+  pivot_longer(cols = math.score:writing.score,names_to = "test_type", values_to = "result" ) %>% 
+  ggplot(aes(x = result, color = gender, fill = gender)) +
+  geom_density(alpha = 0.3) +
+  facet_wrap(~test_type, labeller = labeller(
+               test_type = c(
+                 "math.score" = "Math score",
+                 "reading.score" = "Reading score",
+                 "writing.score" = "Writing score"
+               ))) +
+  labs(title = "Students’ performance in three subjects by gender.",
+       x = "",
+       y = "Density"
+       ) +
+  theme(legend.position = "bottom") 
+
+
+```
+
+**Komentarz: Z wykresu możemy zauważyć, mężczyźni są lepsi z matematyki, natomiast kobiety są lepsze z czytania i pisania. **
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+
+df %>% 
+  select(test.preparation.course, math.score:writing.score) %>% 
+  pivot_longer(cols = math.score:writing.score,names_to = "test_type", values_to = "result" ) %>% 
+  ggplot(aes(y = result, color = test.preparation.course, fill = test.preparation.course)) +
+  geom_boxplot(alpha = 0.3) +
+  facet_wrap(~test_type, labeller = labeller(
+               test_type = c(
+                 "math.score" = "Math score",
+                 "reading.score" = "Reading score",
+                 "writing.score" = "Writing score"
+               ))) +
+  theme(legend.position = "bottom") +
+  labs(title = "Students’ performance by preparatory course completion.",
+       y = "Result",
+       fill = "Finished",
+       color = "Finished") +
+  scale_fill_manual(values = c("completed" = "#F4A3B4", "none" = "#7FDBFF"),
+                    labels = c("completed" = "Yes", "none" = 'No')) +
+  scale_color_manual(values = c("completed" = "#F4A3B4", "none" = "#7FDBFF"),
+                     labels = c("completed" = "Yes", "none" = 'No')) 
+
+
+```
+
+**Komentarz: Tak, widać to jasno z wykresów.**
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+df %>% 
+  group_by(parental.level.of.education) %>% 
+  summarize(mean_math = mean(math.score), mean_reading = mean(reading.score), 
+            mean_writing = mean(writing.score)) %>% 
+  pivot_longer(cols =mean_math:mean_writing, names_to = 'test_type', 
+               values_to = 'mean_result') %>% 
+  ggplot(aes(x = forcats::fct_reorder(parental.level.of.education, mean_result), y = mean_result)) + 
+  geom_col(color = 'navy', fill = 'lightblue', alpha = 0.5) +
+  facet_wrap(~test_type, labeller = labeller(
+               test_type = c(
+                 "mean_math" = "Mean math result",
+                 "mean_reading" = "Mean reading result",
+                 "mean_writing" = "Mean writing result"
+               ))) + 
+  scale_y_continuous(expand = c(0,0), limits = c(0,100)) +
+  labs(x = "Parental level of education", y = "Mean result") + 
+  theme(legend.position = 'bottom', legend.title = element_text(size = 15)) + 
+  scale_x_discrete(guide = guide_axis(angle = 45))
+
+
+```
+
+**Komentarz: Czym wyższe wykształcenie rodziców tym wyższe średnie wyniki uczniów. **
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+  
+df %>%
+  select(gender, parental.level.of.education, math.score) %>% 
+  pivot_longer(cols = math.score, values_to = "math.score") %>% 
+  select(gender, parental.level.of.education, math.score) %>% 
+  ggplot(aes(x = math.score, fill = gender, color = gender)) + 
+  geom_density(alpha = 0.2) +
+  facet_wrap(~parental.level.of.education) +
+  scale_fill_manual(values = c('red', 'blue')) +
+  scale_color_manual(values = c('red', 'blue')) + 
+  labs(title = "Math result depending on parental level of education and student's gender.",
+       x = "Math score",
+       y = "Density")
+
+
+
+```
+
+**Komentarz: Obie te cechy mają wpływ na wynik z matematyki, szczególnie widać to na wykresie, gdzie poziom wykształcenia rodziców to poziom magisterski.**
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+
+df %>% 
+  select(math.score:writing.score) %>% 
+  pivot_longer(cols = reading.score:writing.score, names_to = "test.type", values_to = "score") %>% 
+  ggplot(aes(x = math.score, y = score, color = score)) + 
+    scale_color_gradient(low = 'lightblue', high = 'darkblue') +
+  geom_point() +
+  facet_wrap(~test.type, labeller = labeller(
+               test.type = c(
+                 "reading.score" = "Reading score",
+                 "writing.score" = "Writing score"
+               ))) +
+  scale_y_continuous(expand = c(0,0), limits = c(-5,105)) +
+  scale_x_continuous(expand = c(0,0), limits = c(-5,105)) + 
+  labs(title = "Students’ math test performance by reading and writing test scores.",
+       x = "Math score",
+       y = "") +
+  theme(legend.position = "None")
+```
+
+**Komentarz: Istnieje wyraźna zależność między wynikami z matematyki a wynikami z czytania i pisania. Widzimy to przez  punkty układające się wzdłuź prostej y = x.**
