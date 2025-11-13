@@ -102,7 +102,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">12.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">projekt</td>
-    <td class="tg-c3ow">P1: gotowe wykresy, projekt plakatu </td>
+    <td class="tg-c3ow"><i>P1: gotowe wykresy, projekt plakatu </i></td>
     <td class="tg-c3ow">P1 (2p)</td>
   </tr>
   <tr>
