@@ -1,0 +1,200 @@
+---
+title: "Praca domowa 2"
+author: "Barbara Kozłowska"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+View(df)
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+df_long <- df %>%
+  pivot_longer(cols = c(math.score, reading.score, writing.score), 
+               names_to = "przedmiot", 
+               values_to = "wynik")
+
+wykres <- ggplot(df_long, aes(x = przedmiot, y = wynik, fill = przedmiot)) +
+  geom_violin(alpha = 0.7) + geom_boxplot(alpha = 0.7, width=0.25) + 
+  scale_x_discrete(labels = NULL) +
+  scale_fill_discrete(name = "Przedmioty:", labels=c("Matematyka","Czytanie","Pisanie")) +
+  labs(title = "Rozkłady wyników:",x=NULL, y = "Wynik")
+
+
+wykres
+
+```
+
+**Komentarz:**
+Rozkłady wyników uczniów z trzech przedmiotów rozkładają się następująco: zdecydowanie najmniejszy średni wynik jest z 
+matematyki - wynoszący około 66 - potem wynik z pisania - około 68, zaś największy średni wynik to wynik z czytania, który wyniósł około 69. Dzięki wykresom violin oraz boxplot można powiedzieć, że 50% wyników z matematyki plasuje się między 57 a 77, z czytania między 59 a 79, z pisania między 57.75 a 79 (kwantyle między pierwszym a trzecim). Jedynie niewielka ilość outlierów z wszystkich trzech przedmiotów osiągnęła wyniki poniżej 25 (kolejno 7 z matematyki, 4 z czytania i 5 z pisania, z czego 2 osoby uzyskały ponizej 25 z wszystkich tych kategorii), ale osób, które osiągnęły wynik powyżej 95 jest znacząco więcej (kolejno 24 z matematyki, 34 z czytania i 37 z pisania, z czego 11 osób uzyskały powyżej 95 ze wszystkich tych kategorii).
+
+## Zadanie 2
+
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+box_wykres <- df %>% 
+  group_by(gender) %>% 
+  pivot_longer(cols = c(math.score, reading.score, writing.score), 
+               names_to = "przedmiot", 
+               values_to = "wynik") %>% 
+  ggplot(aes(x = przedmiot, y = wynik, fill = przedmiot)) +
+  geom_boxplot() +
+  facet_wrap(~ gender) + scale_x_discrete(labels = NULL) +
+  scale_fill_discrete(name = "Przedmioty:", labels=c("Matematyka","Czytanie","Pisanie")) +
+  labs(title = "Rozkłady wyników w zależności od płci:",x=NULL, y = "Wynik")
+
+box_wykres
+
+```
+
+**Komentarz:**
+Różnice między wynikami uczniów i uczennic są znaczące - dziewczynki osiągały średnio niższe wyniki w matematyce - 63 do 68 - jednak wyniki uczennic z czytania i pisania były średnio wyższe (odpowiednio 72.5 do 63.3 z czytania oraz 72.6 do 65.5 z pisania). Ilość outlierów - 
+bardzo niskich wyników ze wszystkich przedmiotów - jest wyższa pośród dziewczynek.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+
+kurs <- df %>% 
+  group_by(test.preparation.course) %>% 
+  summarise(srednia_m= mean(math.score),
+            srednia_w = mean(writing.score),
+            srednia_r = mean(reading.score)) %>% 
+  pivot_longer(cols = c(srednia_m,srednia_w,srednia_r),
+               names_to = "typ",
+               values_to = "wynik") %>% 
+  ggplot(aes(x=test.preparation.course, y=wynik,fill=typ)) + geom_col(position = "dodge") + theme_minimal() + labs(title="Srednie wyniki egzaminu a ukończenie kursu przygotowawczego",x="Kurs przygotowawczy",y="Średni wynik") + 
+  scale_x_discrete(labels = c("ukończony","nie podszedł")) + scale_fill_discrete(name = "Przedmioty:", labels=c("Matematyka","Czytanie","Pisanie"))
+
+kurs
+
+```
+
+**Komentarz:**
+Wykorzystałam funkcję obliczania średniej, ponieważ uważam że najlepiej odzwierciedli ona wpływ ewentualnego wypełnienia kursu na wynik z danego przedmiotu. Ze wszystkich przedmiotów średni wynik uczniów, którzy ukończyli kurs przygotowawczy jest wyższy niż średni wynik tych, którzy go nie ukończyli. Osoby, które ukończyły kurs dostały średnio o : 5.7 z matematyki, 9,9 z pisania oraz 7.4 z czytania więcej punktów niż te, które go nie ukończyły.
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+wyksztalcenie <- df %>% 
+  mutate(parental.level.of.education = case_when(
+    parental.level.of.education %in% c("some high school", "high school") ~ "high school",
+    TRUE ~ parental.level.of.education
+  )) %>% 
+  mutate(parental.level.of.education = factor(
+    parental.level.of.education,
+    levels = c("high school", "some college", "associate's degree", 
+               "bachelor's degree", "master's degree"))) %>% 
+  group_by(parental.level.of.education) %>% 
+  summarise(srednia_m = mean(math.score),
+            srednia_w = mean(writing.score),
+            srednia_r = mean(reading.score)) %>% 
+  pivot_longer(cols = c(srednia_m, srednia_w, srednia_r),
+               names_to = "typ",
+               values_to = "wynik") %>% 
+  ggplot(aes(x = parental.level.of.education, y = wynik, fill = typ)) + 
+  geom_col(position = "dodge") + 
+  theme_minimal() + 
+  labs(title = "Średnie wyniki egzaminu a wykształcenie rodziców",
+       x = "Poziom wykształcenia",
+       y = "Średni wynik") +
+  scale_fill_discrete(name = "Przedmioty:", 
+                      labels = c("Matematyka", "Czytanie", "Pisanie"))
+wyksztalcenie
+
+```
+
+**Komentarz:**
+?Czy kategorie wykształcenia rodziców: high school i some high school to to samo? Połączyłam je, bo tak sądzę. Dzięki ustawieniu kolumn w kolejności od najniższego do najwyższego poziomu wykształcenia widać, że im wyższe wykształcenie rodzica tym lepsze średnie wyższe wyniki ucznia. Średnio zawsze wyniki z matematyki są najniższe w każdej grupie, poza grupą uczniów których rodzice mają najwyższe wykształcenie gdzie średnie najwyższe wyniki uczniowie osiągali z pisania, uczniowie których rodzice kwafilikują się do innych grup średnio osiągali najwyższe wyniki z czytania
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+math_score <- df %>% 
+  mutate(parental.level.of.education = case_when(
+  parental.level.of.education %in% c("some high school", "high school") ~ "high school",
+  TRUE ~ parental.level.of.education)) %>%
+  mutate(parental.level.of.education = factor(
+  parental.level.of.education,
+  levels = c("high school", "some college", "associate's degree", 
+             "bachelor's degree", "master's degree"))) %>% 
+  group_by(parental.level.of.education, gender) %>% 
+  summarise(srednia_m= mean(math.score))  %>% 
+  ggplot(aes(x=parental.level.of.education, y=srednia_m, fill=gender)) + geom_col(position = "dodge") + theme_minimal() + labs(title="Średnie wyniki egzaminu z matematyki a wykształcenie rodziców i płeć ucznia",x="Poziom wykształcenia",y="Średni wynik") + 
+  scale_fill_discrete(name = "Płeć ucznia:", labels=c("Kobieta","Mężczyzna"))
+
+math_score
+
+```
+
+**Komentarz:**
+Płeć ucznia oraz wykształcenie rodzica ma wpływ na wyniki uczniów z matematyki - bez względu na wykształcenie rodziców, średnie wyniki uczennic są niższe niż te uczniów. Średnie wyniki uczniów, których rodzice mają wyższe wykształcenie (some college i wyżej) są w przypadku chłopców poziomowo wyższe, zaś w przypadku dziewczynek pomimo wykształcenia rodzica średnie wyniki nie są proporcjonalnie wyższe. 
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+cor_p1 = cor(df$math.score, df$reading.score)
+cor_p2 = cor(df$math.score, df$writing.score)
+
+p1 <- ggplot(df, aes(x = math.score, y = reading.score)) + geom_point(alpha = 0.6, color = "blue") + geom_smooth(method = "lm", color = "red") + labs(title = paste("Matematyka a Czytanie:", round(cor_p1, 3)), x = "Matematyka", y = "Czytanie")
+
+p2 <- ggplot(df, aes(x = math.score, y = writing.score)) + geom_point(alpha = 0.6, color = "green") + geom_smooth(method = "lm", color = "red") + labs(title = paste("Matematyka a Pisanie", round(cor_p2, 3)), x = "Matematyka", y = "Pisanie")
+
+p1 + p2
+
+```
+
+**Komentarz:**
+Wyniki z matematyki są skorelowane z wynikami z czytania oraz pisania - współczynnik korelacji Pearsona wynosi kolejno 0.82 oraz 0.8, gdzie dla wyników powyżej 0.7 korelacja jest opisywana jako silna. Dodatkowo wykresy punktowe pokazują, że większość wyników koncentruje się wzdłuż linii trendu. 
