@@ -110,7 +110,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
     <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab07">R : analiza tekstu & grafy</a></td>
-    <td class="tg-c3ow">PD3 (6p)</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/issues/206">PD3 </a>(6p)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">19.11</td>
