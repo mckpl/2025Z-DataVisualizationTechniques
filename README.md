@@ -116,7 +116,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">19.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow">Nie popełniaj tych błędów!</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/blob/main/lectures/L04-dont_do_this.pdf">Nie popełniaj tych błędów!</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
