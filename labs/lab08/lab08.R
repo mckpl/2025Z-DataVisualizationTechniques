@@ -358,3 +358,4 @@ m %>% addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
 
 
 
+polska <- geojsonio::geojson_read("https://raw.githubusercontent.com/ppatrzyk/polska-geojson/master/wojewodztwa/wojewodztwa-medium.geojson", what = "sp")
