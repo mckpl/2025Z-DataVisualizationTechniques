@@ -123,7 +123,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">26.11, 27.11, 21.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: mapy II, leaflet</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab08">R: plotly, leaflet</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">03.12, 04.12, 28.11</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R: Shiny 1</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab09">R: Shiny 1</a></td>
     <td class="tg-c3ow">PD4 (6p)</td>
   </tr>
   <tr>
