@@ -56,7 +56,7 @@ fig %>%
 
 
 # ~ seaborn / ggplot2
-df_raw <- read.csv("")[,-1]
+df_raw <- read.csv("https://raw.githubusercontent.com/mini-pw/2021Z-DataVisualizationTechniques/master/labs/data/Pokemon.csv")[,-1]
 
 df <- df_raw %>%
   filter(Type.1 %in% c("Fire", "Water", "Grass", "Poison", "Electric")) %>%
@@ -355,5 +355,6 @@ m
 
 m %>% addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
                 position = "bottomright")
+
 
 
