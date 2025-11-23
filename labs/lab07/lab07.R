@@ -101,7 +101,7 @@ head(Erdos_edges)
 
 # Aby uzupełnić naszą wiedzę na temat grafów, jako że policzyliśmy 
 # stopnie wierzchołków w grafie dokanmy także sprawdzenia
-# czy sieć delfinów jest siecią rzeczywistą. - opis czym jest sieć rzeczywista w readme do lab07
+# czy sieć delfinów jest siecią rzeczywistą.
 
 ggplot(node_list, aes(degree)) +         
   geom_histogram(bins = 10) +         
@@ -221,6 +221,7 @@ ggplot(janeaustensentiment, aes(index, sentiment)) +
 # Project Gutenberg (Projekt Gutenberg) to najstarsza cyfrowa biblioteka,
 # której celem jest tworzenie i udostępnianie elektronicznych wersji książek 
 # (e-booków) i innych materiałów w domenie publicznej.
+
 
 
 
