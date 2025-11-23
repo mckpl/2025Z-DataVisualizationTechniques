@@ -11,6 +11,7 @@ world_map <- map_data("world")
 
 dane <- read.csv("Crimes_UN_data.csv")
 #View(dane)
+#Źródło: https://www.kaggle.com/datasets/zikazika/crimes-un-datacsv
 
 eur <- codelist %>%
   filter(continent == "Europe") #państwa europejskie do łatwiejszego rysowania mapy
@@ -83,4 +84,5 @@ ggplot(data = mapa_z_danymi, aes(x = long, y = lat)) +
          color = guide_legend(override.aes = list(alpha = 1, shape = 15, size = 8.9), order = 2)) +
   geom_label_repel(data= srodki, aes(x=long,y=lat,label=tekst), box.padding=0.85, label.r=0.4, segment.size=1, fontface="bold")
    
+
 
