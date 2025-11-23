@@ -1,6 +1,7 @@
 library(ggplot2)
 library(maps)
 library(dplyr)
+library(ggnewscale)
 
 
 
@@ -68,40 +69,60 @@ points_to_annotate <- bind_rows(cent_max, cent_min) %>%
     label_lat = c(50, -10))
 
   
+data_final <- data_final %>%
+  mutate(
+    legend_group = ifelse(
+      is.na(Ladder.score),
+      "No data",
+      "data"))
 
 
-ggplot(data_final, aes(x = long, y = lat, group = group, fill = Ladder.score)) +
-  geom_polygon(color = "gray", size = 0.1) +
-  scale_fill_viridis_c(
-    option = "C",         
-    limits = c(0, 10),    
-    na.value = "lightgray", 
-    name = "Happiness\nindex"
-  ) +
+
+ggplot(data_final, aes(x = long, y = lat, group = group)) +
+  
+  geom_polygon(
+    aes(fill = legend_group),
+    data = data_final %>% filter(legend_group == "No data"),
+    color = "gray", 
+    size = 0.1) +
+  scale_fill_manual(
+    values = c("No data" = "lightgray"),
+    name = "" ) +
+  new_scale_fill() + 
+  geom_polygon(
+    aes(fill = Ladder.score),
+    data = data_final %>% filter(legend_group == "data"),
+    color = "gray", 
+    size = 0.1) +
+    scale_fill_viridis_c(
+      option = "C",
+      limits = c(0, 10),
+      na.value = "transparent", 
+      name = "Happiness\nindex") +
   geom_segment(
     data = points_to_annotate,
     aes(x = long, y = lat, xend = label_long, yend = label_lat),
     inherit.aes = FALSE,
-    color = "black",        
-    linetype = "solid",     
+    color = "black",
+    linetype = "solid",
     size = 0.4) +
   geom_label(
     data = points_to_annotate,
     aes(x = label_long, y = label_lat, label = label),
     inherit.aes = FALSE,
-    fill = "white",             
-    color = "black",            
+    fill = "white",
+    color = "black",
     size = 3.5,
-    label.padding = unit(0.2, "lines"), 
+    label.padding = unit(0.2, "lines"),
     label.r = unit(0.1, "lines")) +
   geom_point(
     data = points_to_annotate,
-    aes(x = long, y = lat), 
-    inherit.aes = FALSE,    
-    color = "black",        
+    aes(x = long, y = lat),
+    inherit.aes = FALSE,
+    color = "black",
     size = 1) +
-  theme_void()  +
-  coord_fixed(ratio = 1.3)+
+  theme_void() +
+  coord_fixed(ratio = 1.3) +
   labs(
     title = "World's happiness index in 2023",
     subtitle = "index = 0 - least happy, index = 10 - happiest",
@@ -109,4 +130,6 @@ ggplot(data_final, aes(x = long, y = lat, group = group, fill = Ladder.score)) +
   theme(
     plot.title = element_text(
       size = 17,
-      face = "bold"))
+      face = "bold"),
+    legend.position = "right", 
+    legend.box = "vertical")
