@@ -155,7 +155,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">10.12, 11.12, 05.12</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">R:Shiny 2</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab10">R:Shiny 2</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
