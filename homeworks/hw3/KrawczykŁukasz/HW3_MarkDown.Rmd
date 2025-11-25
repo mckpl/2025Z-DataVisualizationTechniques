@@ -1,0 +1,70 @@
+---
+title: "Praca domowa 3"
+author: "Łukasz Krawczyk"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(gapminder)
+library(tidyverse)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(plotly)
+
+data <- gapminder %>%
+  filter(year == 2007)
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+europe <- world %>% filter(region_un == "Europe")
+
+data <- data %>%
+  mutate(country = recode(country,
+                          "Czech Republic" = "Czechia"))
+
+europe_life <- europe %>%
+  left_join(data, by = c("name" = "country"))
+
+```
+
+# Dane 
+Dane wykorzystane w pracy dotyczą oczekiwanej długości życia w krajach Europy w roku 2007. Zestaw pochodzi z pakietu gapminder, który zawiera historyczne, rzeczywiste dane demograficzne, gospodarcze i zdrowotne dla wielu państw świata. W analizie uwzględniono wyłącznie obserwacje dla roku 2007 oraz informacje o krajach europejskich. Zbiór obejmuje m.in. nazwy państw, wielkość populacji, produkt krajowy brutto per capita oraz wartość oczekiwanej długości życia, która stanowi główny wskaźnik analizowany w mapie tematycznej.
+
+# Wykres prezentujący przewidywaną długość życia w krajach europejskich:
+
+
+```{r, message=FALSE}
+
+max_val <- europe_life %>%
+  filter(lifeExp == max(lifeExp, na.rm = TRUE))
+
+min_val <- europe_life %>%
+  filter(lifeExp == min(lifeExp, na.rm = TRUE))
+
+p <- ggplot(europe_life) +
+  geom_sf(aes(fill = lifeExp), color = "gray40", size = 0.2) +
+  scale_fill_viridis_c(option = "plasma", name = "Life Expectancy") +
+  labs(
+    title = "Oczekiwana długość życia w Europie (2007)",
+    caption = "Dane: pakiet gapminder"
+  ) +
+  coord_sf(
+    xlim = c(-15, 40),
+    ylim = c(35, 70),
+    expand = FALSE
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 18, face = "bold"))
+
+ggplotly(p, tooltip = c("name", "lifeExp"))
+
+```
+
+**Komentarz: Njdłuższą przewidywaną długość życia ma Islandia (81.757), a najkrótszą Rumunia (72.746).**
