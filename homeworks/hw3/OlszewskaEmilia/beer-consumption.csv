@@ -1,0 +1,184 @@
+"flagCode","country","BeerConsumptionTotal_2022","BeerConsumptionRate_2022"
+"CN","China",34028000,23.86
+"US","United States",23761000,70.24
+"BR","Brazil",13944000,64.76
+"MX","Mexico",10072000,78.99
+"RU","Russia",8348000,57.69
+"DE","Germany",7938000,95.22
+"ES","Spain",4184000,87.97
+"GB","United Kingdom",4132000,61.2
+"VN","Vietnam",3811000,38.81
+"PL","Poland",3501000,87.84
+"ZA","South Africa",3313000,55.31
+"FR","France",2583000,39.96
+"CO","Colombia",2568000,49.51
+"IN","India",2520000,1.78
+"AU","Australia",2303000,87.97
+"CA","Canada",2191000,56.97
+"IT","Italy",2161000,36.6
+"TH","Thailand",2136000,29.79
+"AR","Argentina",1919000,42.16
+"NG","Nigeria",1814000,8.3
+"KR","South Korea",1696000,32.73
+"PH","Philippines",1628000,14.08
+"RO","Romania",1600000,81.4
+"JP","Japan",1539000,12.42
+"PE","Peru",1522000,44.69
+"ET","Ethiopia",1499000,12.15
+"CZ","Czechia",1467000,139.82
+"CL","Chile",1354000,69.08
+"KH","Cambodia",1309000,78.09
+"UA","Ukraine",1239000,31.2
+"AO","Angola",1188000,33.39
+"BE","Belgium",983000,84.34
+"AT","Austria",947000,105.95
+"TR","Turkey",889000,10.41
+"NL","Netherlands",841000,47.88
+"TW","Taiwan",757000,31.7
+"EC","Ecuador",708000,39.36
+"HU","Hungary",688000,68.98
+"KZ","Kazakhstan",680000,35.06
+"DO","Dominican Republic",646000,57.54
+"PT","Portugal",631000,61.41
+"TZ","Tanzania",523000,7.99
+"BG","Bulgaria",522000,76.9
+"SE","Sweden",521000,49.36
+"CD","DR Congo",500000,5.05
+"PY","Paraguay",478000,70.5
+"BY","Belarus",473000,49.6
+"VE","Venezuela",472000,16.66
+"CH","Switzerland",467000,53.38
+"RS","Serbia",465000,64.37
+"KE","Kenya",415000,7.69
+"SK","Slovakia",414000,73.41
+"IE","Ireland",402000,80.04
+"DK","Denmark",399000,67.82
+"UZ","Uzbekistan",396000,11.43
+"BW","Botswana",396000,150.43
+"MZ","Mozambique",393000,11.93
+"BO","Bolivia",387000,31.65
+"FI","Finland",379000,68.39
+"GR","Greece",354000,34.08
+"NO","Norway",352000,64.83
+"UG","Uganda",345000,7.3
+"GT","Guatemala",343000,19.24
+"PA","Panama",343000,77.73
+"HR","Croatia",339000,84.16
+"CI","Ivory Coast",334000,11.86
+"CG","Republic of the Congo",334000,55.94
+"NZ","New Zealand",329000,63.54
+"ID","Indonesia",323000,1.17
+"GH","Ghana",318000,9.51
+"HN","Honduras",295000,28.31
+"LT","Lithuania",294000,107.1
+"ZM","Zambia",271000,13.55
+"BF","Burkina Faso",244000,10.75
+"IL","Israel",244000,27.01
+"BI","Burundi",234000,18.16
+"BA","Bosnia and Herzegovina",232000,71.89
+"RW","Rwanda",227000,16.47
+"ZW","Zimbabwe",222000,13.61
+"TN","Tunisia",202000,16.32
+"NP","Nepal",189000,6.17
+"GA","Gabon",187000,78.29
+"CR","Costa Rica",177000,34.14
+"SI","Slovenia",176000,83.21
+"DZ","Algeria",174000,3.87
+"MY","Malaysia",167000,4.91
+"HK","Hong Kong",153000,20.48
+"UY","Uruguay",150000,43.82
+"MM","Myanmar",145000,2.68
+"MG","Madagascar",145000,4.91
+"CU","Cuba",144000,12.87
+"LV","Latvia",143000,77.37
+"SV","El Salvador",141000,22.33
+"BJ","Benin",139000,10.4
+"MN","Mongolia",131000,38.46
+"LK","Sri Lanka",117000,5.36
+"GE","Georgia",115000,30.77
+"MW","Malawi",107000,5.26
+"AL","Albania",105000,36.84
+"MD","Moldova",104000,37.63
+"MA","Morocco",101000,2.71
+"EE","Estonia",92000,69.3
+"IR","Iran",90000,1.02
+"TG","Togo",90000,10.16
+"NI","Nicaragua",90000,12.94
+"NA","Namibia",89000,34.7
+"EG","Egypt",88000,0.79
+"TD","Chad",85000,4.78
+"IQ","Iraq",79000,2.08
+"LS","Lesotho",70000,30.32
+"PG","Papua New Guinea",69000,6.84
+"LA","Laos",55000,7.36
+"AE","United Arab Emirates",53000,5.64
+"TT","Trinidad and Tobago",53000,34.34
+"AZ","Azerbaijan",51000,4.94
+"MK","North Macedonia",51000,24.52
+"LU","Luxembourg",50000,76.47
+"ME","Montenegro",45000,72.11
+"KG","Kyrgyzstan",44000,6.56
+"LB","Lebanon",39000,7.08
+"CY","Cyprus",39000,30.97
+"TJ","Tajikistan",38000,3.78
+"GY","Guyana",37000,45.14
+"MU","Mauritius",36000,27.67
+"SZ","Eswatini",36000,29.93
+"GN","Guinea",34000,2.46
+"CF","Central African Republic",33000,5.93
+"AM","Armenia",33000,11.7
+"SN","Senegal",32000,1.84
+"BH","Bahrain",27000,18.39
+"BT","Bhutan",26000,32.61
+"IS","Iceland",25000,66.01
+"ML","Mali",24000,1.07
+"HT","Haiti",24000,2.07
+"SR","Suriname",23000,36.43
+"MT","Malta",23000,42.8
+"BZ","Belize",23000,56.34
+"SS","South Sudan",20000,1.85
+"SL","Sierra Leone",19000,2.17
+"LR","Liberia",19000,3.53
+"JM","Jamaica",19000,6.55
+"GW","Guinea-Bissau",19000,8.95
+"OM","Oman",18000,3.87
+"QA","Qatar",17000,6.3
+"JO","Jordan",15000,1.31
+"FJ","Fiji",15000,15.67
+"PF","French Polynesia",14000,46.13
+"NC","New Caledonia",13000,43.87
+"MO","Macau",11000,16.4
+"CV","Cape Verde",10000,17.2
+"PK","Pakistan",8000,0.03
+"NE","Niger",8000,0.29
+"BB","Barbados",8000,27.19
+"LC","Saint Lucia",8000,44.61
+"SC","Seychelles",8000,74.3
+"TL","Timor-Leste",6000,4.17
+"SB","Solomon Islands",6000,8.97
+"SY","Syria",5000,0.21
+"WS","Samoa",4000,17.87
+"SD","Sudan",3000,0.07
+"MV","Maldives",3000,6.37
+"BS","Bahamas",3000,8.42
+"GD","Grenada",3000,26.54
+"VC","Saint Vincent and the Grenadines",3000,30.17
+"DM","Dominica",3000,42.98
+"CM","Cameroon",2000,0.06
+"TM","Turkmenistan",2000,0.25
+"ST","Sao Tome and Principe",2000,9.39
+"AG","Antigua and Barbuda",2000,25.6
+"BD","Bangladesh",1000,
+"DJ","Djibouti",1000,1.29
+"KM","Comoros",1000,0.69
+"KI","Kiribati",1000,5.07
+"FM","Micronesia",1000,10.52
+"KN","Saint Kitts and Nevis",1000,20.59
+"SO","Somalia",,0.01
+"LY","Libya",,0.01
+"KW","Kuwait",,0.05
+"GM","Gambia",,0.16
+"VU","Vanuatu",,0.89
+"MH","Marshall Islands",,14.11
+"NR","Nauru",,0.79
+,"Total",180327000,
