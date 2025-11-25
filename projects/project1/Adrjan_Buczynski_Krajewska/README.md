@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 Opis plakatu:
 
 Plakat przedstawia dane na temat struktury ulic w Polsce. Na
