@@ -132,7 +132,7 @@ W PR o nazwie `[projekt1] Nazwisko1_Nazwisko2_Nazwisko3` należy zamieścić fol
 -   plik README zawierający plakat, źródła danych, autorów.
 
 
-Przykład poprawnego folderu [`nazwisko1_nazwisko2_nazwisko3`]()
+Przykład poprawnego folderu [`nazwisko1_nazwisko2_nazwisko3`](https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/projects/project1/nazwisko1_nazwisko2_nazwisko3)
 
 PR robi jedna osoba z zespołu. Folder należy umieścić w [../projects/project1]().
 

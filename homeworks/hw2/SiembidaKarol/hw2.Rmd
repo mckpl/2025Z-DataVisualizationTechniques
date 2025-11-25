@@ -1,0 +1,150 @@
+---
+title: "Praca domowa 2"
+author: "Karol Siembida"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+df %>% 
+  pivot_longer(cols=c(math.score, reading.score, writing.score), names_to = "test_type", values_to = "score") %>% 
+  ggplot(aes(x=score, y=test_type, fill=test_type)) +
+  geom_violin()+
+  labs(title = "Rozkład wyników z egzaminów (pisanie, czytanie, matematyka)", y="Typ egzaminu", x="Wynik", color="Kurs przygotowawczy")+
+  theme(legend.position = "none")
+
+
+```
+
+**Komentarz: Można zauważyć, że najczęściej występującym wynikiem z egzaminu z matematyki jest około 65% i jest to wynik o około 10 pkt. procentowy niższy od najczęściej uzyskiwanych wyników z egzaminów z czytania i pisania. Ponadto wyniki niższe od najczęściej występujących z czytania i pisania są bardziej równmiernie rozłożone niż te niższe od najczęstszego wyniku z matematyki, natomiast odwrotnie jest w przypadku wyników wyższych od najczęściej uzyskiwanych. Bardzo niskie wyniki uzyskiwane są przede wszystkim z matematyki (wynik mniejszy niż 10%).**
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+df %>% 
+  pivot_longer(cols=c(math.score, reading.score, writing.score), names_to = "test_type", values_to = "score") %>% 
+  ggplot(aes( x=score, color=gender))+
+  geom_density()+
+  facet_wrap("test_type", nrow=1)+
+  labs(title = "Rozkład wyników z egzaminu w zależności od płci zdającego", y="Gęstość", x="Wynik", color="Płeć")
+
+```
+
+**Komentarz: W przypadku egzaminu z matematyki możemy zauważyć, że nieco lepiej niż uczennice wypadają uczniowie; osiągają oni najczęściej wynik w okolicy 70%, podczas gdy uczennice osiągają najczęściej wynik w okolicy 63%-64%, wyniki niższe od najczęściej uzyskiwanych (z egzaminu z matematyki) są częściej uzyskiwane przez uczennice niż uczniów i odwrotnie w przypadku wyników wyższych. Zupełnie odwrotnie jest w przypadku egzaminów z pisania i czytania gdzie to uczennice radzą sobie lepiej niż uczniowie uzyskując z czytania i pisania najczęściej ok. 75% a uczniowie około 65%. Można próbować wytłumaczyć to zauważając, że to kobiety częściej mają lepiej rozwinięte umięjętności humanistyczne i mężczyźni śrenio lepiej radzą sobie w naukach ścisłych.*
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+df %>% 
+  pivot_longer(cols=c(math.score, reading.score, writing.score), names_to = "test_type", values_to = "score") %>% 
+  ggplot(aes( x=score, color=test.preparation.course))+
+  geom_density()+
+  facet_wrap("test_type", nrow=1)+
+  labs(title = "Rozkład wyników z egzaminu w zależności od statusu ukończenia \nkursu przygotowawczego z podziałem na typy egzaminów", y="Gęstość", x="Wynik", color="Kurs przygotowawczy")
+  
+
+
+```
+
+**Komentarz: Można zdecydowanie stwierdzić, że kurs przygotowawczy pozwala osiągnąć lepsze wyniki w porównaniu z wynikami osób bez takiego kursu, jednakże efektywność tego kursu różni się w zależności od przedmiotu. Jeżeli chodzi o matematykę, to poprawa jest niewielka, najczęściej uzyskiwany wynik z matematyki po kursie przygotowawczym jest o około 5 pkt. procentowy wyższy od najczęsciej uzsykiwanego przez osoby bez kursu. Natomiast w przypadku wyników z czytania i pisania można zauważyć, że kurs zdecydowanie pomaga uczniom, którzy najczęściej uzyskują z tych przedmiotów nieco ponad 75% i jest to wynik zdecydowanie dużo popularniejszy od innych w tej grupie osób, natomiast uczniowie bez kursu uzyskują gorsze wyniki i rozkład jest nieco bardziej równomierny. Ponadto wyniki mniejsze od ok. 30% z czytania i pisania praktycznie nie występują w grupie osób, które ukończyły kurs, podczas gdy w drugiej grupie osób liczba takich wyników jest zdecydowanie większa od 0. Taką efektywność kursu można wytłumaczyć tym, że matematyka jest przedmiotem wymagającym myślenia i tworzenia często nietypowych rozwiązań a umiętności takie jak ortografie czy czytanie, to coś czego można się po prostu nauczyć dużo ćwicząc.**
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+df %>% 
+  mutate(mean_score = (math.score+writing.score+reading.score)/3) %>% 
+  ggplot(aes(x=mean_score, y=parental.level.of.education, fill=parental.level.of.education))+
+  geom_violin()+
+  scale_y_discrete(limits = c("some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree"))+
+  labs(title = "Rozkład średnich wyników z egzaminów w zależności od poziomu \nwykształcenia rodziców", y="Wykształcenie rodziców", x="Średni wynik z egzaminów")+
+  theme(legend.position = "none")
+
+```
+
+**Komentarz: Wyższy poziom wykształcenia rodziców ma pozytywny wpływ na średnie wyniki z egzaminów, aczkolwiek jeżeli rozważamy to jak często uczniowie osiągają słabe wyniki. To znaczy, że w przypadku dzieci lepiej wykształconych rodziców nie występują niskie wyniki (0%-30%). Jednakże i tak najczęściej najćzęściej osiągany średni wynik we wszystkich grupach jest podobny.**
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+df %>% 
+  ggplot(aes(x=math.score, y=parental.level.of.education, fill=parental.level.of.education))+
+  geom_violin()+
+  scale_y_discrete(limits = c("some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree"))+
+  facet_wrap("gender", nrow=1)+
+  labs(title = "Rozkład wyników z egz. z matematyki w zależności od wykształcenia \nrodzica z podziałem na płeć", y="Wykształcenie rodzica", x="Wynik egzaminu z matematyki")+
+  theme(legend.position = "none")
+
+```
+
+**Komentarz: Wykształcenie rodzica oraz płeć zdecydowanie wpływają na wyniki z egzaminu z matematyki. Najbardziej zauważalną różnicę widzimy wśród dzieci rodziców z tytułem magistra, gdzie uczniowie radzą sobie zdecydowanie lepiej niż uczennice, zdobywając najczęściej trochę ponad 75%, podczas gdy wśród ucznnic najczęściej jest to około 55%. W tej grupie rozkład wyników wśród uczennic jest bardziej równomierny niż wśród uczniów. Jeśli chodzi o dzieci licencjatów to rozkład wyników jest podobny zarówno wśród uczniów jak i uczennic. W przypadku pozostałych stopni wykształcenia rodziców to najczęściej uzyskiwane wyniki w grupie uczennic są wyższe niż w grupie uczniów. Aczkolwiek widzimy też, że zawsze najniższy uzyskiwany wynik wśród uczniów jest wyższy niż najniższy uzyskiwany wynik wśród uczennic (dla każdego poziomu wykształcenia rodzica).**
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+df %>% 
+  ggplot(aes(x = math.score)) +
+  geom_point(aes(y = writing.score, color = "Egzamin z pisania"), alpha = 0.25) +
+  geom_point(aes(y = reading.score, color = "Egzamin z czytania"), alpha = 0.25) +
+  scale_color_manual(values = c("Egzamin z pisania" = "red",
+                                "Egzamin z czytania" = "blue"))+
+  labs(y="Wynik z odpowiedniego egzaminu (czytanie/pisanie)", x="Wynik z egzaminu z matematyki", title="Wynik egzaminu z pisania/czytania w zależności od wyniku egzaminu z matematyki", color = NULL)
+
+
+```
+
+**Komentarz: Bardzo łatwo dostrzec, że wynik egzaminów zarówno z czytania jak i pisania jest wprost proporcjonalny do wyniku egzaminu z matematyki. Zatem: Tak, istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania.**

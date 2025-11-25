@@ -1,0 +1,249 @@
+---
+title: "Praca domowa 2"
+author: "Rozalia Wróblewska"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+library(grid)
+library(gridExtra)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+ggplot(df, aes(x = math.score)) + geom_histogram(fill = 'lightblue') +
+  labs(title = "z matematyki") -> a1
+a1 <- a1 + labs(x = NULL, y = NULL)
+ggplot(df, aes(x = writing.score)) + geom_histogram(fill = 'navy') +
+  labs(title = "z pisania") -> a2
+a2 <- a2 + labs(x = NULL, y = "liczba wystąpień")
+ggplot(df, aes(x = reading.score)) + geom_histogram(fill = 'magenta') +
+  labs(title = "z czytania") -> a3
+a3 <- a3 + labs(x = NULL, y = NULL)
+
+(a1 / a2 / a3) + plot_layout(guides = "collect") + plot_annotation(title = "Rozkład wyników z egzaminów") +
+  theme(axis.title.x = element_text(), axis.title.y = element_text()) + 
+  labs(x = "wynik [%]")
+```
+
+**Komentarz:**
+
+Rozkłady z matematyki, pisania i czytania wyglądają podobnie - są zbliżone do rozkładu normalnego, przesuniętego w prawo.
+
+Jednak w przypadku matematyki znaczna część wyników mieści się w przedziale od 60 % do 80 %, podczas gdy w pozostałych przedmiotach nie ma takiej przewagi wyników w tym przedziale. 
+
+W rozkładzie wyników z czytania można zauważyć, że dla wyniku około 70 % jest znaczny spadek liczby wystąpień.
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+df %>%  
+  ggplot(aes(x = math.score, fill = gender)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Matematyka",
+       fill = "Płeć") +
+  xlab("Średni wynik") +
+  ylab("Gęstość") +
+  scale_fill_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna")) -> p1
+
+df %>%  
+  ggplot(aes(x = writing.score, fill = gender)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Pisanie",
+       fill = "Płeć") +
+  xlab("Średni wynik") +
+  ylab("Gęstość") +
+  scale_fill_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna")) +
+  scale_x_continuous(limits = c(0,100)) -> p2
+
+df %>%  
+  ggplot(aes(x = reading.score, fill = gender)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Czytanie",
+       fill = "Płeć") +
+  xlab("Średni wynik") +
+  ylab("Gęstość") +
+  scale_fill_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna")) +
+  scale_x_continuous(limits = c(0,100)) -> p3
+
+p1 / p2 / p3 + plot_layout(guides = "collect") + plot_annotation(title = "Rozkład gęstości wyników z egzaminów z matematyki, pisania i czytania\nz podziałem na płcie")
+
+```
+
+**Komentarz:**
+
+W rozkładzie gęstości każdego z przedmiotów istnieje zauważalna różnica między wynikami uczniów i uczennic.
+
+Wyniki egzaminu z matematyki świądczą o większych umiejętnościach chłopaków niż dziewczyn w tym przedmiocie, jednak jest to niewielka różnica.
+
+Egzamin z pisania i czytania znacznie lepiej poszedł dziewczynom - osiągały one średnio o 5-10 % wyższy wynik niż chłopacy.
+
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+df %>% 
+  ggplot(aes(x = math.score, fill = test.preparation.course)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Matematyka", fill = "Kurs przygotowujący") +
+  xlab("Średni wynik") +
+  ylab("Gęstość") +
+  scale_fill_discrete(labels = c("none" = "brak", "completed" = "ukończony")) ->w1
+
+df %>% 
+  ggplot(aes(x = writing.score, fill = test.preparation.course)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Pisanie", fill = "Kurs przygotowujący") +
+  xlab("Średni wynik") +
+  ylab("Gęstość") +
+  scale_fill_discrete(labels = c("none" = "brak", "completed" = "ukończony")) +
+  scale_x_continuous(limits = c(0,100)) ->w2
+
+df %>% 
+  ggplot(aes(x = reading.score, fill = test.preparation.course)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Czytanie", fill = "Kurs przygotowujący") +
+  xlab("Średni wynik") +
+  ylab("Gęstość") +
+  scale_fill_discrete(labels = c("none" = "brak", "completed" = "ukończony")) +
+  scale_x_continuous(limits = c(0,100)) ->w3
+
+w1 / w2 / w3 + plot_layout(guides = "collect") + plot_annotation(title = "Rozkład gęstości wyników dla uczniów z i bez kursu przygotowującego")
+
+```
+
+**Komentarz:**
+
+Uczniowie, którzy ukończyli kurs przygotowyjący osiągają średnio lepsze wyniki niż uczniowie bez żadnego kursu.
+W przypadku egzaminu z matematyki różnica w rozkładzie gęstości wyników dla uczniów z ukończonym kursem i bez nie przekracza przesunięcia o 6 % na korzyść uczniów z ukończonym kursem. Dla egzaminu z pisania i czytania widoczne jest, że uczniowie z kursem wypadają dużo lepiej.
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+df %>% 
+  mutate(mean.score = (math.score + writing.score + reading.score)/3) %>% 
+  ggplot(aes(x = mean.score, y = parental.level.of.education, fill = parental.level.of.education)) +
+  geom_violin() +
+  labs(title = "Rozkład gęstości średnich wyników\nz podziałem na poziomy wykształcenia rodziców", fill = "Poziom wykształcenia rodziców") +
+  xlab("Średni wynik") +
+  ylab("Poziom wykształcenia rodziców") +
+  theme(plot.title = element_text(hjust = 0))
+
+
+```
+
+**Komentarz:**
+
+Poziom wykształcenia rodziców ma widoczny wpływ na średni wynik z egzaminów.
+
+Średnio najlepsze wyniki osiągają dzieci rodziców z dyplomem magisterskim, chociaż żadne z nich nie napisało wszystkich 3 egzaminów na 100 % - w przeciwieństwie do dzieci licencjatów i współpracowników (associate's degree).
+
+Można zauważyć, że średnie wyniki poniżej 20 % występowały tylko w grupie dzieci rodziców z wykształceniem średnim.
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+df %>% 
+  ggplot(aes(x = math.score, y = parental.level.of.education, fill = gender)) +
+  geom_boxplot() +
+  labs(title = "Rozkład wyników\nz podziałem na płcie i wykształcenie rodziców", 
+       fill = "Płeć") +
+  xlab("Średni wynik") +
+  ylab("Poziom wykształcenia rodziców") +
+  theme(plot.title = element_text(hjust = 0)) +
+  scale_fill_discrete(labels = c("female" = "Kobieta", "male" = "Mężczyzna"))
+
+
+```
+
+**Komentarz:**
+
+Można zauważyć wpływ płci na wynik z matematyki - dla każdego poziomu wykształcenia rodziców to chłopaki lepiej pisały egzamin.
+
+Dzieci magistrów w większości pisały egzamin z matematyki na ponad 60 %, jednak żadne z nich nie osiągneło maksimum punktów.
+
+Średnio najsłabsze wyniki z matematyki dostały dzieci rodziców z wykształceniem średnim.
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+df %>% 
+  ggplot(aes(y = math.score, x = writing.score)) +
+  labs(title = "pisania",
+       y = "wynik z matematyki", x = "wynik z pisania") +
+  geom_point(color = "magenta", alpha = 0.3) +
+  scale_y_continuous(limits = c(0,100)) +
+  scale_x_continuous(limits = c(0,100)) +
+  geom_smooth(method = "lm", se = TRUE)-> b1
+
+df %>% 
+  ggplot(aes(y = math.score, x = reading.score)) +
+  labs(title = "czytania",
+       y = "wynik z matematyki", x = "wynik z czytania") +
+  geom_point(color = "navy", alpha = 0.3) +
+  scale_y_continuous(limits = c(0,100)) +
+  scale_x_continuous(limits = c(0,100)) +
+  geom_smooth(method = "lm", se = TRUE)-> b2
+b2 <- b2 + labs(y = NULL)
+
+
+(b1 + b2) + plot_layout(guides = "collect") + plot_annotation(title = "Zależność między wynikami z matematyki oraz")
+```
+
+**Komentarz:**
+
+Istnieje zależność między wynikami z matematyki, i czytania, i pisania - zależność liniowa. Nikt nie napisał egzaminu z czytania lub pisania na 0 %, a zdarzało się to dla matematyki.
+
+Więcej osób osiągnęło maksymalny wynik dla pisania lub czytania niż dla matematyki.
+

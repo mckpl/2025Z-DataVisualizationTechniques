@@ -1,0 +1,189 @@
+---
+title: "Praca domowa 2"
+author: "Emilia Olszewska"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+View(df)
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+df_1 <- df%>%
+  pivot_longer(cols = c(math.score, reading.score, writing.score),names_to = "subject", values_to = "score")
+View(df_1)
+
+df_1%>%
+  ggplot(aes(x= subject,y=score))+
+  geom_boxplot(fill= 'pink2')+
+  labs(title= "Rozkład wyników uczniów z 3 przedmiotów",x = "Przedmiot", y= "Skala")+
+  scale_x_discrete(labels = c("math.score" = "Matematyka", "reading.score" = "Czytanie","writing.score" ="Pisanie"))+
+  theme_minimal()+
+  theme(legend.title = element_text( face = 'bold'),
+        axis.title = element_text(face = 'bold'),
+        plot.title = element_text(face='bold',hjust = 0.5))
+
+```
+
+**Komentarz:**
+Rozkłady wyników uczniów są bardzo zbliżone. Widoczne jest jednak, że uczniowie gorzej radzą sobie z matematyką. Egzmain ten ma najniższą medianę, oraz pojawiają się pojedyncze wartości bliskie 0 - co nie występuje odczas egzaminu z czytania i pisania. Niewielka przewaga czytania nad pisaniem decyduje, że z egzmainu z czytania uczniowie otrzymują najwyższe wyniki ( róźnica jest jednak mininlana).
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+df_1%>%
+  ggplot(aes(x = gender, y = score,fill = gender))+
+  geom_boxplot()+
+  facet_wrap(~subject,nrow=1,labeller = as_labeller(c(
+    "math.score" = "Matematyka",
+    "reading.score" = "Czytanie",
+    "writing.score" = "Pisanie")))+
+  scale_fill_manual(values = c("pink1", "skyblue"), labels = c("Kobiety","Mężczyźni"))+
+  labs(title= "Rozkład wyników uczniów i uczennic",x = "Płeć", y= "Wyniki",fill="Płeć")+
+  scale_x_discrete(labels = c("female" = "Kobiety", "male" = "Mężczyźni"))+
+  theme_minimal()+
+  theme( axis.title = element_text(face = 'bold'),
+        plot.title = element_text(face='bold',hjust = 0.5))
+
+```
+
+**Komentarz:**
+Tak istnieje zauważalna różnica w wynikach między uczennicami i uczniami. Mężczyźni radzą sobie lepiej z matematyką. Kobiety natomiast dużo lepiej zdają egzaminy z czytania i pisania( większa mediana). Jednak podczas wszytskich egzmainów widać, że u kobiet występuje większa ilość punktów odstających, co może świadczyć o większym zróżnicowaniu wyników.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+df_1%>%
+  ggplot(aes(x = test.preparation.course, y = score, fill = test.preparation.course))+
+  geom_boxplot()+
+  facet_wrap(~subject,nrow=1,labeller = as_labeller(c(
+    "math.score" = "Matematyka",
+    "reading.score" = "Czytanie",
+    "writing.score" = "Pisanie")))+
+  scale_fill_manual(values = c('lightpink','deeppink'),labels =c("ukońcozny","nie ukończony"))+
+  labs(title= "Rozkład wyników na podstawie ukończenia kursu przygotowawczego",x = "Kurs przygotowawczy", y= "Wyniki",fill = 'Kurs przygotowawczy')+
+  scale_x_discrete(labels = c("completed" = "ukończony", "none" = "nie ukończony"))+
+  theme_minimal()+
+  theme( axis.title = element_text(face = 'bold'),
+       plot.title = element_text(face='bold'),
+       axis.text.x = element_text(size=7))
+```
+
+**Komentarz:**
+Na podstawie wykresu, można stwierdzić, że uczniowie którzy ukończyli kurs osiągają wyższe wyniki ze wszystkich 3 przedmiotów. Widoczny jest także minimalny poziom wartości odstjących w porównaniu do grupy uczniów, która nie brała udziału w kursie. 
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+df_4<-df_1%>%
+  group_by(parental.level.of.education) %>%
+  summarise(mean_score = mean(score, na.rm = TRUE), .groups="drop")
+
+df_4%>%
+  ggplot(aes(x =reorder(parental.level.of.education,mean_score), y = mean_score))+
+  geom_col(fill = 'pink2')+
+  labs(title= "Średnie wyniki uczniów z 3 przedmiotów \n na podstawie wykształcenia rodziców",x = "Wykształcenie", y= "Wyniki")+
+  theme_minimal()+
+  theme( axis.title = element_text(face = 'bold'),
+       plot.title = element_text(face='bold',hjust = 0.5))
+
+```
+
+**Komentarz:**
+Na podstawie wykresu, można stwierdzić, że wykształcenie rodziców ma wpływ na wyniki uczniów. Najlepiej radzą sobie dzieci, których rodzice mają wykształcenie wyższe ( tytuł licencjata lub magistra). Wraz ze słabszymi wynikami widzimy spadek poziomu wykształcenia rodziców.  Jednak zaskoczeniem jest fakt, że najgorzej radzą sobie dzieci rodziców z wykształceniem średnim (oczekiwana grupa: nieskończone liceum)
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+df%>%
+  ggplot(aes(x =reorder(parental.level.of.education,math.score), y = math.score,fill = gender))+
+  geom_boxplot()+
+  labs(title= "Rozkład wyników na podstawie wykształcenia rodziców oraz płci",x = "Wykształcenie", y= "Wyniki")+
+  scale_fill_manual(values = c('pink','skyblue'))+
+  theme_minimal()+
+  theme(axis.title = element_text(face = 'bold'),
+       plot.title = element_text(face='bold'),
+       legend.title = element_text(face = 'bold'),
+       axis.text.x = element_text(size=8))
+
+```
+
+**Komentarz:**
+Na podstawie wykresu można stwierdzić, że zarówno płeć ucznia, jak i wykształcenie rodziców mają wpływ na wyniki z matematyki. W zadaniu 4 przeanalizowany został wpływ wykształcenia rodziców. Na powyższym wykresie widać podobną zależność. Dodatkową informacją jest fakt, że dzieci rodziców z tytułem magistra nie osiągają wartości maksymalnych na testach. Jeżeli chodzi o płeć, widoczna jest bardzo dominacja płci męskiej. Osiągają oni lepsze wyniki w każdej grupie. Wyniki układają się tak samo jak rozkład wykształcenia rodziców z zadania 4. Ciekawsza obserwacja jest jedna u kobiet. Mediana ich wyników jest do siebie bardzo zbliżona. 
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+df_6%>%
+ggplot( aes(x = score, y = math.score, color = subject)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE,color="grey", linewidth = 1) +
+  facet_wrap(~subject, nrow = 1, labeller = as_labeller(c(
+    "reading.score" = "Matematyka vs Czytanie",
+    "writing.score" = "Matematyka vs Pisanie"
+  ))) +
+  scale_color_manual(values = c("reading.score" = "skyblue", "writing.score" = "pink1")) +
+  labs(
+    title = "Zależność między wynikami z matematyki, czytania i pisania",
+    x = "Wynik z czytania / pisania",
+    y = "Wynik z matematyki",
+    color = "Przedmiot"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    legend.position = "none"
+  )
+
+
+```
+
+**Komentarz:**
+Na podstawie wykresu można stwierdzić, że istnieje silna zależność między wynikami uczniów z matematyki a wynikami z czytania i pisania.Na obu wykresach punkty rozłożone są wzdłóż linii trendu - oznacza to, że uczniowie którzy uzyskują wysokie wyniki z czytania i pisania otrzymują także wysokie wyniki z matematyki.  

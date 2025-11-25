@@ -1,0 +1,204 @@
+---
+title: "Praca domowa 2"
+author: "Bartosz Kitewski"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+subject.labs <- c("Matematyka", "Czytanie", "Pisanie")
+names(subject.labs) <- c("math.score", "reading.score", "writing.score")
+
+df2 <- df %>% tidyr::pivot_longer(
+  cols = c("math.score", "reading.score", "writing.score"),
+  names_to = "subject",
+  values_to = "score"
+)
+df2 %>% ggplot(aes(x=score, fill = subject)) +
+  geom_histogram() +
+  scale_fill_manual(values = c("math.score" = "green", "writing.score" = "red", "reading.score" = "blue")) +
+  facet_wrap(~ subject, ncol=3, labeller = labeller(subject=subject.labs))+
+  labs(
+    title = "Rozkłady wyników z egzaminów z matematyki, czytania i pisania",
+    x = "Ilość zdobytych punktów",
+    y = "Ilość uczniów"
+  ) + theme_light()  +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(hjust=0.5),
+    strip.text.x = element_text(color = "black", size = 9)
+  )
+
+
+```
+
+**Komentarz:** Każdy z rozkładów jest podobny. Wykres gęstości matematyki jest lekko przesunięty na lewo, czyli wyniki z matematyki były gorsze od wyników z pisania i czytania. Najwięcej uczniow miało wynik pomiędzy 67.5 a 75 pubktów. Tylko nieliczni mieli mniej niż 25 punktów.
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+df2 %>% ggplot(aes(x=score, fill=gender, colour = gender)) +
+  scale_fill_discrete(palette = c("red", "blue"),name = "Płeć", labels = c("Kobieta", "Mężczyzna"))+
+  scale_color_discrete(palette = c("red", "blue"),name = "Płeć", labels = c("Kobieta", "Mężczyzna")) +
+  geom_density(alpha = 0.5, adjust=1) +
+  facet_wrap(~subject,ncol=1, labeller = labeller(subject = subject.labs)) +
+  labs(
+    title = "Wyniki egzaminów wg płci",
+    x = "Ilość punktów",
+    y = "Gęstość"
+  ) +
+  theme_light()+
+  theme(
+    plot.title = element_text(hjust=0.5, size = 16, face = "bold"),
+    strip.text.x = element_text(color = "black", size = 9)
+  )
+
+```
+
+**Komentarz:** Z wykresu widać, że matematyka poszła lepiej uczniom niż uczennicom, Chociaż maksymalny wynik z matematyki miało porównywalnie wiele uczniów i uczennic. Natomiast egzamin z czytania i pisania poszedł zdecydowanie lepiej uczennicom.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+
+
+df2 %>% ggplot(aes(x=score, fill = test.preparation.course, colour = test.preparation.course)) +
+  geom_density(alpha=0.5) +
+  scale_fill_discrete(palette = c("darkviolet", "darkorange"),name = stringr::str_wrap("Czy uczeń odbył kurs przygotowawczy?",                               width = 20), labels = c("Tak", "Nie"))+
+  scale_color_discrete(palette = c("darkviolet", "darkorange"),name = stringr::str_wrap("Czy uczeń odbył kurs przygotowawczy?",                               width = 20),labels = c("Tak", "Nie")) +
+  facet_wrap(~subject, ncol = 1, labeller = labeller(subject = subject.labs)) +
+  labs(
+    title = "Wyniki z egzaminu w zależności od odbycia kursu przygotowawczego",
+    x = "Ilość punktów",
+    y = "Gęstość"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.key.justification = "centre"
+  ) + theme_minimal()
+
+```
+
+**Komentarz:** Z wykresów można zauważyć, że uczniowie, którzy ukończyli kurs przygotowawczy, mają lepsze wynik od uczniów, którzy go nie ukończyli. Najmniejsza różnica między wynikami osób 'z kursem' i 'bez kursu' jest z egzaminu z matematyki. 
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+lvl.edu.labs <- c("Nieskończone liceum", "Liceum", "Nieskończone studia", "Szkoła policealna", "Licencjat", "Tytuł magistra")
+names(lvl.edu.labs) <- c("some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree")
+
+df2 %>% ggplot(aes(x=factor(parental.level.of.education), y=score)) +
+  geom_boxplot(color = "navyblue", fill="lightblue") +
+  scale_x_discrete(labels = lvl.edu.labs, guide = guide_axis(n.dodge=2)) +
+  labs(
+    title = "Rozkład wyników egzaminu w zależności od wykształcenia rodziców",
+    x = "Wykształcenie rodziców",
+    y = "Ilość punktów"
+  ) + theme_bw()+ theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+```
+
+**Komentarz:** Z wykresu można zauważyć,że dzieci z rodzicami z tytułem magistra osiągają średnio najlepsze wyniki z medianą ok. 74 punkty. Następnie najlepsze wyniki mają kolejno uczniowie z rodzicami z licencjatem, po skończeniu szkoły policealnej(Associate's degree), z nieskończonymi studiami oraz nieskończonym liceum. Najgorsze wyniki mają dzieci osób, które skończyły liceum. 
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+df2 %>% filter(subject == "math.score") %>% 
+  ggplot(aes(x=score, y =factor(parental.level.of.education), color=gender)) +
+  geom_boxplot() +
+  scale_color_discrete(palette = c("red", "blue"),name = "Płeć", labels = c("Kobieta", "Mężczyzna")) +
+  scale_y_discrete(labels = lvl.edu.labs) +
+  labs(
+    title = stringr::str_wrap("Wyniki egzaminu z matematyki w zależności od wykształcenia rodziców oraz płci", width = 60),
+    x = "Ilość punktów",
+    y = "Wykształcenie rodzica"
+  ) + theme(
+    plot.title = element_text(hjust=0.5, )
+  ) + theme_light()
+  
+
+```
+
+**Komentarz:** Z wykresu widać, że najlepsze wyniki mają mężczyźni z rodzicami, którzy mają tytuł magistra. Można zauważyć, że u mężczyzn istnieje zależność między wynikami z mateamtyki a wykształceniem rodziców. Najlepsze wyniki mają mężczyźni z rodzicami z tytułem magistra oraz po szkole policealnej, natomiast najgorsze - z rodzicami po liceum lub rodzicami, którzy nieskończyli liceum. U dziewczyn, w przeciwieństwie do chłopaków, są mniejsze różnice porównując wykształcenie rodziców. Chociaż nadal można dostrzec pewne różnice, np. średnio najlepsze wyniki mają uczennice z rodzicami z licencjatem. Następnie porównując po płci można stwierdzić, że chłopacy osiągają zdecydowanie lepsze wyniki z matematyki niż dziewczyny. Szczególnie duża różnica jest z rodzicami magistrami.
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+rw.labs <- c("W zależności od czytania", "W zależności od pisania")
+names(rw.labs) <- c("reading.score", "writing.score")
+
+df %>% tidyr::pivot_longer(
+  cols = c("reading.score", "writing.score"),
+  names_to = "rw",
+  values_to = "rw.score"
+) %>% ggplot(aes(x=math.score, y=rw.score)) +
+  geom_point(color = "blue") +
+  facet_wrap(~rw, labeller = labeller(rw = rw.labs)) +
+  labs(
+    title = "Zależność wyników z matematyki od wyników z czytania i pisania",
+    x = "Wynik z matematyki",
+    y = ""
+  ) + theme(
+    strip.background = element_rect(fill='lightblue'),
+    plot.title = element_text(hjust=0.5)
+  )
+
+```
+
+**Komentarz:** W obu przypadkach można dostrzec pewną zależność, która jest bliska zależności liniowej. Z wykresu dostrzegam, że czytanie jest bardziej skolerowwane z matematyką niż pisanie z matematyką, ponieważ wykres zależności czytania od matematyki jest bardziej skondensowany. Jednak nie można tego powiedzieć z pewnością.

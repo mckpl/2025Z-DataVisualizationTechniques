@@ -1,0 +1,207 @@
+---
+title: "Praca domowa 2"
+author: "Marek Skok"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+  |-|-|
+  | **gender**| płeć|
+  |**race.ethnicity**| pochodzenie etniczne |
+  |**parental.level.of.education**| wykształcenie rodziców |
+  |**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+  |**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+  |**math.score**| wynik egzaminu z matematyki |
+  |**reading.score** | wynik egzaminu z czytania |
+  |**writing.score** | wynik egzaminu z pisania|
+  
+  
+  
+  ## Zadanie 1
+  
+  Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+  
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+math1_plot <- df %>% 
+  ggplot(aes(x = math.score)) +
+  geom_histogram(fill = "steelblue", bins = 30, color = "black") +
+  labs(x = "Math Score", y = "Count") +
+  theme_minimal()
+
+reading1_plot <- df %>% 
+  ggplot(aes(x = reading.score)) +
+  geom_histogram(fill = "forestgreen", bins = 30, color = "black") +
+  labs(x = "Reading Score", y = "Count") +
+  theme_minimal()
+
+writing1_plot <- df %>% 
+  ggplot(aes(x = writing.score)) +
+  geom_histogram(fill = "darkred", bins = 30, color = "black") +
+  labs(x = "Writing Score", y = "Count") +
+  theme_minimal()
+
+math1_plot / reading1_plot / writing1_plot
+```
+
+**Komentarz: Wykresy wszystkich trzech przedmiotów są bardzo zbliżone i lekko lewoskośne.**
+  
+  ## Zadanie 2
+  
+  Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+  
+  
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+math2_plot <- df %>% 
+  ggplot(aes(x = math.score, y = gender)) +
+  geom_boxplot(fill = "steelblue") +
+  labs(x = "Math Score", y = "Gender") +
+  theme_minimal()
+
+reading2_plot <- df %>% 
+  ggplot(aes(x = reading.score, y = gender)) +
+  geom_boxplot(fill = "forestgreen") +
+  labs(x = "Reading Score", y = "Gender") +
+  theme_minimal()
+
+writing2_plot <- df %>% 
+  ggplot(aes(x = writing.score, y = gender)) +
+  geom_boxplot(fill = "darkred") +
+  labs(x = "Writing Score", y = "Gender") +
+  theme_minimal()
+
+math2_plot / reading2_plot / writing2_plot
+```
+
+**Komentarz: Mężczyźni są odrobinę lepsi w matematyce, a kobiety są zauważalnie lepsze w pozostałcyh kategoriach.**
+  
+  ## Zadanie 3
+  
+  Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+  
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df$test.preparation.course = ifelse(df$test.preparation.course == "completed", "yes", "no")
+
+math3_plot <- df %>% 
+  ggplot(aes(x = math.score, y = test.preparation.course)) +
+  geom_boxplot(fill = "steelblue") +
+  labs(x = "Math Score", y = "") +
+  theme_minimal()
+
+reading3_plot <- df %>% 
+  ggplot(aes(x = reading.score, y = test.preparation.course)) +
+  geom_boxplot(fill = "forestgreen") +
+  labs(x = "Reading Score", y = "Student Completed Preparation Test") +
+  theme_minimal()
+
+writing3_plot <- df %>% 
+  ggplot(aes(x = writing.score, y = test.preparation.course)) +
+  geom_boxplot(fill = "darkred") +
+  labs(x = "Writing Score", y = "") +
+  theme_minimal()
+
+math3_plot / reading3_plot / writing3_plot
+```
+
+**Komentarz: Tak, we wszystkich kategoriach uczniowie po testach przygotowawczych osiągali średnio wyższe wyniki.**
+  
+  ## Zadanie 4
+  
+  Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+  
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  mutate(avg.score = rowMeans(cbind(math.score, reading.score, writing.score))) %>% 
+  ggplot(aes(y = parental.level.of.education, x = avg.score)) +
+  geom_boxplot(fill = "steelblue") +
+  labs(x = "Average Score", y = "Parental Education") +
+  theme_minimal()
+
+```
+
+**Komentarz: Możemy zauważyć, że im wyższy jest poziom wykształcenia rodziców tym wyższe średnie wyniki uczniów.**
+  
+  ## Zadanie 5
+  
+  Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+  
+  
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+math5_plot <- df %>% 
+  ggplot(aes(x = math.score, y = gender)) +
+  geom_boxplot(fill = "steelblue") +
+  labs(x = "", y ="Gender") +
+  theme_minimal() +
+  theme(axis.text.x = element_blank())
+
+
+math5.2_plot <- df %>% 
+  ggplot(aes(x = math.score, y = parental.level.of.education)) +
+  geom_boxplot(fill = "steelblue") +
+  labs(y = "Parental Education", x = "Math Score") +
+  theme_minimal()
+
+math5_plot / math5.2_plot
+```
+
+**Komentarz: Tak, płeć i wykształcenie rodziców wpływają na wyniki w matematyce. Możemy zauważyć to najlepiej u uczniów z rodzicami o wykształceniu wyższym.**
+  
+  ## Zadanie 6
+  Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+  
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+z6.1 <- df %>% 
+  ggplot(aes(x = reading.score, y = math.score)) +
+  geom_point(color = "forestgreen", alpha = 0.6) +
+  labs(y = "Math Score", x = "Reading Score") +
+  theme_minimal()
+
+z6.2 <-  df%>% 
+  ggplot(aes(x = writing.score, y = math.score)) +
+  geom_point(color = "darkred", alpha = 0.6) +
+  labs(y = "", x = "Writing Score") +
+  theme_minimal() +
+  theme(axis.text.y = element_blank())
+
+z6.1 + z6.2
+```
+
+**Komentarz: Istnieje, im uczeń jest lepszy z matematyki tym lepszy jest z pisania i czytania.**
+  

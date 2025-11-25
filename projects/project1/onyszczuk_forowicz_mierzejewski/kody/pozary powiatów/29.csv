@@ -1,0 +1,2517 @@
+TERYT,Województwo,Powiat,Gmina,OGÓŁEM,Podpowierzchniowy,Pokrywy gleby,Całkowity drzew,Pojedyncze drzewo
+020101,dolnośląskie,bolesławiecki,Bolesławiec,0,0,0,0,0
+020102,dolnośląskie,bolesławiecki,Bolesławiec,20,1,18,1,0
+020103,dolnośląskie,bolesławiecki,Gromadka,16,0,15,0,1
+020104,dolnośląskie,bolesławiecki,Nowogrodziec,14,3,10,0,1
+020105,dolnośląskie,bolesławiecki,Osiecznica,9,2,7,0,0
+020106,dolnośląskie,bolesławiecki,Warta Bolesławiecka,2,0,2,0,0
+020201,dolnośląskie,dzierżoniowski,Bielawa,1,0,1,0,0
+020202,dolnośląskie,dzierżoniowski,Dzierżoniów,0,0,0,0,0
+020203,dolnośląskie,dzierżoniowski,Pieszyce,2,0,2,0,0
+020204,dolnośląskie,dzierżoniowski,Piława Górna,0,0,0,0,0
+020205,dolnośląskie,dzierżoniowski,Dzierżoniów,4,1,3,0,0
+020206,dolnośląskie,dzierżoniowski,Łagiewniki,9,4,5,0,0
+020207,dolnośląskie,dzierżoniowski,Niemcza,0,0,0,0,0
+020301,dolnośląskie,głogowski,Głogów,0,0,0,0,0
+020302,dolnośląskie,głogowski,Głogów,1,0,1,0,0
+020303,dolnośląskie,głogowski,Jerzmanowa,7,1,6,0,0
+020304,dolnośląskie,głogowski,Kotla,1,0,1,0,0
+020305,dolnośląskie,głogowski,Pęcław,0,0,0,0,0
+020306,dolnośląskie,głogowski,Żukowice,1,0,1,0,0
+020401,dolnośląskie,górowski,Góra,1,0,1,0,0
+020402,dolnośląskie,górowski,Jemielno,4,0,4,0,0
+020403,dolnośląskie,górowski,Niechlów,1,0,1,0,0
+020404,dolnośląskie,górowski,Wąsosz,3,0,1,1,1
+020501,dolnośląskie,jaworski,Jawor,1,0,1,0,0
+020502,dolnośląskie,jaworski,Bolków,6,0,4,1,1
+020503,dolnośląskie,jaworski,Męcinka,0,0,0,0,0
+020504,dolnośląskie,jaworski,Mściwojów,0,0,0,0,0
+020505,dolnośląskie,jaworski,Paszowice,1,0,0,1,0
+020506,dolnośląskie,jaworski,Wądroże Wielkie,0,0,0,0,0
+020601,dolnośląskie,karkonoski,Karpacz,2,1,1,0,0
+020602,dolnośląskie,karkonoski,Kowary,0,0,0,0,0
+020603,dolnośląskie,karkonoski,Piechowice,1,0,1,0,0
+020604,dolnośląskie,karkonoski,Szklarska Poręba,5,3,2,0,0
+020605,dolnośląskie,karkonoski,Janowice Wielkie,3,1,2,0,0
+020606,dolnośląskie,karkonoski,Jeżów Sudecki,1,1,0,0,0
+020607,dolnośląskie,karkonoski,Mysłakowice,4,0,4,0,0
+020608,dolnośląskie,karkonoski,Podgórzyn,4,0,3,0,1
+020609,dolnośląskie,karkonoski,Stara Kamienica,1,0,1,0,0
+020701,dolnośląskie,kamiennogórski,Kamienna Góra,1,1,0,0,0
+020702,dolnośląskie,kamiennogórski,Kamienna Góra,1,0,1,0,0
+020703,dolnośląskie,kamiennogórski,Lubawka,0,0,0,0,0
+020704,dolnośląskie,kamiennogórski,Marciszów,2,0,0,0,2
+020801,dolnośląskie,kłodzki,Duszniki-Zdrój,1,0,1,0,0
+020802,dolnośląskie,kłodzki,Kłodzko,0,0,0,0,0
+020803,dolnośląskie,kłodzki,Kudowa-Zdrój,2,0,2,0,0
+020804,dolnośląskie,kłodzki,Nowa Ruda,2,1,1,0,0
+020805,dolnośląskie,kłodzki,Polanica-Zdrój,5,1,4,0,0
+020806,dolnośląskie,kłodzki,Bystrzyca Kłodzka,0,0,0,0,0
+020807,dolnośląskie,kłodzki,Kłodzko,2,0,2,0,0
+020808,dolnośląskie,kłodzki,Lądek-Zdrój,2,1,0,0,1
+020809,dolnośląskie,kłodzki,Lewin Kłodzki,1,0,1,0,0
+020810,dolnośląskie,kłodzki,Międzylesie,0,0,0,0,0
+020811,dolnośląskie,kłodzki,Nowa Ruda,6,3,3,0,0
+020812,dolnośląskie,kłodzki,Radków,2,0,2,0,0
+020813,dolnośląskie,kłodzki,Stronie Śląskie,0,0,0,0,0
+020814,dolnośląskie,kłodzki,Szczytna,3,0,2,1,0
+020901,dolnośląskie,legnicki,Chojnów,0,0,0,0,0
+020902,dolnośląskie,legnicki,Chojnów,12,1,10,0,1
+020903,dolnośląskie,legnicki,Krotoszyce,1,0,1,0,0
+020904,dolnośląskie,legnicki,Kunice,0,0,0,0,0
+020905,dolnośląskie,legnicki,Legnickie Pole,0,0,0,0,0
+020906,dolnośląskie,legnicki,Miłkowice,2,0,1,0,1
+020907,dolnośląskie,legnicki,Prochowice,1,0,1,0,0
+020908,dolnośląskie,legnicki,Ruja,0,0,0,0,0
+021001,dolnośląskie,lubański,Lubań,0,0,0,0,0
+021002,dolnośląskie,lubański,Świeradów-Zdrój,0,0,0,0,0
+021003,dolnośląskie,lubański,Leśna,3,0,1,0,2
+021004,dolnośląskie,lubański,Lubań,2,0,1,0,1
+021005,dolnośląskie,lubański,Olszyna,2,0,1,0,1
+021006,dolnośląskie,lubański,Platerówka,1,0,1,0,0
+021007,dolnośląskie,lubański,Siekierczyn,1,1,0,0,0
+021101,dolnośląskie,lubiński,Lubin,1,0,1,0,0
+021102,dolnośląskie,lubiński,Lubin,23,1,19,0,3
+021103,dolnośląskie,lubiński,Rudna,7,0,5,0,2
+021104,dolnośląskie,lubiński,Ścinawa,0,0,0,0,0
+021201,dolnośląskie,lwówecki,Gryfów Śląski,1,0,1,0,0
+021202,dolnośląskie,lwówecki,Lubomierz,0,0,0,0,0
+021203,dolnośląskie,lwówecki,Lwówek Śląski,3,0,2,1,0
+021204,dolnośląskie,lwówecki,Mirsk,1,0,1,0,0
+021205,dolnośląskie,lwówecki,Wleń,0,0,0,0,0
+021301,dolnośląskie,milicki,Cieszków,3,0,3,0,0
+021302,dolnośląskie,milicki,Krośnice,4,0,4,0,0
+021303,dolnośląskie,milicki,Milicz,10,0,10,0,0
+021401,dolnośląskie,oleśnicki,Oleśnica,0,0,0,0,0
+021402,dolnośląskie,oleśnicki,Bierutów,0,0,0,0,0
+021403,dolnośląskie,oleśnicki,Dobroszyce,1,0,1,0,0
+021404,dolnośląskie,oleśnicki,Dziadowa Kłoda,2,0,1,1,0
+021405,dolnośląskie,oleśnicki,Międzybórz,7,0,5,2,0
+021406,dolnośląskie,oleśnicki,Oleśnica,1,0,1,0,0
+021407,dolnośląskie,oleśnicki,Syców,3,0,3,0,0
+021408,dolnośląskie,oleśnicki,Twardogóra,2,0,2,0,0
+021501,dolnośląskie,oławski,Oława,0,0,0,0,0
+021502,dolnośląskie,oławski,Domaniów,0,0,0,0,0
+021503,dolnośląskie,oławski,Jelcz-Laskowice,2,1,1,0,0
+021504,dolnośląskie,oławski,Oława,0,0,0,0,0
+021601,dolnośląskie,polkowicki,Chocianów,8,1,7,0,0
+021602,dolnośląskie,polkowicki,Gaworzyce,1,0,1,0,0
+021603,dolnośląskie,polkowicki,Grębocice,0,0,0,0,0
+021604,dolnośląskie,polkowicki,Polkowice,7,0,7,0,0
+021605,dolnośląskie,polkowicki,Przemków,2,0,2,0,0
+021606,dolnośląskie,polkowicki,Radwanice,1,0,1,0,0
+021701,dolnośląskie,strzeliński,Borów,1,0,1,0,0
+021702,dolnośląskie,strzeliński,Kondratowice,5,2,2,1,0
+021703,dolnośląskie,strzeliński,Przeworno,0,0,0,0,0
+021704,dolnośląskie,strzeliński,Strzelin,1,0,1,0,0
+021705,dolnośląskie,strzeliński,Wiązów,0,0,0,0,0
+021801,dolnośląskie,średzki,Kostomłoty,0,0,0,0,0
+021802,dolnośląskie,średzki,Malczyce,0,0,0,0,0
+021803,dolnośląskie,średzki,Miękinia,0,0,0,0,0
+021804,dolnośląskie,średzki,Środa Śląska,1,0,1,0,0
+021805,dolnośląskie,średzki,Udanin,0,0,0,0,0
+021901,dolnośląskie,świdnicki,Świdnica,0,0,0,0,0
+021902,dolnośląskie,świdnicki,Świebodzice,6,3,3,0,0
+021903,dolnośląskie,świdnicki,Dobromierz,0,0,0,0,0
+021904,dolnośląskie,świdnicki,Jaworzyna Śląska,0,0,0,0,0
+021905,dolnośląskie,świdnicki,Marcinowice,1,0,1,0,0
+021906,dolnośląskie,świdnicki,Strzegom,0,0,0,0,0
+021907,dolnośląskie,świdnicki,Świdnica,1,0,1,0,0
+021908,dolnośląskie,świdnicki,Żarów,0,0,0,0,0
+022001,dolnośląskie,trzebnicki,Oborniki Śląskie,12,0,12,0,0
+022002,dolnośląskie,trzebnicki,Prusice,0,0,0,0,0
+022003,dolnośląskie,trzebnicki,Trzebnica,1,0,1,0,0
+022004,dolnośląskie,trzebnicki,Wisznia Mała,1,0,1,0,0
+022005,dolnośląskie,trzebnicki,Zawonia,2,0,2,0,0
+022006,dolnośląskie,trzebnicki,Żmigród,1,0,1,0,0
+022101,dolnośląskie,wałbrzyski,Boguszów-Gorce,6,3,3,0,0
+022102,dolnośląskie,wałbrzyski,Jedlina-Zdrój,1,0,1,0,0
+022103,dolnośląskie,wałbrzyski,Szczawno-Zdrój,0,0,0,0,0
+022104,dolnośląskie,wałbrzyski,Czarny Bór,0,0,0,0,0
+022105,dolnośląskie,wałbrzyski,Głuszyca,2,0,2,0,0
+022106,dolnośląskie,wałbrzyski,Mieroszów,8,3,3,1,1
+022107,dolnośląskie,wałbrzyski,Stare Bogaczowice,0,0,0,0,0
+022108,dolnośląskie,wałbrzyski,Walim,1,0,1,0,0
+022201,dolnośląskie,wołowski,Brzeg Dolny,2,0,2,0,0
+022202,dolnośląskie,wołowski,Wińsko,2,0,2,0,0
+022203,dolnośląskie,wołowski,Wołów,5,0,4,1,0
+022301,dolnośląskie,wrocławski,Czernica,2,0,2,0,0
+022302,dolnośląskie,wrocławski,Długołęka,0,0,0,0,0
+022303,dolnośląskie,wrocławski,Jordanów Śląski,0,0,0,0,0
+022304,dolnośląskie,wrocławski,Kąty Wrocławskie,0,0,0,0,0
+022305,dolnośląskie,wrocławski,Kobierzyce,0,0,0,0,0
+022306,dolnośląskie,wrocławski,Mietków,0,0,0,0,0
+022307,dolnośląskie,wrocławski,Sobótka,1,0,1,0,0
+022308,dolnośląskie,wrocławski,Siechnice,0,0,0,0,0
+022309,dolnośląskie,wrocławski,Żórawina,0,0,0,0,0
+022401,dolnośląskie,ząbkowicki,Bardo,0,0,0,0,0
+022402,dolnośląskie,ząbkowicki,Ciepłowody,0,0,0,0,0
+022403,dolnośląskie,ząbkowicki,Kamieniec Ząbkowicki,1,0,0,0,1
+022404,dolnośląskie,ząbkowicki,Stoszowice,1,0,1,0,0
+022405,dolnośląskie,ząbkowicki,Ząbkowice Śląskie,0,0,0,0,0
+022406,dolnośląskie,ząbkowicki,Ziębice,0,0,0,0,0
+022407,dolnośląskie,ząbkowicki,Złoty Stok,0,0,0,0,0
+022501,dolnośląskie,zgorzelecki,Zawidów,0,0,0,0,0
+022502,dolnośląskie,zgorzelecki,Zgorzelec,0,0,0,0,0
+022503,dolnośląskie,zgorzelecki,Bogatynia,5,1,3,0,1
+022504,dolnośląskie,zgorzelecki,Pieńsk,1,0,1,0,0
+022505,dolnośląskie,zgorzelecki,Sulików,0,0,0,0,0
+022506,dolnośląskie,zgorzelecki,Węgliniec,24,3,18,3,0
+022507,dolnośląskie,zgorzelecki,Zgorzelec,1,0,1,0,0
+022601,dolnośląskie,złotoryjski,Wojcieszów,0,0,0,0,0
+022602,dolnośląskie,złotoryjski,Złotoryja,0,0,0,0,0
+022603,dolnośląskie,złotoryjski,Pielgrzymka,0,0,0,0,0
+022604,dolnośląskie,złotoryjski,Świerzawa,2,0,2,0,0
+022605,dolnośląskie,złotoryjski,Zagrodno,1,0,1,0,0
+022606,dolnośląskie,złotoryjski,Złotoryja,1,0,1,0,0
+026101,dolnośląskie,Jelenia Góra,Jelenia Góra,8,1,7,0,0
+026201,dolnośląskie,Legnica,Legnica,0,0,0,0,0
+026401,dolnośląskie,Wrocław,Wrocław,0,0,0,0,0
+026402,dolnośląskie,Wrocław,Wrocław,9,0,6,0,3
+026403,dolnośląskie,Wrocław,Wrocław,1,0,1,0,0
+026404,dolnośląskie,Wrocław,Wrocław,0,0,0,0,0
+026405,dolnośląskie,Wrocław,Wrocław,0,0,0,0,0
+026406,dolnośląskie,Wrocław,Wrocław,0,0,0,0,0
+026501,dolnośląskie,Wałbrzych,Wałbrzych,8,1,5,0,2
+040101,kujawsko-pomorskie,aleksandrowski,Aleksandrów Kujawski,0,0,0,0,0
+040102,kujawsko-pomorskie,aleksandrowski,Ciechocinek,0,0,0,0,0
+040103,kujawsko-pomorskie,aleksandrowski,Nieszawa,1,0,1,0,0
+040104,kujawsko-pomorskie,aleksandrowski,Aleksandrów Kujawski,4,0,4,0,0
+040105,kujawsko-pomorskie,aleksandrowski,Bądkowo,0,0,0,0,0
+040106,kujawsko-pomorskie,aleksandrowski,Koneck,0,0,0,0,0
+040107,kujawsko-pomorskie,aleksandrowski,Raciążek,1,0,1,0,0
+040108,kujawsko-pomorskie,aleksandrowski,Waganiec,0,0,0,0,0
+040109,kujawsko-pomorskie,aleksandrowski,Zakrzewo,0,0,0,0,0
+040201,kujawsko-pomorskie,brodnicki,Brodnica,0,0,0,0,0
+040202,kujawsko-pomorskie,brodnicki,Bobrowo,0,0,0,0,0
+040203,kujawsko-pomorskie,brodnicki,Brodnica,5,0,5,0,0
+040204,kujawsko-pomorskie,brodnicki,Brzozie,0,0,0,0,0
+040205,kujawsko-pomorskie,brodnicki,Górzno,0,0,0,0,0
+040206,kujawsko-pomorskie,brodnicki,Bartniczka,0,0,0,0,0
+040207,kujawsko-pomorskie,brodnicki,Jabłonowo Pomorskie,0,0,0,0,0
+040208,kujawsko-pomorskie,brodnicki,Osiek,0,0,0,0,0
+040209,kujawsko-pomorskie,brodnicki,Świedziebnia,0,0,0,0,0
+040210,kujawsko-pomorskie,brodnicki,Zbiczno,1,0,1,0,0
+040301,kujawsko-pomorskie,bydgoski,Białe Błota,8,0,8,0,0
+040302,kujawsko-pomorskie,bydgoski,Dąbrowa Chełmińska,0,0,0,0,0
+040303,kujawsko-pomorskie,bydgoski,Dobrcz,0,0,0,0,0
+040304,kujawsko-pomorskie,bydgoski,Koronowo,4,0,4,0,0
+040305,kujawsko-pomorskie,bydgoski,Nowa Wieś Wielka,4,0,4,0,0
+040306,kujawsko-pomorskie,bydgoski,Osielsko,3,0,3,0,0
+040307,kujawsko-pomorskie,bydgoski,Sicienko,0,0,0,0,0
+040308,kujawsko-pomorskie,bydgoski,Solec Kujawski,10,0,9,1,0
+040401,kujawsko-pomorskie,chełmiński,Chełmno,0,0,0,0,0
+040402,kujawsko-pomorskie,chełmiński,Chełmno,3,0,3,0,0
+040403,kujawsko-pomorskie,chełmiński,Kijewo Królewskie,0,0,0,0,0
+040404,kujawsko-pomorskie,chełmiński,Lisewo,0,0,0,0,0
+040405,kujawsko-pomorskie,chełmiński,Papowo Biskupie,0,0,0,0,0
+040406,kujawsko-pomorskie,chełmiński,Stolno,0,0,0,0,0
+040407,kujawsko-pomorskie,chełmiński,Unisław,0,0,0,0,0
+040501,kujawsko-pomorskie,golubsko-dobrzyński,Golub-Dobrzyń,0,0,0,0,0
+040502,kujawsko-pomorskie,golubsko-dobrzyński,Ciechocin,3,0,2,0,1
+040503,kujawsko-pomorskie,golubsko-dobrzyński,Golub-Dobrzyń,3,0,3,0,0
+040504,kujawsko-pomorskie,golubsko-dobrzyński,Kowalewo Pomorskie,0,0,0,0,0
+040505,kujawsko-pomorskie,golubsko-dobrzyński,Radomin,0,0,0,0,0
+040506,kujawsko-pomorskie,golubsko-dobrzyński,Zbójno,0,0,0,0,0
+040601,kujawsko-pomorskie,grudziądzki,Grudziądz,0,0,0,0,0
+040602,kujawsko-pomorskie,grudziądzki,Gruta,0,0,0,0,0
+040603,kujawsko-pomorskie,grudziądzki,Łasin,0,0,0,0,0
+040604,kujawsko-pomorskie,grudziądzki,Radzyń Chełmiński,0,0,0,0,0
+040605,kujawsko-pomorskie,grudziądzki,Rogóźno,0,0,0,0,0
+040606,kujawsko-pomorskie,grudziądzki,Świecie nad Osą,0,0,0,0,0
+040701,kujawsko-pomorskie,inowrocławski,Inowrocław,0,0,0,0,0
+040702,kujawsko-pomorskie,inowrocławski,Dąbrowa Biskupia,0,0,0,0,0
+040703,kujawsko-pomorskie,inowrocławski,Gniewkowo,2,0,2,0,0
+040704,kujawsko-pomorskie,inowrocławski,Inowrocław,0,0,0,0,0
+040705,kujawsko-pomorskie,inowrocławski,Janikowo,0,0,0,0,0
+040706,kujawsko-pomorskie,inowrocławski,Kruszwica,0,0,0,0,0
+040707,kujawsko-pomorskie,inowrocławski,Pakość,0,0,0,0,0
+040708,kujawsko-pomorskie,inowrocławski,Rojewo,7,1,6,0,0
+040709,kujawsko-pomorskie,inowrocławski,Złotniki Kujawskie,0,0,0,0,0
+040801,kujawsko-pomorskie,lipnowski,Lipno,1,0,1,0,0
+040802,kujawsko-pomorskie,lipnowski,Bobrowniki,16,1,15,0,0
+040803,kujawsko-pomorskie,lipnowski,Chrostkowo,0,0,0,0,0
+040804,kujawsko-pomorskie,lipnowski,Dobrzyń nad Wisłą,0,0,0,0,0
+040805,kujawsko-pomorskie,lipnowski,Kikół,0,0,0,0,0
+040806,kujawsko-pomorskie,lipnowski,Lipno,4,0,4,0,0
+040807,kujawsko-pomorskie,lipnowski,Skępe,2,0,2,0,0
+040808,kujawsko-pomorskie,lipnowski,Tłuchowo,4,0,2,2,0
+040809,kujawsko-pomorskie,lipnowski,Wielgie,0,0,0,0,0
+040901,kujawsko-pomorskie,mogileński,Dąbrowa,0,0,0,0,0
+040902,kujawsko-pomorskie,mogileński,Jeziora Wielkie,0,0,0,0,0
+040903,kujawsko-pomorskie,mogileński,Mogilno,2,0,2,0,0
+040904,kujawsko-pomorskie,mogileński,Strzelno,1,1,0,0,0
+041001,kujawsko-pomorskie,nakielski,Kcynia,0,0,0,0,0
+041002,kujawsko-pomorskie,nakielski,Mrocza,2,0,1,1,0
+041003,kujawsko-pomorskie,nakielski,Nakło nad Notecią,2,0,2,0,0
+041004,kujawsko-pomorskie,nakielski,Sadki,0,0,0,0,0
+041005,kujawsko-pomorskie,nakielski,Szubin,4,0,4,0,0
+041101,kujawsko-pomorskie,radziejowski,Radziejów,0,0,0,0,0
+041102,kujawsko-pomorskie,radziejowski,Bytoń,1,0,1,0,0
+041103,kujawsko-pomorskie,radziejowski,Dobre,2,0,2,0,0
+041104,kujawsko-pomorskie,radziejowski,Osięciny,0,0,0,0,0
+041105,kujawsko-pomorskie,radziejowski,Piotrków Kujawski,0,0,0,0,0
+041106,kujawsko-pomorskie,radziejowski,Radziejów,0,0,0,0,0
+041107,kujawsko-pomorskie,radziejowski,Topólka,0,0,0,0,0
+041201,kujawsko-pomorskie,rypiński,Rypin,0,0,0,0,0
+041202,kujawsko-pomorskie,rypiński,Brzuze,0,0,0,0,0
+041203,kujawsko-pomorskie,rypiński,Rogowo,0,0,0,0,0
+041204,kujawsko-pomorskie,rypiński,Rypin,0,0,0,0,0
+041205,kujawsko-pomorskie,rypiński,Skrwilno,2,0,2,0,0
+041206,kujawsko-pomorskie,rypiński,Wąpielsk,0,0,0,0,0
+041301,kujawsko-pomorskie,sępoleński,Kamień Krajeński,0,0,0,0,0
+041302,kujawsko-pomorskie,sępoleński,Sępólno Krajeńskie,0,0,0,0,0
+041303,kujawsko-pomorskie,sępoleński,Sośno,0,0,0,0,0
+041304,kujawsko-pomorskie,sępoleński,Więcbork,2,0,2,0,0
+041401,kujawsko-pomorskie,świecki,Bukowiec,0,0,0,0,0
+041402,kujawsko-pomorskie,świecki,Dragacz,5,0,4,1,0
+041403,kujawsko-pomorskie,świecki,Drzycim,0,0,0,0,0
+041404,kujawsko-pomorskie,świecki,Jeżewo,1,0,1,0,0
+041405,kujawsko-pomorskie,świecki,Lniano,0,0,0,0,0
+041406,kujawsko-pomorskie,świecki,Nowe,0,0,0,0,0
+041407,kujawsko-pomorskie,świecki,Osie,0,0,0,0,0
+041408,kujawsko-pomorskie,świecki,Pruszcz,0,0,0,0,0
+041409,kujawsko-pomorskie,świecki,Świecie,0,0,0,0,0
+041410,kujawsko-pomorskie,świecki,Świekatowo,2,0,2,0,0
+041411,kujawsko-pomorskie,świecki,Warlubie,1,0,1,0,0
+041501,kujawsko-pomorskie,toruński,Chełmża,0,0,0,0,0
+041502,kujawsko-pomorskie,toruński,Chełmża,2,0,2,0,0
+041503,kujawsko-pomorskie,toruński,Czernikowo,5,0,5,0,0
+041504,kujawsko-pomorskie,toruński,Lubicz,1,0,1,0,0
+041505,kujawsko-pomorskie,toruński,Łubianka,0,0,0,0,0
+041506,kujawsko-pomorskie,toruński,Łysomice,0,0,0,0,0
+041507,kujawsko-pomorskie,toruński,Obrowo,13,0,13,0,0
+041508,kujawsko-pomorskie,toruński,Wielka Nieszawka,10,0,10,0,0
+041509,kujawsko-pomorskie,toruński,Zławieś Wielka,2,0,2,0,0
+041601,kujawsko-pomorskie,tucholski,Cekcyn,1,0,1,0,0
+041602,kujawsko-pomorskie,tucholski,Gostycyn,0,0,0,0,0
+041603,kujawsko-pomorskie,tucholski,Kęsowo,0,0,0,0,0
+041604,kujawsko-pomorskie,tucholski,Lubiewo,0,0,0,0,0
+041605,kujawsko-pomorskie,tucholski,Śliwice,3,0,3,0,0
+041606,kujawsko-pomorskie,tucholski,Tuchola,1,0,1,0,0
+041701,kujawsko-pomorskie,wąbrzeski,Wąbrzeźno,2,0,2,0,0
+041702,kujawsko-pomorskie,wąbrzeski,Dębowa Łąka,0,0,0,0,0
+041703,kujawsko-pomorskie,wąbrzeski,Książki,0,0,0,0,0
+041704,kujawsko-pomorskie,wąbrzeski,Płużnica,0,0,0,0,0
+041705,kujawsko-pomorskie,wąbrzeski,Ryńsk,2,0,2,0,0
+041801,kujawsko-pomorskie,włocławski,Kowal,0,0,0,0,0
+041802,kujawsko-pomorskie,włocławski,Baruchowo,3,0,3,0,0
+041803,kujawsko-pomorskie,włocławski,Boniewo,0,0,0,0,0
+041804,kujawsko-pomorskie,włocławski,Brześć Kujawski,8,0,8,0,0
+041805,kujawsko-pomorskie,włocławski,Choceń,1,0,1,0,0
+041806,kujawsko-pomorskie,włocławski,Chodecz,0,0,0,0,0
+041807,kujawsko-pomorskie,włocławski,Fabianki,3,0,3,0,0
+041808,kujawsko-pomorskie,włocławski,Izbica Kujawska,1,0,1,0,0
+041809,kujawsko-pomorskie,włocławski,Kowal,1,0,1,0,0
+041810,kujawsko-pomorskie,włocławski,Lubanie,0,0,0,0,0
+041811,kujawsko-pomorskie,włocławski,Lubień Kujawski,0,0,0,0,0
+041812,kujawsko-pomorskie,włocławski,Lubraniec,0,0,0,0,0
+041813,kujawsko-pomorskie,włocławski,Włocławek,8,0,8,0,0
+041901,kujawsko-pomorskie,żniński,Barcin,0,0,0,0,0
+041902,kujawsko-pomorskie,żniński,Gąsawa,2,0,2,0,0
+041903,kujawsko-pomorskie,żniński,Janowiec Wielkopolski,0,0,0,0,0
+041904,kujawsko-pomorskie,żniński,Łabiszyn,1,0,1,0,0
+041905,kujawsko-pomorskie,żniński,Rogowo,1,0,1,0,0
+041906,kujawsko-pomorskie,żniński,Żnin,1,0,1,0,0
+046101,kujawsko-pomorskie,Bydgoszcz,Bydgoszcz,34,3,28,0,3
+046201,kujawsko-pomorskie,Grudziądz,Grudziądz,1,0,1,0,0
+046301,kujawsko-pomorskie,Toruń,Toruń,37,3,32,0,2
+046401,kujawsko-pomorskie,Włocławek,Włocławek,33,1,32,0,0
+060101,lubelskie,bialski,Międzyrzec Podlaski,0,0,0,0,0
+060102,lubelskie,bialski,Terespol,0,0,0,0,0
+060103,lubelskie,bialski,Biała Podlaska,3,0,3,0,0
+060104,lubelskie,bialski,Drelów,7,0,5,2,0
+060105,lubelskie,bialski,Janów Podlaski,0,0,0,0,0
+060106,lubelskie,bialski,Kodeń,2,0,2,0,0
+060107,lubelskie,bialski,Konstantynów,0,0,0,0,0
+060108,lubelskie,bialski,Leśna Podlaska,1,0,1,0,0
+060109,lubelskie,bialski,Łomazy,2,0,2,0,0
+060110,lubelskie,bialski,Międzyrzec Podlaski,6,2,3,0,1
+060111,lubelskie,bialski,Piszczac,2,0,2,0,0
+060112,lubelskie,bialski,Rokitno,0,0,0,0,0
+060113,lubelskie,bialski,Rossosz,2,0,2,0,0
+060114,lubelskie,bialski,Sławatycze,0,0,0,0,0
+060115,lubelskie,bialski,Sosnówka,0,0,0,0,0
+060116,lubelskie,bialski,Terespol,3,0,3,0,0
+060117,lubelskie,bialski,Tuczna,8,2,6,0,0
+060118,lubelskie,bialski,Wisznice,3,0,3,0,0
+060119,lubelskie,bialski,Zalesie,1,0,1,0,0
+060201,lubelskie,biłgorajski,Biłgoraj,0,0,0,0,0
+060202,lubelskie,biłgorajski,Aleksandrów,0,0,0,0,0
+060203,lubelskie,biłgorajski,Biłgoraj,11,2,9,0,0
+060204,lubelskie,biłgorajski,Biszcza,0,0,0,0,0
+060205,lubelskie,biłgorajski,Frampol,0,0,0,0,0
+060206,lubelskie,biłgorajski,Goraj,0,0,0,0,0
+060207,lubelskie,biłgorajski,Józefów,4,0,4,0,0
+060208,lubelskie,biłgorajski,Księżpol,2,0,2,0,0
+060209,lubelskie,biłgorajski,Łukowa,6,1,5,0,0
+060210,lubelskie,biłgorajski,Obsza,0,0,0,0,0
+060211,lubelskie,biłgorajski,Potok Górny,2,0,2,0,0
+060212,lubelskie,biłgorajski,Tarnogród,2,1,1,0,0
+060213,lubelskie,biłgorajski,Tereszpol,3,0,3,0,0
+060214,lubelskie,biłgorajski,Turobin,0,0,0,0,0
+060301,lubelskie,chełmski,Rejowiec Fabryczny,0,0,0,0,0
+060302,lubelskie,chełmski,Białopole,0,0,0,0,0
+060303,lubelskie,chełmski,Chełm,2,0,2,0,0
+060304,lubelskie,chełmski,Dorohusk,2,0,2,0,0
+060305,lubelskie,chełmski,Dubienka,1,0,1,0,0
+060306,lubelskie,chełmski,Kamień,0,0,0,0,0
+060307,lubelskie,chełmski,Leśniowice,0,0,0,0,0
+060308,lubelskie,chełmski,Rejowiec Fabryczny,0,0,0,0,0
+060309,lubelskie,chełmski,Ruda-Huta,1,0,1,0,0
+060310,lubelskie,chełmski,Sawin,1,0,1,0,0
+060311,lubelskie,chełmski,Siedliszcze,2,0,2,0,0
+060312,lubelskie,chełmski,Wierzbica,2,0,1,1,0
+060313,lubelskie,chełmski,Wojsławice,0,0,0,0,0
+060314,lubelskie,chełmski,Żmudź,0,0,0,0,0
+060315,lubelskie,chełmski,Rejowiec,4,0,3,1,0
+060401,lubelskie,hrubieszowski,Hrubieszów,0,0,0,0,0
+060402,lubelskie,hrubieszowski,Dołhobyczów,0,0,0,0,0
+060403,lubelskie,hrubieszowski,Horodło,0,0,0,0,0
+060404,lubelskie,hrubieszowski,Hrubieszów,0,0,0,0,0
+060405,lubelskie,hrubieszowski,Mircze,0,0,0,0,0
+060406,lubelskie,hrubieszowski,Trzeszczany,0,0,0,0,0
+060407,lubelskie,hrubieszowski,Uchanie,0,0,0,0,0
+060408,lubelskie,hrubieszowski,Werbkowice,0,0,0,0,0
+060501,lubelskie,janowski,Batorz,0,0,0,0,0
+060502,lubelskie,janowski,Chrzanów,0,0,0,0,0
+060503,lubelskie,janowski,Dzwola,3,0,3,0,0
+060504,lubelskie,janowski,Godziszów,0,0,0,0,0
+060505,lubelskie,janowski,Janów Lubelski,6,0,6,0,0
+060506,lubelskie,janowski,Modliborzyce,3,0,3,0,0
+060507,lubelskie,janowski,Potok Wielki,0,0,0,0,0
+060601,lubelskie,krasnostawski,Krasnystaw,0,0,0,0,0
+060602,lubelskie,krasnostawski,Fajsławice,0,0,0,0,0
+060603,lubelskie,krasnostawski,Gorzków,0,0,0,0,0
+060604,lubelskie,krasnostawski,Izbica,0,0,0,0,0
+060605,lubelskie,krasnostawski,Krasnystaw,0,0,0,0,0
+060606,lubelskie,krasnostawski,Kraśniczyn,0,0,0,0,0
+060607,lubelskie,krasnostawski,Łopiennik Górny,0,0,0,0,0
+060609,lubelskie,krasnostawski,Rudnik,1,0,1,0,0
+060610,lubelskie,krasnostawski,Siennica Różana,0,0,0,0,0
+060611,lubelskie,krasnostawski,Żółkiewka,0,0,0,0,0
+060701,lubelskie,kraśnicki,Kraśnik,3,0,2,0,1
+060702,lubelskie,kraśnicki,Annopol,1,0,1,0,0
+060703,lubelskie,kraśnicki,Dzierzkowice,1,0,0,0,1
+060704,lubelskie,kraśnicki,Gościeradów,3,0,3,0,0
+060705,lubelskie,kraśnicki,Kraśnik,1,0,1,0,0
+060706,lubelskie,kraśnicki,Szastarka,0,0,0,0,0
+060707,lubelskie,kraśnicki,Trzydnik Duży,0,0,0,0,0
+060708,lubelskie,kraśnicki,Urzędów,0,0,0,0,0
+060709,lubelskie,kraśnicki,Wilkołaz,0,0,0,0,0
+060710,lubelskie,kraśnicki,Zakrzówek,0,0,0,0,0
+060801,lubelskie,lubartowski,Lubartów,0,0,0,0,0
+060802,lubelskie,lubartowski,Abramów,0,0,0,0,0
+060803,lubelskie,lubartowski,Firlej,3,0,3,0,0
+060804,lubelskie,lubartowski,Jeziorzany,0,0,0,0,0
+060805,lubelskie,lubartowski,Kamionka,7,0,6,0,1
+060806,lubelskie,lubartowski,Kock,1,0,1,0,0
+060807,lubelskie,lubartowski,Lubartów,4,0,3,0,1
+060808,lubelskie,lubartowski,Michów,9,0,9,0,0
+060809,lubelskie,lubartowski,Niedźwiada,1,0,1,0,0
+060810,lubelskie,lubartowski,Ostrów Lubelski,11,0,11,0,0
+060811,lubelskie,lubartowski,Ostrówek,9,2,6,1,0
+060812,lubelskie,lubartowski,Serniki,1,0,1,0,0
+060813,lubelskie,lubartowski,Uścimów,10,0,9,1,0
+060901,lubelskie,lubelski,Bełżyce,0,0,0,0,0
+060902,lubelskie,lubelski,Borzechów,1,0,1,0,0
+060903,lubelskie,lubelski,Bychawa,0,0,0,0,0
+060904,lubelskie,lubelski,Garbów,0,0,0,0,0
+060905,lubelskie,lubelski,Głusk,0,0,0,0,0
+060906,lubelskie,lubelski,Jabłonna,0,0,0,0,0
+060907,lubelskie,lubelski,Jastków,1,0,1,0,0
+060908,lubelskie,lubelski,Konopnica,0,0,0,0,0
+060909,lubelskie,lubelski,Krzczonów,0,0,0,0,0
+060910,lubelskie,lubelski,Niedrzwica Duża,1,0,0,0,1
+060911,lubelskie,lubelski,Niemce,1,0,0,0,1
+060912,lubelskie,lubelski,Strzyżewice,1,0,1,0,0
+060913,lubelskie,lubelski,Wojciechów,0,0,0,0,0
+060914,lubelskie,lubelski,Wólka,0,0,0,0,0
+060915,lubelskie,lubelski,Wysokie,0,0,0,0,0
+060916,lubelskie,lubelski,Zakrzew,0,0,0,0,0
+061001,lubelskie,łęczyński,Cyców,1,0,1,0,0
+061002,lubelskie,łęczyński,Ludwin,1,1,0,0,0
+061003,lubelskie,łęczyński,Łęczna,2,0,1,0,1
+061004,lubelskie,łęczyński,Milejów,8,0,6,2,0
+061005,lubelskie,łęczyński,Puchaczów,0,0,0,0,0
+061006,lubelskie,łęczyński,Spiczyn,1,0,0,1,0
+061101,lubelskie,łukowski,Łuków,0,0,0,0,0
+061102,lubelskie,łukowski,Stoczek Łukowski,0,0,0,0,0
+061103,lubelskie,łukowski,Adamów,0,0,0,0,0
+061104,lubelskie,łukowski,Krzywda,7,0,6,1,0
+061105,lubelskie,łukowski,Łuków,13,0,13,0,0
+061106,lubelskie,łukowski,Serokomla,1,0,1,0,0
+061107,lubelskie,łukowski,Stanin,1,0,1,0,0
+061108,lubelskie,łukowski,Stoczek Łukowski,1,0,1,0,0
+061109,lubelskie,łukowski,Trzebieszów,0,0,0,0,0
+061110,lubelskie,łukowski,Wojcieszków,1,0,1,0,0
+061111,lubelskie,łukowski,Wola Mysłowska,0,0,0,0,0
+061201,lubelskie,opolski,Chodel,1,0,1,0,0
+061202,lubelskie,opolski,Józefów nad Wisłą,0,0,0,0,0
+061203,lubelskie,opolski,Karczmiska,4,0,4,0,0
+061204,lubelskie,opolski,Łaziska,1,0,1,0,0
+061205,lubelskie,opolski,Opole Lubelskie,3,0,3,0,0
+061206,lubelskie,opolski,Poniatowa,0,0,0,0,0
+061207,lubelskie,opolski,Wilków,0,0,0,0,0
+061301,lubelskie,parczewski,Dębowa Kłoda,0,0,0,0,0
+061302,lubelskie,parczewski,Jabłoń,0,0,0,0,0
+061303,lubelskie,parczewski,Milanów,0,0,0,0,0
+061304,lubelskie,parczewski,Parczew,5,0,5,0,0
+061305,lubelskie,parczewski,Podedwórze,0,0,0,0,0
+061306,lubelskie,parczewski,Siemień,4,0,4,0,0
+061307,lubelskie,parczewski,Sosnowica,2,0,2,0,0
+061401,lubelskie,puławski,Puławy,0,0,0,0,0
+061402,lubelskie,puławski,Baranów,4,0,4,0,0
+061403,lubelskie,puławski,Janowiec,20,0,20,0,0
+061404,lubelskie,puławski,Kazimierz Dolny,0,0,0,0,0
+061405,lubelskie,puławski,Końskowola,2,0,1,1,0
+061406,lubelskie,puławski,Kurów,0,0,0,0,0
+061407,lubelskie,puławski,Markuszów,1,0,1,0,0
+061408,lubelskie,puławski,Nałęczów,0,0,0,0,0
+061409,lubelskie,puławski,Puławy,11,0,9,2,0
+061410,lubelskie,puławski,Wąwolnica,0,0,0,0,0
+061411,lubelskie,puławski,Żyrzyn,5,0,5,0,0
+061501,lubelskie,radzyński,Radzyń Podlaski,0,0,0,0,0
+061502,lubelskie,radzyński,Borki,0,0,0,0,0
+061503,lubelskie,radzyński,Czemierniki,1,0,1,0,0
+061504,lubelskie,radzyński,Kąkolewnica,1,0,1,0,0
+061505,lubelskie,radzyński,Komarówka Podlaska,0,0,0,0,0
+061506,lubelskie,radzyński,Radzyń Podlaski,1,0,1,0,0
+061507,lubelskie,radzyński,Ulan-Majorat,0,0,0,0,0
+061508,lubelskie,radzyński,Wohyń,0,0,0,0,0
+061601,lubelskie,rycki,Dęblin,0,0,0,0,0
+061602,lubelskie,rycki,Kłoczew,1,0,1,0,0
+061603,lubelskie,rycki,Nowodwór,0,0,0,0,0
+061604,lubelskie,rycki,Ryki,2,0,2,0,0
+061605,lubelskie,rycki,Stężyca,19,1,15,0,3
+061606,lubelskie,rycki,Ułęż,0,0,0,0,0
+061701,lubelskie,świdnicki,Świdnik,0,0,0,0,0
+061702,lubelskie,świdnicki,Mełgiew,1,0,0,0,1
+061703,lubelskie,świdnicki,Piaski,1,0,1,0,0
+061704,lubelskie,świdnicki,Rybczewice,0,0,0,0,0
+061705,lubelskie,świdnicki,Trawniki,1,0,1,0,0
+061801,lubelskie,tomaszowski,Tomaszów Lubelski,0,0,0,0,0
+061802,lubelskie,tomaszowski,Bełżec,0,0,0,0,0
+061803,lubelskie,tomaszowski,Jarczów,0,0,0,0,0
+061804,lubelskie,tomaszowski,Krynice,0,0,0,0,0
+061805,lubelskie,tomaszowski,Lubycza Królewska,0,0,0,0,0
+061806,lubelskie,tomaszowski,Łaszczów,0,0,0,0,0
+061807,lubelskie,tomaszowski,Rachanie,0,0,0,0,0
+061808,lubelskie,tomaszowski,Susiec,3,0,3,0,0
+061809,lubelskie,tomaszowski,Tarnawatka,0,0,0,0,0
+061810,lubelskie,tomaszowski,Telatyn,0,0,0,0,0
+061811,lubelskie,tomaszowski,Tomaszów Lubelski,3,0,3,0,0
+061812,lubelskie,tomaszowski,Tyszowce,1,0,1,0,0
+061813,lubelskie,tomaszowski,Ulhówek,0,0,0,0,0
+061901,lubelskie,włodawski,Włodawa,0,0,0,0,0
+061902,lubelskie,włodawski,Hanna,0,0,0,0,0
+061903,lubelskie,włodawski,Hańsk,5,0,5,0,0
+061904,lubelskie,włodawski,Stary Brus,0,0,0,0,0
+061905,lubelskie,włodawski,Urszulin,0,0,0,0,0
+061906,lubelskie,włodawski,Włodawa,4,0,3,1,0
+061907,lubelskie,włodawski,Wola Uhruska,1,0,1,0,0
+061908,lubelskie,włodawski,Wyryki,0,0,0,0,0
+062001,lubelskie,zamojski,Adamów,0,0,0,0,0
+062002,lubelskie,zamojski,Grabowiec,0,0,0,0,0
+062003,lubelskie,zamojski,Komarów-Osada,0,0,0,0,0
+062004,lubelskie,zamojski,Krasnobród,1,0,1,0,0
+062005,lubelskie,zamojski,Łabunie,0,0,0,0,0
+062006,lubelskie,zamojski,Miączyn,0,0,0,0,0
+062007,lubelskie,zamojski,Nielisz,0,0,0,0,0
+062008,lubelskie,zamojski,Radecznica,0,0,0,0,0
+062009,lubelskie,zamojski,Sitno,0,0,0,0,0
+062010,lubelskie,zamojski,Skierbieszów,0,0,0,0,0
+062011,lubelskie,zamojski,Stary Zamość,0,0,0,0,0
+062012,lubelskie,zamojski,Sułów,0,0,0,0,0
+062013,lubelskie,zamojski,Szczebrzeszyn,0,0,0,0,0
+062014,lubelskie,zamojski,Zamość,0,0,0,0,0
+062015,lubelskie,zamojski,Zwierzyniec,0,0,0,0,0
+066101,lubelskie,Biała Podlaska,Biała Podlaska,7,0,6,0,1
+066201,lubelskie,Chełm,Chełm,0,0,0,0,0
+066301,lubelskie,Lublin,Lublin,1,0,0,0,1
+066401,lubelskie,Zamość,Zamość,0,0,0,0,0
+080101,lubuskie,gorzowski,Kostrzyn nad Odrą,2,0,2,0,0
+080102,lubuskie,gorzowski,Bogdaniec,1,0,1,0,0
+080103,lubuskie,gorzowski,Deszczno,3,0,3,0,0
+080104,lubuskie,gorzowski,Kłodawa,4,0,4,0,0
+080105,lubuskie,gorzowski,Lubiszyn,6,0,6,0,0
+080106,lubuskie,gorzowski,Santok,1,0,1,0,0
+080107,lubuskie,gorzowski,Witnica,5,0,5,0,0
+080201,lubuskie,krośnieński,Gubin,0,0,0,0,0
+080202,lubuskie,krośnieński,Bobrowice,4,0,4,0,0
+080203,lubuskie,krośnieński,Bytnica,3,0,3,0,0
+080204,lubuskie,krośnieński,Dąbie,2,0,2,0,0
+080205,lubuskie,krośnieński,Gubin,15,2,12,1,0
+080206,lubuskie,krośnieński,Krosno Odrzańskie,4,1,3,0,0
+080207,lubuskie,krośnieński,Maszewo,4,0,4,0,0
+080301,lubuskie,międzyrzecki,Bledzew,1,0,1,0,0
+080302,lubuskie,międzyrzecki,Międzyrzecz,7,0,7,0,0
+080303,lubuskie,międzyrzecki,Przytoczna,0,0,0,0,0
+080304,lubuskie,międzyrzecki,Pszczew,7,0,7,0,0
+080305,lubuskie,międzyrzecki,Skwierzyna,1,0,1,0,0
+080306,lubuskie,międzyrzecki,Trzciel,5,0,5,0,0
+080401,lubuskie,nowosolski,Nowa Sól,4,0,4,0,0
+080402,lubuskie,nowosolski,Bytom Odrzański,0,0,0,0,0
+080403,lubuskie,nowosolski,Kolsko,4,0,4,0,0
+080404,lubuskie,nowosolski,Kożuchów,0,0,0,0,0
+080405,lubuskie,nowosolski,Nowa Sól,6,0,5,0,1
+080406,lubuskie,nowosolski,Nowe Miasteczko,1,0,1,0,0
+080407,lubuskie,nowosolski,Otyń,1,0,1,0,0
+080408,lubuskie,nowosolski,Siedlisko,0,0,0,0,0
+080501,lubuskie,słubicki,Cybinka,6,0,6,0,0
+080502,lubuskie,słubicki,Górzyca,0,0,0,0,0
+080503,lubuskie,słubicki,Ośno Lubuskie,3,0,3,0,0
+080504,lubuskie,słubicki,Rzepin,2,0,2,0,0
+080505,lubuskie,słubicki,Słubice,10,0,7,1,2
+080601,lubuskie,strzelecko-drezdenecki,Dobiegniew,0,0,0,0,0
+080602,lubuskie,strzelecko-drezdenecki,Drezdenko,13,0,13,0,0
+080603,lubuskie,strzelecko-drezdenecki,Stare Kurowo,0,0,0,0,0
+080604,lubuskie,strzelecko-drezdenecki,Strzelce Krajeńskie,0,0,0,0,0
+080605,lubuskie,strzelecko-drezdenecki,Zwierzyn,1,0,1,0,0
+080701,lubuskie,sulęciński,Krzeszyce,1,0,1,0,0
+080702,lubuskie,sulęciński,Lubniewice,2,0,2,0,0
+080703,lubuskie,sulęciński,Słońsk,1,0,1,0,0
+080704,lubuskie,sulęciński,Sulęcin,2,0,2,0,0
+080705,lubuskie,sulęciński,Torzym,5,0,4,1,0
+080801,lubuskie,świebodziński,Lubrza,1,0,1,0,0
+080802,lubuskie,świebodziński,Łagów,3,0,3,0,0
+080803,lubuskie,świebodziński,Skąpe,1,0,1,0,0
+080804,lubuskie,świebodziński,Szczaniec,0,0,0,0,0
+080805,lubuskie,świebodziński,Świebodzin,3,0,3,0,0
+080806,lubuskie,świebodziński,Zbąszynek,1,0,1,0,0
+080901,lubuskie,zielonogórski,Babimost,0,0,0,0,0
+080902,lubuskie,zielonogórski,Bojadła,1,0,1,0,0
+080903,lubuskie,zielonogórski,Czerwieńsk,8,0,8,0,0
+080904,lubuskie,zielonogórski,Kargowa,7,0,7,0,0
+080905,lubuskie,zielonogórski,Nowogród Bobrzański,5,0,5,0,0
+080906,lubuskie,zielonogórski,Sulechów,7,0,7,0,0
+080907,lubuskie,zielonogórski,Świdnica,5,0,5,0,0
+080908,lubuskie,zielonogórski,Trzebiechów,0,0,0,0,0
+080909,lubuskie,zielonogórski,Zabór,1,0,1,0,0
+081001,lubuskie,żagański,Gozdnica,1,0,1,0,0
+081002,lubuskie,żagański,Żagań,5,0,5,0,0
+081003,lubuskie,żagański,Brzeźnica,0,0,0,0,0
+081004,lubuskie,żagański,Iłowa,2,0,2,0,0
+081005,lubuskie,żagański,Małomice,5,0,5,0,0
+081006,lubuskie,żagański,Niegosławice,1,0,1,0,0
+081007,lubuskie,żagański,Szprotawa,3,0,3,0,0
+081008,lubuskie,żagański,Wymiarki,0,0,0,0,0
+081009,lubuskie,żagański,Żagań,3,0,3,0,0
+081101,lubuskie,żarski,Łęknica,0,0,0,0,0
+081102,lubuskie,żarski,Żary,0,0,0,0,0
+081103,lubuskie,żarski,Brody,4,0,3,1,0
+081104,lubuskie,żarski,Jasień,21,0,20,1,0
+081105,lubuskie,żarski,Lipinki Łużyckie,0,0,0,0,0
+081106,lubuskie,żarski,Lubsko,5,0,5,0,0
+081107,lubuskie,żarski,Przewóz,5,0,5,0,0
+081108,lubuskie,żarski,Trzebiel,11,0,11,0,0
+081109,lubuskie,żarski,Tuplice,8,0,8,0,0
+081110,lubuskie,żarski,Żary,6,0,6,0,0
+081201,lubuskie,wschowski,Sława,7,0,7,0,0
+081202,lubuskie,wschowski,Szlichtyngowa,1,0,1,0,0
+081203,lubuskie,wschowski,Wschowa,1,0,1,0,0
+086101,lubuskie,Gorzów Wielkopolski,Gorzów Wielkopolski,2,0,2,0,0
+086201,lubuskie,Zielona Góra,Zielona Góra,19,0,19,0,0
+100101,łódzkie,bełchatowski,Bełchatów,8,0,8,0,0
+100102,łódzkie,bełchatowski,Bełchatów,11,0,11,0,0
+100103,łódzkie,bełchatowski,Drużbice,0,0,0,0,0
+100104,łódzkie,bełchatowski,Kleszczów,0,0,0,0,0
+100105,łódzkie,bełchatowski,Kluki,14,0,14,0,0
+100106,łódzkie,bełchatowski,Rusiec,1,0,1,0,0
+100107,łódzkie,bełchatowski,Szczerców,5,0,5,0,0
+100108,łódzkie,bełchatowski,Zelów,9,0,9,0,0
+100201,łódzkie,kutnowski,Kutno,0,0,0,0,0
+100202,łódzkie,kutnowski,Bedlno,0,0,0,0,0
+100203,łódzkie,kutnowski,Dąbrowice,0,0,0,0,0
+100204,łódzkie,kutnowski,Krośniewice,0,0,0,0,0
+100205,łódzkie,kutnowski,Krzyżanów,0,0,0,0,0
+100206,łódzkie,kutnowski,Kutno,0,0,0,0,0
+100207,łódzkie,kutnowski,Łanięta,0,0,0,0,0
+100208,łódzkie,kutnowski,Nowe Ostrowy,0,0,0,0,0
+100209,łódzkie,kutnowski,Oporów,0,0,0,0,0
+100210,łódzkie,kutnowski,Strzelce,1,0,1,0,0
+100211,łódzkie,kutnowski,Żychlin,0,0,0,0,0
+100301,łódzkie,łaski,Buczek,2,0,2,0,0
+100302,łódzkie,łaski,Łask,2,0,2,0,0
+100303,łódzkie,łaski,Sędziejowice,2,0,2,0,0
+100304,łódzkie,łaski,Widawa,19,0,19,0,0
+100305,łódzkie,łaski,Wodzierady,2,0,2,0,0
+100401,łódzkie,łęczycki,Łęczyca,0,0,0,0,0
+100402,łódzkie,łęczycki,Daszyna,6,0,6,0,0
+100403,łódzkie,łęczycki,Góra Świętej Małgorzaty,2,0,2,0,0
+100404,łódzkie,łęczycki,Grabów,2,0,2,0,0
+100405,łódzkie,łęczycki,Łęczyca,0,0,0,0,0
+100406,łódzkie,łęczycki,Piątek,0,0,0,0,0
+100407,łódzkie,łęczycki,Świnice Warckie,2,0,2,0,0
+100408,łódzkie,łęczycki,Witonia,0,0,0,0,0
+100501,łódzkie,łowicki,Łowicz,1,0,1,0,0
+100502,łódzkie,łowicki,Bielawy,2,0,2,0,0
+100503,łódzkie,łowicki,Chąśno,0,0,0,0,0
+100504,łódzkie,łowicki,Domaniewice,2,0,2,0,0
+100505,łódzkie,łowicki,Kiernozia,0,0,0,0,0
+100506,łódzkie,łowicki,Kocierzew Południowy,0,0,0,0,0
+100507,łódzkie,łowicki,Łowicz,7,0,7,0,0
+100508,łódzkie,łowicki,Łyszkowice,7,0,7,0,0
+100509,łódzkie,łowicki,Nieborów,9,0,9,0,0
+100510,łódzkie,łowicki,Zduny,0,0,0,0,0
+100602,łódzkie,łódzki wschodni,Andrespol,5,0,5,0,0
+100603,łódzkie,łódzki wschodni,Brójce,0,0,0,0,0
+100607,łódzkie,łódzki wschodni,Koluszki,6,0,5,0,1
+100608,łódzkie,łódzki wschodni,Nowosolna,4,0,4,0,0
+100610,łódzkie,łódzki wschodni,Rzgów,5,0,5,0,0
+100611,łódzkie,łódzki wschodni,Tuszyn,4,0,4,0,0
+100701,łódzkie,opoczyński,Białaczów,10,0,10,0,0
+100702,łódzkie,opoczyński,Drzewica,25,0,25,0,0
+100703,łódzkie,opoczyński,Mniszków,4,0,4,0,0
+100704,łódzkie,opoczyński,Opoczno,11,0,11,0,0
+100705,łódzkie,opoczyński,Paradyż,2,0,2,0,0
+100706,łódzkie,opoczyński,Poświętne,2,0,2,0,0
+100707,łódzkie,opoczyński,Sławno,3,0,3,0,0
+100708,łódzkie,opoczyński,Żarnów,11,0,11,0,0
+100801,łódzkie,pabianicki,Konstantynów Łódzki,1,0,0,0,1
+100802,łódzkie,pabianicki,Pabianice,2,0,2,0,0
+100803,łódzkie,pabianicki,Dłutów,1,0,1,0,0
+100804,łódzkie,pabianicki,Dobroń,6,0,6,0,0
+100805,łódzkie,pabianicki,Ksawerów,0,0,0,0,0
+100806,łódzkie,pabianicki,Lutomiersk,1,0,1,0,0
+100807,łódzkie,pabianicki,Pabianice,1,0,1,0,0
+100901,łódzkie,pajęczański,Działoszyn,6,0,5,1,0
+100902,łódzkie,pajęczański,Kiełczygłów,0,0,0,0,0
+100903,łódzkie,pajęczański,Nowa Brzeźnica,6,0,6,0,0
+100904,łódzkie,pajęczański,Pajęczno,4,0,3,0,1
+100905,łódzkie,pajęczański,Rząśnia,2,0,2,0,0
+100906,łódzkie,pajęczański,Siemkowice,1,0,1,0,0
+100907,łódzkie,pajęczański,Strzelce Wielkie,1,0,1,0,0
+100908,łódzkie,pajęczański,Sulmierzyce,1,0,1,0,0
+101001,łódzkie,piotrkowski,Aleksandrów,15,0,15,0,0
+101002,łódzkie,piotrkowski,Czarnocin,0,0,0,0,0
+101003,łódzkie,piotrkowski,Gorzkowice,2,0,2,0,0
+101004,łódzkie,piotrkowski,Grabica,1,0,1,0,0
+101005,łódzkie,piotrkowski,Łęki Szlacheckie,3,0,3,0,0
+101006,łódzkie,piotrkowski,Moszczenica,0,0,0,0,0
+101007,łódzkie,piotrkowski,Ręczno,3,0,2,0,1
+101008,łódzkie,piotrkowski,Rozprza,8,0,8,0,0
+101009,łódzkie,piotrkowski,Sulejów,3,0,3,0,0
+101010,łódzkie,piotrkowski,Wola Krzysztoporska,2,0,2,0,0
+101011,łódzkie,piotrkowski,Wolbórz,3,0,3,0,0
+101101,łódzkie,poddębicki,Dalików,0,0,0,0,0
+101102,łódzkie,poddębicki,Pęczniew,1,0,1,0,0
+101103,łódzkie,poddębicki,Poddębice,3,0,3,0,0
+101104,łódzkie,poddębicki,Uniejów,2,0,2,0,0
+101105,łódzkie,poddębicki,Wartkowice,3,0,3,0,0
+101106,łódzkie,poddębicki,Zadzim,5,0,5,0,0
+101201,łódzkie,radomszczański,Radomsko,4,0,4,0,0
+101202,łódzkie,radomszczański,Dobryszyce,0,0,0,0,0
+101203,łódzkie,radomszczański,Gidle,11,0,11,0,0
+101204,łódzkie,radomszczański,Gomunice,3,0,3,0,0
+101205,łódzkie,radomszczański,Kamieńsk,2,0,2,0,0
+101206,łódzkie,radomszczański,Kobiele Wielkie,0,0,0,0,0
+101207,łódzkie,radomszczański,Kodrąb,1,0,1,0,0
+101208,łódzkie,radomszczański,Lgota Wielka,1,0,1,0,0
+101209,łódzkie,radomszczański,Ładzice,6,0,6,0,0
+101210,łódzkie,radomszczański,Masłowice,2,0,1,1,0
+101211,łódzkie,radomszczański,Przedbórz,2,0,2,0,0
+101212,łódzkie,radomszczański,Radomsko,21,0,20,1,0
+101213,łódzkie,radomszczański,Wielgomłyny,2,0,2,0,0
+101214,łódzkie,radomszczański,Żytno,15,0,13,2,0
+101301,łódzkie,rawski,Rawa Mazowiecka,0,0,0,0,0
+101302,łódzkie,rawski,Biała Rawska,1,0,1,0,0
+101303,łódzkie,rawski,Cielądz,1,0,1,0,0
+101304,łódzkie,rawski,Rawa Mazowiecka,0,0,0,0,0
+101305,łódzkie,rawski,Regnów,0,0,0,0,0
+101306,łódzkie,rawski,Sadkowice,0,0,0,0,0
+101401,łódzkie,sieradzki,Sieradz,0,0,0,0,0
+101402,łódzkie,sieradzki,Błaszki,0,0,0,0,0
+101403,łódzkie,sieradzki,Brąszewice,2,0,2,0,0
+101404,łódzkie,sieradzki,Brzeźnio,3,0,3,0,0
+101405,łódzkie,sieradzki,Burzenin,6,0,5,1,0
+101406,łódzkie,sieradzki,Goszczanów,0,0,0,0,0
+101407,łódzkie,sieradzki,Klonowa,0,0,0,0,0
+101408,łódzkie,sieradzki,Sieradz,11,0,11,0,0
+101409,łódzkie,sieradzki,Warta,4,0,4,0,0
+101410,łódzkie,sieradzki,Wróblew,1,0,1,0,0
+101411,łódzkie,sieradzki,Złoczew,3,0,3,0,0
+101501,łódzkie,skierniewicki,Bolimów,7,0,5,1,1
+101502,łódzkie,skierniewicki,Głuchów,0,0,0,0,0
+101503,łódzkie,skierniewicki,Godzianów,1,0,1,0,0
+101504,łódzkie,skierniewicki,Kowiesy,1,0,1,0,0
+101505,łódzkie,skierniewicki,Lipce Reymontowskie,2,0,1,0,1
+101506,łódzkie,skierniewicki,Maków,1,0,1,0,0
+101507,łódzkie,skierniewicki,Nowy Kawęczyn,1,0,1,0,0
+101508,łódzkie,skierniewicki,Skierniewice,1,0,1,0,0
+101509,łódzkie,skierniewicki,Słupia,2,0,2,0,0
+101601,łódzkie,tomaszowski,Tomaszów Mazowiecki,4,0,4,0,0
+101602,łódzkie,tomaszowski,Będków,1,0,1,0,0
+101603,łódzkie,tomaszowski,Budziszewice,1,0,1,0,0
+101604,łódzkie,tomaszowski,Czerniewice,2,0,2,0,0
+101605,łódzkie,tomaszowski,Inowłódz,1,0,1,0,0
+101606,łódzkie,tomaszowski,Lubochnia,7,0,7,0,0
+101607,łódzkie,tomaszowski,Rokiciny,2,0,2,0,0
+101608,łódzkie,tomaszowski,Rzeczyca,0,0,0,0,0
+101609,łódzkie,tomaszowski,Tomaszów Mazowiecki,12,0,10,1,1
+101610,łódzkie,tomaszowski,Ujazd,4,0,4,0,0
+101611,łódzkie,tomaszowski,Żelechlinek,1,0,1,0,0
+101701,łódzkie,wieluński,Biała,0,0,0,0,0
+101702,łódzkie,wieluński,Czarnożyły,0,0,0,0,0
+101703,łódzkie,wieluński,Konopnica,4,0,4,0,0
+101704,łódzkie,wieluński,Mokrsko,1,0,1,0,0
+101705,łódzkie,wieluński,Osjaków,2,0,2,0,0
+101706,łódzkie,wieluński,Ostrówek,3,0,3,0,0
+101707,łódzkie,wieluński,Pątnów,2,0,2,0,0
+101708,łódzkie,wieluński,Skomlin,0,0,0,0,0
+101709,łódzkie,wieluński,Wieluń,0,0,0,0,0
+101710,łódzkie,wieluński,Wierzchlas,0,0,0,0,0
+101801,łódzkie,wieruszowski,Bolesławiec,0,0,0,0,0
+101802,łódzkie,wieruszowski,Czastary,5,0,4,1,0
+101803,łódzkie,wieruszowski,Galewice,8,0,8,0,0
+101804,łódzkie,wieruszowski,Lututów,0,0,0,0,0
+101805,łódzkie,wieruszowski,Łubnice,0,0,0,0,0
+101806,łódzkie,wieruszowski,Sokolniki,0,0,0,0,0
+101807,łódzkie,wieruszowski,Wieruszów,5,0,5,0,0
+101901,łódzkie,zduńskowolski,Zduńska Wola,1,0,1,0,0
+101902,łódzkie,zduńskowolski,Szadek,4,0,4,0,0
+101903,łódzkie,zduńskowolski,Zapolice,3,0,3,0,0
+101904,łódzkie,zduńskowolski,Zduńska Wola,0,0,0,0,0
+102001,łódzkie,zgierski,Głowno,14,0,14,0,0
+102002,łódzkie,zgierski,Ozorków,0,0,0,0,0
+102003,łódzkie,zgierski,Zgierz,0,0,0,0,0
+102004,łódzkie,zgierski,Aleksandrów Łódzki,3,0,2,0,1
+102005,łódzkie,zgierski,Głowno,7,0,7,0,0
+102006,łódzkie,zgierski,Ozorków,0,0,0,0,0
+102007,łódzkie,zgierski,Parzęczew,2,0,2,0,0
+102008,łódzkie,zgierski,Stryków,6,0,6,0,0
+102009,łódzkie,zgierski,Zgierz,14,0,14,0,0
+102101,łódzkie,brzeziński,Brzeziny,1,0,1,0,0
+102102,łódzkie,brzeziński,Brzeziny,1,0,1,0,0
+102103,łódzkie,brzeziński,Dmosin,4,0,4,0,0
+102104,łódzkie,brzeziński,Jeżów,1,0,1,0,0
+102105,łódzkie,brzeziński,Rogów,0,0,0,0,0
+106101,łódzkie,Łódź,Łódź,2,0,2,0,0
+106102,łódzkie,Łódź,Łódź,1,0,1,0,0
+106103,łódzkie,Łódź,Łódź,1,0,1,0,0
+106104,łódzkie,Łódź,Łódź,2,0,2,0,0
+106105,łódzkie,Łódź,Łódź,0,0,0,0,0
+106106,łódzkie,Łódź,Łódź,10,0,10,0,0
+106201,łódzkie,Piotrków Trybunalski,Piotrków Trybunalski,0,0,0,0,0
+106301,łódzkie,Skierniewice,Skierniewice,3,0,3,0,0
+120101,małopolskie,bocheński,Bochnia,1,0,1,0,0
+120102,małopolskie,bocheński,Bochnia,1,0,1,0,0
+120103,małopolskie,bocheński,Drwinia,0,0,0,0,0
+120104,małopolskie,bocheński,Lipnica Murowana,1,0,1,0,0
+120105,małopolskie,bocheński,Łapanów,0,0,0,0,0
+120106,małopolskie,bocheński,Nowy Wiśnicz,0,0,0,0,0
+120107,małopolskie,bocheński,Rzezawa,0,0,0,0,0
+120108,małopolskie,bocheński,Trzciana,0,0,0,0,0
+120109,małopolskie,bocheński,Żegocina,0,0,0,0,0
+120201,małopolskie,brzeski,Borzęcin,1,0,0,1,0
+120202,małopolskie,brzeski,Brzesko,1,0,0,0,1
+120203,małopolskie,brzeski,Czchów,0,0,0,0,0
+120204,małopolskie,brzeski,Dębno,0,0,0,0,0
+120205,małopolskie,brzeski,Gnojnik,0,0,0,0,0
+120206,małopolskie,brzeski,Iwkowa,0,0,0,0,0
+120207,małopolskie,brzeski,Szczurowa,1,0,1,0,0
+120301,małopolskie,chrzanowski,Alwernia,0,0,0,0,0
+120302,małopolskie,chrzanowski,Babice,0,0,0,0,0
+120303,małopolskie,chrzanowski,Chrzanów,6,0,4,0,2
+120304,małopolskie,chrzanowski,Libiąż,7,1,6,0,0
+120305,małopolskie,chrzanowski,Trzebinia,11,3,8,0,0
+120401,małopolskie,dąbrowski,Bolesław,0,0,0,0,0
+120402,małopolskie,dąbrowski,Dąbrowa Tarnowska,2,0,2,0,0
+120403,małopolskie,dąbrowski,Gręboszów,0,0,0,0,0
+120404,małopolskie,dąbrowski,Mędrzechów,0,0,0,0,0
+120405,małopolskie,dąbrowski,Olesno,0,0,0,0,0
+120406,małopolskie,dąbrowski,Radgoszcz,0,0,0,0,0
+120407,małopolskie,dąbrowski,Szczucin,1,0,1,0,0
+120501,małopolskie,gorlicki,Gorlice,0,0,0,0,0
+120502,małopolskie,gorlicki,Biecz,0,0,0,0,0
+120503,małopolskie,gorlicki,Bobowa,0,0,0,0,0
+120504,małopolskie,gorlicki,Gorlice,0,0,0,0,0
+120505,małopolskie,gorlicki,Lipinki,0,0,0,0,0
+120506,małopolskie,gorlicki,Łużna,2,0,1,1,0
+120507,małopolskie,gorlicki,Moszczenica,0,0,0,0,0
+120508,małopolskie,gorlicki,Ropa,0,0,0,0,0
+120509,małopolskie,gorlicki,Sękowa,0,0,0,0,0
+120510,małopolskie,gorlicki,Uście Gorlickie,0,0,0,0,0
+120601,małopolskie,krakowski,Czernichów,0,0,0,0,0
+120602,małopolskie,krakowski,Igołomia-Wawrzeńczyce,0,0,0,0,0
+120603,małopolskie,krakowski,Iwanowice,0,0,0,0,0
+120604,małopolskie,krakowski,Jerzmanowice-Przeginia,2,0,2,0,0
+120605,małopolskie,krakowski,Kocmyrzów-Luborzyca,0,0,0,0,0
+120606,małopolskie,krakowski,Krzeszowice,6,0,6,0,0
+120607,małopolskie,krakowski,Liszki,0,0,0,0,0
+120608,małopolskie,krakowski,Michałowice,0,0,0,0,0
+120609,małopolskie,krakowski,Mogilany,0,0,0,0,0
+120610,małopolskie,krakowski,Skała,0,0,0,0,0
+120611,małopolskie,krakowski,Skawina,0,0,0,0,0
+120612,małopolskie,krakowski,Słomniki,0,0,0,0,0
+120613,małopolskie,krakowski,Sułoszowa,0,0,0,0,0
+120614,małopolskie,krakowski,Świątniki Górne,0,0,0,0,0
+120615,małopolskie,krakowski,Wielka Wieś,0,0,0,0,0
+120616,małopolskie,krakowski,Zabierzów,0,0,0,0,0
+120617,małopolskie,krakowski,Zielonki,0,0,0,0,0
+120701,małopolskie,limanowski,Limanowa,0,0,0,0,0
+120702,małopolskie,limanowski,Mszana Dolna,0,0,0,0,0
+120703,małopolskie,limanowski,Dobra,0,0,0,0,0
+120704,małopolskie,limanowski,Jodłownik,0,0,0,0,0
+120705,małopolskie,limanowski,Kamienica,0,0,0,0,0
+120706,małopolskie,limanowski,Laskowa,1,0,0,0,1
+120707,małopolskie,limanowski,Limanowa,0,0,0,0,0
+120708,małopolskie,limanowski,Łukowica,1,0,1,0,0
+120709,małopolskie,limanowski,Mszana Dolna,1,0,1,0,0
+120710,małopolskie,limanowski,Niedźwiedź,1,0,1,0,0
+120711,małopolskie,limanowski,Słopnice,0,0,0,0,0
+120712,małopolskie,limanowski,Tymbark,0,0,0,0,0
+120713,małopolskie,limanowski,Kamienica,0,0,0,0,0
+120801,małopolskie,miechowski,Charsznica,0,0,0,0,0
+120802,małopolskie,miechowski,Gołcza,2,0,1,0,1
+120803,małopolskie,miechowski,Kozłów,0,0,0,0,0
+120804,małopolskie,miechowski,Książ Wielki,0,0,0,0,0
+120805,małopolskie,miechowski,Miechów,0,0,0,0,0
+120806,małopolskie,miechowski,Racławice,0,0,0,0,0
+120807,małopolskie,miechowski,Słaboszów,0,0,0,0,0
+120901,małopolskie,myślenicki,Dobczyce,0,0,0,0,0
+120902,małopolskie,myślenicki,Lubień,0,0,0,0,0
+120903,małopolskie,myślenicki,Myślenice,2,0,1,0,1
+120904,małopolskie,myślenicki,Pcim,0,0,0,0,0
+120905,małopolskie,myślenicki,Raciechowice,0,0,0,0,0
+120906,małopolskie,myślenicki,Siepraw,0,0,0,0,0
+120907,małopolskie,myślenicki,Sułkowice,0,0,0,0,0
+120908,małopolskie,myślenicki,Tokarnia,0,0,0,0,0
+120909,małopolskie,myślenicki,Wiśniowa,0,0,0,0,0
+121001,małopolskie,nowosądecki,Grybów,0,0,0,0,0
+121002,małopolskie,nowosądecki,Chełmiec,0,0,0,0,0
+121003,małopolskie,nowosądecki,Gródek nad Dunajcem,0,0,0,0,0
+121004,małopolskie,nowosądecki,Grybów,0,0,0,0,0
+121005,małopolskie,nowosądecki,Kamionka Wielka,0,0,0,0,0
+121006,małopolskie,nowosądecki,Korzenna,0,0,0,0,0
+121007,małopolskie,nowosądecki,Krynica-Zdrój,3,0,2,0,1
+121008,małopolskie,nowosądecki,Łabowa,0,0,0,0,0
+121009,małopolskie,nowosądecki,Łącko,1,0,1,0,0
+121010,małopolskie,nowosądecki,Łososina Dolna,0,0,0,0,0
+121011,małopolskie,nowosądecki,Muszyna,0,0,0,0,0
+121012,małopolskie,nowosądecki,Nawojowa,0,0,0,0,0
+121013,małopolskie,nowosądecki,Piwniczna-Zdrój,0,0,0,0,0
+121014,małopolskie,nowosądecki,Podegrodzie,1,0,1,0,0
+121015,małopolskie,nowosądecki,Rytro,1,0,1,0,0
+121016,małopolskie,nowosądecki,Stary Sącz,1,0,1,0,0
+121101,małopolskie,nowotarski,Nowy Targ,1,0,1,0,0
+121102,małopolskie,nowotarski,Szczawnica,1,0,1,0,0
+121103,małopolskie,nowotarski,Czarny Dunajec,0,0,0,0,0
+121104,małopolskie,nowotarski,Czorsztyn,0,0,0,0,0
+121105,małopolskie,nowotarski,Jabłonka,0,0,0,0,0
+121106,małopolskie,nowotarski,Krościenko nad Dunajcem,0,0,0,0,0
+121107,małopolskie,nowotarski,Lipnica Wielka,0,0,0,0,0
+121108,małopolskie,nowotarski,Łapsze Niżne,0,0,0,0,0
+121109,małopolskie,nowotarski,Nowy Targ,0,0,0,0,0
+121110,małopolskie,nowotarski,Ochotnica Dolna,0,0,0,0,0
+121111,małopolskie,nowotarski,Raba Wyżna,0,0,0,0,0
+121112,małopolskie,nowotarski,Rabka-Zdrój,1,0,1,0,0
+121113,małopolskie,nowotarski,Spytkowice,0,0,0,0,0
+121114,małopolskie,nowotarski,Szaflary,0,0,0,0,0
+121201,małopolskie,olkuski,Bukowno,11,0,11,0,0
+121203,małopolskie,olkuski,Bolesław,5,0,5,0,0
+121204,małopolskie,olkuski,Klucze,14,0,13,0,1
+121205,małopolskie,olkuski,Olkusz,16,1,14,1,0
+121206,małopolskie,olkuski,Trzyciąż,0,0,0,0,0
+121207,małopolskie,olkuski,Wolbrom,16,0,16,0,0
+121301,małopolskie,oświęcimski,Oświęcim,0,0,0,0,0
+121302,małopolskie,oświęcimski,Brzeszcze,1,0,1,0,0
+121303,małopolskie,oświęcimski,Chełmek,1,0,0,0,1
+121304,małopolskie,oświęcimski,Kęty,0,0,0,0,0
+121305,małopolskie,oświęcimski,Osiek,0,0,0,0,0
+121306,małopolskie,oświęcimski,Oświęcim,0,0,0,0,0
+121307,małopolskie,oświęcimski,Polanka Wielka,0,0,0,0,0
+121308,małopolskie,oświęcimski,Przeciszów,0,0,0,0,0
+121309,małopolskie,oświęcimski,Zator,0,0,0,0,0
+121401,małopolskie,proszowicki,Koniusza,0,0,0,0,0
+121402,małopolskie,proszowicki,Koszyce,0,0,0,0,0
+121403,małopolskie,proszowicki,Nowe Brzesko,0,0,0,0,0
+121404,małopolskie,proszowicki,Pałecznica,0,0,0,0,0
+121405,małopolskie,proszowicki,Proszowice,0,0,0,0,0
+121406,małopolskie,proszowicki,Radziemice,0,0,0,0,0
+121501,małopolskie,suski,Jordanów,0,0,0,0,0
+121502,małopolskie,suski,Sucha Beskidzka,0,0,0,0,0
+121503,małopolskie,suski,Budzów,0,0,0,0,0
+121504,małopolskie,suski,Bystra-Sidzina,0,0,0,0,0
+121505,małopolskie,suski,Jordanów,0,0,0,0,0
+121506,małopolskie,suski,Maków Podhalański,0,0,0,0,0
+121507,małopolskie,suski,Stryszawa,0,0,0,0,0
+121508,małopolskie,suski,Zawoja,0,0,0,0,0
+121509,małopolskie,suski,Zembrzyce,0,0,0,0,0
+121601,małopolskie,tarnowski,Ciężkowice,1,0,1,0,0
+121602,małopolskie,tarnowski,Gromnik,0,0,0,0,0
+121603,małopolskie,tarnowski,Lisia Góra,0,0,0,0,0
+121604,małopolskie,tarnowski,Pleśna,0,0,0,0,0
+121605,małopolskie,tarnowski,Radłów,0,0,0,0,0
+121606,małopolskie,tarnowski,Ryglice,0,0,0,0,0
+121607,małopolskie,tarnowski,Rzepiennik Strzyżewski,0,0,0,0,0
+121608,małopolskie,tarnowski,Skrzyszów,0,0,0,0,0
+121609,małopolskie,tarnowski,Tarnów,3,0,2,0,1
+121610,małopolskie,tarnowski,Tuchów,3,1,1,0,1
+121611,małopolskie,tarnowski,Wierzchosławice,0,0,0,0,0
+121612,małopolskie,tarnowski,Wietrzychowice,0,0,0,0,0
+121613,małopolskie,tarnowski,Wojnicz,0,0,0,0,0
+121614,małopolskie,tarnowski,Zakliczyn,0,0,0,0,0
+121615,małopolskie,tarnowski,Żabno,2,0,2,0,0
+121616,małopolskie,tarnowski,Szerzyny,0,0,0,0,0
+121701,małopolskie,tatrzański,Zakopane,1,0,1,0,0
+121702,małopolskie,tatrzański,Biały Dunajec,0,0,0,0,0
+121703,małopolskie,tatrzański,Bukowina Tatrzańska,1,0,1,0,0
+121704,małopolskie,tatrzański,Kościelisko,1,0,1,0,0
+121705,małopolskie,tatrzański,Poronin,0,0,0,0,0
+121801,małopolskie,wadowicki,Andrychów,0,0,0,0,0
+121802,małopolskie,wadowicki,Brzeźnica,0,0,0,0,0
+121803,małopolskie,wadowicki,Kalwaria Zebrzydowska,0,0,0,0,0
+121804,małopolskie,wadowicki,Lanckorona,0,0,0,0,0
+121805,małopolskie,wadowicki,Mucharz,0,0,0,0,0
+121806,małopolskie,wadowicki,Spytkowice,1,0,1,0,0
+121807,małopolskie,wadowicki,Stryszów,0,0,0,0,0
+121808,małopolskie,wadowicki,Tomice,0,0,0,0,0
+121809,małopolskie,wadowicki,Wadowice,0,0,0,0,0
+121810,małopolskie,wadowicki,Wieprz,0,0,0,0,0
+121901,małopolskie,wielicki,Biskupice,0,0,0,0,0
+121902,małopolskie,wielicki,Gdów,0,0,0,0,0
+121903,małopolskie,wielicki,Kłaj,0,0,0,0,0
+121904,małopolskie,wielicki,Niepołomice,0,0,0,0,0
+121905,małopolskie,wielicki,Wieliczka,0,0,0,0,0
+126101,małopolskie,Kraków,Kraków,0,0,0,0,0
+126102,małopolskie,Kraków,Kraków,1,0,0,0,1
+126103,małopolskie,Kraków,Kraków,3,0,3,0,0
+126104,małopolskie,Kraków,Kraków,3,0,0,0,3
+126105,małopolskie,Kraków,Kraków,1,0,1,0,0
+126201,małopolskie,Nowy Sącz,Nowy Sącz,0,0,0,0,0
+126301,małopolskie,Tarnów,Tarnów,0,0,0,0,0
+140101,mazowieckie,białobrzeski,Białobrzegi,5,0,5,0,0
+140102,mazowieckie,białobrzeski,Promna,1,0,1,0,0
+140103,mazowieckie,białobrzeski,Radzanów,0,0,0,0,0
+140104,mazowieckie,białobrzeski,Stara Błotnica,3,0,3,0,0
+140105,mazowieckie,białobrzeski,Stromiec,7,0,6,1,0
+140106,mazowieckie,białobrzeski,Wyśmierzyce,1,0,0,0,1
+140201,mazowieckie,ciechanowski,Ciechanów,0,0,0,0,0
+140202,mazowieckie,ciechanowski,Ciechanów,2,0,2,0,0
+140203,mazowieckie,ciechanowski,Glinojeck,4,0,4,0,0
+140204,mazowieckie,ciechanowski,Gołymin-Ośrodek,0,0,0,0,0
+140205,mazowieckie,ciechanowski,Grudusk,0,0,0,0,0
+140206,mazowieckie,ciechanowski,Ojrzeń,0,0,0,0,0
+140207,mazowieckie,ciechanowski,Opinogóra Górna,1,0,1,0,0
+140208,mazowieckie,ciechanowski,Regimin,2,0,2,0,0
+140209,mazowieckie,ciechanowski,Sońsk,1,0,1,0,0
+140301,mazowieckie,garwoliński,Garwolin,1,0,1,0,0
+140302,mazowieckie,garwoliński,Łaskarzew,0,0,0,0,0
+140303,mazowieckie,garwoliński,Borowie,9,0,9,0,0
+140304,mazowieckie,garwoliński,Garwolin,4,0,4,0,0
+140305,mazowieckie,garwoliński,Górzno,0,0,0,0,0
+140306,mazowieckie,garwoliński,Łaskarzew,5,0,5,0,0
+140307,mazowieckie,garwoliński,Maciejowice,11,0,11,0,0
+140308,mazowieckie,garwoliński,Miastków Kościelny,1,0,1,0,0
+140309,mazowieckie,garwoliński,Parysów,1,0,1,0,0
+140310,mazowieckie,garwoliński,Pilawa,6,0,6,0,0
+140311,mazowieckie,garwoliński,Sobolew,10,0,10,0,0
+140312,mazowieckie,garwoliński,Trojanów,4,0,4,0,0
+140313,mazowieckie,garwoliński,Wilga,12,0,12,0,0
+140314,mazowieckie,garwoliński,Żelechów,1,0,1,0,0
+140401,mazowieckie,gostyniński,Gostynin,1,0,1,0,0
+140402,mazowieckie,gostyniński,Gostynin,5,1,4,0,0
+140403,mazowieckie,gostyniński,Pacyna,3,0,2,0,1
+140404,mazowieckie,gostyniński,Sanniki,1,0,1,0,0
+140405,mazowieckie,gostyniński,Szczawin Kościelny,13,0,11,2,0
+140501,mazowieckie,grodziski,Milanówek,2,0,2,0,0
+140502,mazowieckie,grodziski,Podkowa Leśna,0,0,0,0,0
+140503,mazowieckie,grodziski,Baranów,1,0,1,0,0
+140504,mazowieckie,grodziski,Grodzisk Mazowiecki,8,1,7,0,0
+140505,mazowieckie,grodziski,Jaktorów,8,0,8,0,0
+140506,mazowieckie,grodziski,Żabia Wola,20,0,20,0,0
+140601,mazowieckie,grójecki,Belsk Duży,0,0,0,0,0
+140602,mazowieckie,grójecki,Błędów,0,0,0,0,0
+140603,mazowieckie,grójecki,Chynów,20,1,19,0,0
+140604,mazowieckie,grójecki,Goszczyn,0,0,0,0,0
+140605,mazowieckie,grójecki,Grójec,3,0,3,0,0
+140606,mazowieckie,grójecki,Jasieniec,0,0,0,0,0
+140607,mazowieckie,grójecki,Mogielnica,1,0,1,0,0
+140608,mazowieckie,grójecki,Nowe Miasto nad Pilicą,8,0,8,0,0
+140609,mazowieckie,grójecki,Pniewy,11,0,11,0,0
+140611,mazowieckie,grójecki,Warka,0,0,0,0,0
+140701,mazowieckie,kozienicki,Garbatka-Letnisko,1,0,1,0,0
+140702,mazowieckie,kozienicki,Głowaczów,19,0,19,0,0
+140703,mazowieckie,kozienicki,Gniewoszów,0,0,0,0,0
+140704,mazowieckie,kozienicki,Grabów nad Pilicą,6,0,6,0,0
+140705,mazowieckie,kozienicki,Kozienice,8,0,7,0,1
+140706,mazowieckie,kozienicki,Magnuszew,7,0,7,0,0
+140707,mazowieckie,kozienicki,Sieciechów,2,0,2,0,0
+140801,mazowieckie,legionowski,Legionowo,3,0,3,0,0
+140802,mazowieckie,legionowski,Jabłonna,4,0,4,0,0
+140803,mazowieckie,legionowski,Nieporęt,6,0,6,0,0
+140804,mazowieckie,legionowski,Serock,3,0,3,0,0
+140805,mazowieckie,legionowski,Wieliszew,9,0,9,0,0
+140901,mazowieckie,lipski,Chotcza,0,0,0,0,0
+140902,mazowieckie,lipski,Ciepielów,0,0,0,0,0
+140903,mazowieckie,lipski,Lipsko,3,0,3,0,0
+140904,mazowieckie,lipski,Rzeczniów,0,0,0,0,0
+140905,mazowieckie,lipski,Sienno,0,0,0,0,0
+140906,mazowieckie,lipski,Solec nad Wisłą,1,0,1,0,0
+141001,mazowieckie,łosicki,Huszlew,0,0,0,0,0
+141002,mazowieckie,łosicki,Łosice,0,0,0,0,0
+141003,mazowieckie,łosicki,Olszanka,0,0,0,0,0
+141004,mazowieckie,łosicki,Platerów,6,1,5,0,0
+141005,mazowieckie,łosicki,Sarnaki,0,0,0,0,0
+141006,mazowieckie,łosicki,Stara Kornica,0,0,0,0,0
+141101,mazowieckie,makowski,Maków Mazowiecki,1,0,1,0,0
+141102,mazowieckie,makowski,Czerwonka,2,0,2,0,0
+141103,mazowieckie,makowski,Karniewo,0,0,0,0,0
+141104,mazowieckie,makowski,Krasnosielc,2,0,2,0,0
+141105,mazowieckie,makowski,Młynarze,1,0,1,0,0
+141106,mazowieckie,makowski,Płoniawy-Bramura,3,0,3,0,0
+141107,mazowieckie,makowski,Różan,2,0,2,0,0
+141108,mazowieckie,makowski,Rzewnie,1,0,1,0,0
+141109,mazowieckie,makowski,Sypniewo,2,0,2,0,0
+141110,mazowieckie,makowski,Szelków,2,0,0,2,0
+141201,mazowieckie,miński,Mińsk Mazowiecki,2,0,2,0,0
+141204,mazowieckie,miński,Cegłów,0,0,0,0,0
+141205,mazowieckie,miński,Dębe Wielkie,9,0,9,0,0
+141206,mazowieckie,miński,Dobre,3,0,3,0,0
+141207,mazowieckie,miński,Halinów,14,0,14,0,0
+141208,mazowieckie,miński,Jakubów,2,0,2,0,0
+141209,mazowieckie,miński,Kałuszyn,1,0,1,0,0
+141210,mazowieckie,miński,Latowicz,1,0,1,0,0
+141211,mazowieckie,miński,Mińsk Mazowiecki,5,0,5,0,0
+141212,mazowieckie,miński,Mrozy,12,0,12,0,0
+141213,mazowieckie,miński,Siennica,2,0,2,0,0
+141214,mazowieckie,miński,Stanisławów,3,0,3,0,0
+141215,mazowieckie,miński,Sulejówek,5,0,5,0,0
+141301,mazowieckie,mławski,Mława,2,1,1,0,0
+141302,mazowieckie,mławski,Dzierzgowo,0,0,0,0,0
+141303,mazowieckie,mławski,Lipowiec Kościelny,0,0,0,0,0
+141304,mazowieckie,mławski,Radzanów,2,0,2,0,0
+141305,mazowieckie,mławski,Strzegowo,3,0,3,0,0
+141306,mazowieckie,mławski,Stupsk,0,0,0,0,0
+141307,mazowieckie,mławski,Szreńsk,0,0,0,0,0
+141308,mazowieckie,mławski,Szydłowo,8,0,8,0,0
+141309,mazowieckie,mławski,Wieczfnia Kościelna,0,0,0,0,0
+141310,mazowieckie,mławski,Wiśniewo,0,0,0,0,0
+141401,mazowieckie,nowodworski,Nowy Dwór Mazowiecki,3,0,3,0,0
+141402,mazowieckie,nowodworski,Czosnów,6,0,6,0,0
+141403,mazowieckie,nowodworski,Leoncin,12,0,11,0,1
+141404,mazowieckie,nowodworski,Nasielsk,4,0,4,0,0
+141405,mazowieckie,nowodworski,Pomiechówek,2,0,1,1,0
+141406,mazowieckie,nowodworski,Zakroczym,0,0,0,0,0
+141501,mazowieckie,ostrołęcki,Baranowo,2,0,2,0,0
+141502,mazowieckie,ostrołęcki,Czarnia,2,0,1,1,0
+141503,mazowieckie,ostrołęcki,Czerwin,1,0,1,0,0
+141504,mazowieckie,ostrołęcki,Goworowo,1,0,1,0,0
+141505,mazowieckie,ostrołęcki,Kadzidło,3,0,3,0,0
+141506,mazowieckie,ostrołęcki,Lelis,1,0,1,0,0
+141507,mazowieckie,ostrołęcki,Łyse,1,0,1,0,0
+141508,mazowieckie,ostrołęcki,Myszyniec,6,0,6,0,0
+141509,mazowieckie,ostrołęcki,Olszewo-Borki,16,0,16,0,0
+141510,mazowieckie,ostrołęcki,Rzekuń,6,0,6,0,0
+141511,mazowieckie,ostrołęcki,Troszyn,0,0,0,0,0
+141601,mazowieckie,ostrowski,Ostrów Mazowiecka,4,0,4,0,0
+141602,mazowieckie,ostrowski,Andrzejewo,0,0,0,0,0
+141603,mazowieckie,ostrowski,Boguty-Pianki,8,0,8,0,0
+141604,mazowieckie,ostrowski,Brok,6,1,4,1,0
+141605,mazowieckie,ostrowski,Małkinia Górna,9,0,9,0,0
+141606,mazowieckie,ostrowski,Nur,0,0,0,0,0
+141607,mazowieckie,ostrowski,Ostrów Mazowiecka,13,0,13,0,0
+141608,mazowieckie,ostrowski,Stary Lubotyń,1,0,1,0,0
+141609,mazowieckie,ostrowski,Szulborze Wielkie,0,0,0,0,0
+141610,mazowieckie,ostrowski,Wąsewo,0,0,0,0,0
+141611,mazowieckie,ostrowski,Zaręby Kościelne,2,0,2,0,0
+141701,mazowieckie,otwocki,Józefów,2,0,2,0,0
+141702,mazowieckie,otwocki,Otwock,27,1,26,0,0
+141703,mazowieckie,otwocki,Celestynów,22,1,20,1,0
+141704,mazowieckie,otwocki,Karczew,12,0,12,0,0
+141705,mazowieckie,otwocki,Kołbiel,7,0,6,0,1
+141706,mazowieckie,otwocki,Osieck,3,0,3,0,0
+141707,mazowieckie,otwocki,Sobienie-Jeziory,16,0,16,0,0
+141708,mazowieckie,otwocki,Wiązowna,8,0,8,0,0
+141801,mazowieckie,piaseczyński,Góra Kalwaria,81,18,61,2,0
+141802,mazowieckie,piaseczyński,Konstancin-Jeziorna,1,0,1,0,0
+141803,mazowieckie,piaseczyński,Lesznowola,3,0,3,0,0
+141804,mazowieckie,piaseczyński,Piaseczno,24,6,17,0,1
+141805,mazowieckie,piaseczyński,Prażmów,43,9,34,0,0
+141806,mazowieckie,piaseczyński,Tarczyn,27,4,23,0,0
+141901,mazowieckie,płocki,Bielsk,1,0,1,0,0
+141902,mazowieckie,płocki,Bodzanów,2,0,2,0,0
+141903,mazowieckie,płocki,Brudzeń Duży,4,0,3,0,1
+141904,mazowieckie,płocki,Bulkowo,0,0,0,0,0
+141905,mazowieckie,płocki,Drobin,1,0,1,0,0
+141906,mazowieckie,płocki,Gąbin,5,0,5,0,0
+141907,mazowieckie,płocki,Łąck,2,0,2,0,0
+141908,mazowieckie,płocki,Mała Wieś,1,0,1,0,0
+141909,mazowieckie,płocki,Nowy Duninów,4,0,3,0,1
+141910,mazowieckie,płocki,Radzanowo,0,0,0,0,0
+141911,mazowieckie,płocki,Słubice,0,0,0,0,0
+141912,mazowieckie,płocki,Słupno,2,0,2,0,0
+141913,mazowieckie,płocki,Stara Biała,0,0,0,0,0
+141914,mazowieckie,płocki,Staroźreby,3,0,2,1,0
+141915,mazowieckie,płocki,Wyszogród,0,0,0,0,0
+142001,mazowieckie,płoński,Płońsk,0,0,0,0,0
+142002,mazowieckie,płoński,Raciąż,2,0,2,0,0
+142003,mazowieckie,płoński,Baboszewo,2,0,2,0,0
+142004,mazowieckie,płoński,Czerwińsk nad Wisłą,2,0,1,0,1
+142005,mazowieckie,płoński,Dzierzążnia,1,0,1,0,0
+142006,mazowieckie,płoński,Joniec,2,0,2,0,0
+142007,mazowieckie,płoński,Naruszewo,2,0,2,0,0
+142008,mazowieckie,płoński,Nowe Miasto,10,0,10,0,0
+142009,mazowieckie,płoński,Płońsk,2,0,1,0,1
+142010,mazowieckie,płoński,Raciąż,2,0,2,0,0
+142011,mazowieckie,płoński,Sochocin,0,0,0,0,0
+142012,mazowieckie,płoński,Załuski,1,0,1,0,0
+142101,mazowieckie,pruszkowski,Piastów,0,0,0,0,0
+142102,mazowieckie,pruszkowski,Pruszków,0,0,0,0,0
+142103,mazowieckie,pruszkowski,Brwinów,2,0,2,0,0
+142104,mazowieckie,pruszkowski,Michałowice,0,0,0,0,0
+142105,mazowieckie,pruszkowski,Nadarzyn,1,0,1,0,0
+142106,mazowieckie,pruszkowski,Raszyn,1,0,1,0,0
+142201,mazowieckie,przasnyski,Przasnysz,0,0,0,0,0
+142202,mazowieckie,przasnyski,Chorzele,2,0,2,0,0
+142203,mazowieckie,przasnyski,Czernice Borowe,0,0,0,0,0
+142204,mazowieckie,przasnyski,Jednorożec,3,0,3,0,0
+142205,mazowieckie,przasnyski,Krasne,0,0,0,0,0
+142206,mazowieckie,przasnyski,Krzynowłoga Mała,2,0,2,0,0
+142207,mazowieckie,przasnyski,Przasnysz,2,0,2,0,0
+142301,mazowieckie,przysuski,Borkowice,11,0,10,0,1
+142302,mazowieckie,przysuski,Gielniów,15,0,13,0,2
+142303,mazowieckie,przysuski,Klwów,27,1,26,0,0
+142304,mazowieckie,przysuski,Odrzywół,4,0,4,0,0
+142305,mazowieckie,przysuski,Potworów,11,0,11,0,0
+142306,mazowieckie,przysuski,Przysucha,2,0,2,0,0
+142307,mazowieckie,przysuski,Rusinów,1,0,1,0,0
+142308,mazowieckie,przysuski,Wieniawa,11,0,10,0,1
+142401,mazowieckie,pułtuski,Gzy,0,0,0,0,0
+142402,mazowieckie,pułtuski,Obryte,0,0,0,0,0
+142403,mazowieckie,pułtuski,Pokrzywnica,1,0,1,0,0
+142404,mazowieckie,pułtuski,Pułtusk,6,0,6,0,0
+142405,mazowieckie,pułtuski,Świercze,0,0,0,0,0
+142406,mazowieckie,pułtuski,Winnica,0,0,0,0,0
+142407,mazowieckie,pułtuski,Zatory,1,0,1,0,0
+142501,mazowieckie,radomski,Pionki,8,3,5,0,0
+142502,mazowieckie,radomski,Gózd,11,0,9,2,0
+142503,mazowieckie,radomski,Iłża,2,0,2,0,0
+142504,mazowieckie,radomski,Jastrzębia,7,0,7,0,0
+142505,mazowieckie,radomski,Jedlińsk,21,0,19,1,1
+142506,mazowieckie,radomski,Jedlnia-Letnisko,13,0,13,0,0
+142507,mazowieckie,radomski,Kowala,5,0,5,0,0
+142508,mazowieckie,radomski,Pionki,6,1,4,1,0
+142509,mazowieckie,radomski,Przytyk,5,0,5,0,0
+142510,mazowieckie,radomski,Skaryszew,14,0,13,1,0
+142511,mazowieckie,radomski,Wierzbica,0,0,0,0,0
+142512,mazowieckie,radomski,Wolanów,13,0,13,0,0
+142513,mazowieckie,radomski,Zakrzew,9,1,7,1,0
+142601,mazowieckie,siedlecki,Domanice,0,0,0,0,0
+142602,mazowieckie,siedlecki,Korczew,0,0,0,0,0
+142603,mazowieckie,siedlecki,Kotuń,4,0,4,0,0
+142604,mazowieckie,siedlecki,Mokobody,1,0,1,0,0
+142605,mazowieckie,siedlecki,Mordy,0,0,0,0,0
+142606,mazowieckie,siedlecki,Paprotnia,2,0,2,0,0
+142607,mazowieckie,siedlecki,Przesmyki,3,0,3,0,0
+142608,mazowieckie,siedlecki,Siedlce,6,0,5,0,1
+142609,mazowieckie,siedlecki,Skórzec,35,1,31,3,0
+142610,mazowieckie,siedlecki,Suchożebry,3,0,3,0,0
+142611,mazowieckie,siedlecki,Wiśniew,5,0,4,1,0
+142612,mazowieckie,siedlecki,Wodynie,2,0,1,0,1
+142613,mazowieckie,siedlecki,Zbuczyn,8,0,8,0,0
+142701,mazowieckie,sierpecki,Sierpc,0,0,0,0,0
+142702,mazowieckie,sierpecki,Gozdowo,0,0,0,0,0
+142703,mazowieckie,sierpecki,Mochowo,6,0,6,0,0
+142704,mazowieckie,sierpecki,Rościszewo,0,0,0,0,0
+142705,mazowieckie,sierpecki,Sierpc,0,0,0,0,0
+142706,mazowieckie,sierpecki,Szczutowo,2,0,2,0,0
+142707,mazowieckie,sierpecki,Zawidz,3,0,3,0,0
+142801,mazowieckie,sochaczewski,Sochaczew,2,0,2,0,0
+142802,mazowieckie,sochaczewski,Brochów,4,0,4,0,0
+142803,mazowieckie,sochaczewski,Iłów,3,0,3,0,0
+142804,mazowieckie,sochaczewski,Młodzieszyn,4,0,4,0,0
+142805,mazowieckie,sochaczewski,Nowa Sucha,0,0,0,0,0
+142806,mazowieckie,sochaczewski,Rybno,0,0,0,0,0
+142807,mazowieckie,sochaczewski,Sochaczew,5,0,4,1,0
+142808,mazowieckie,sochaczewski,Teresin,1,0,1,0,0
+142901,mazowieckie,sokołowski,Sokołów Podlaski,0,0,0,0,0
+142902,mazowieckie,sokołowski,Bielany,0,0,0,0,0
+142903,mazowieckie,sokołowski,Ceranów,5,0,5,0,0
+142904,mazowieckie,sokołowski,Jabłonna Lacka,0,0,0,0,0
+142905,mazowieckie,sokołowski,Kosów Lacki,3,0,3,0,0
+142906,mazowieckie,sokołowski,Repki,0,0,0,0,0
+142907,mazowieckie,sokołowski,Sabnie,1,0,1,0,0
+142908,mazowieckie,sokołowski,Sokołów Podlaski,3,0,3,0,0
+142909,mazowieckie,sokołowski,Sterdyń,1,0,1,0,0
+143001,mazowieckie,szydłowiecki,Chlewiska,14,0,13,1,0
+143002,mazowieckie,szydłowiecki,Jastrząb,4,0,4,0,0
+143003,mazowieckie,szydłowiecki,Mirów,0,0,0,0,0
+143004,mazowieckie,szydłowiecki,Orońsko,15,1,13,1,0
+143005,mazowieckie,szydłowiecki,Szydłowiec,11,0,11,0,0
+143201,mazowieckie,warszawski zachodni,Błonie,2,0,2,0,0
+143202,mazowieckie,warszawski zachodni,Izabelin,0,0,0,0,0
+143203,mazowieckie,warszawski zachodni,Kampinos,1,0,1,0,0
+143204,mazowieckie,warszawski zachodni,Leszno,8,0,8,0,0
+143205,mazowieckie,warszawski zachodni,Łomianki,8,0,8,0,0
+143206,mazowieckie,warszawski zachodni,Ożarów Mazowiecki,0,0,0,0,0
+143207,mazowieckie,warszawski zachodni,Stare Babice,2,0,2,0,0
+143301,mazowieckie,węgrowski,Węgrów,3,0,3,0,0
+143302,mazowieckie,węgrowski,Grębków,2,0,2,0,0
+143303,mazowieckie,węgrowski,Korytnica,1,0,1,0,0
+143304,mazowieckie,węgrowski,Liw,5,0,5,0,0
+143305,mazowieckie,węgrowski,Łochów,7,0,7,0,0
+143306,mazowieckie,węgrowski,Miedzna,0,0,0,0,0
+143307,mazowieckie,węgrowski,Sadowne,11,0,10,1,0
+143308,mazowieckie,węgrowski,Stoczek,1,0,1,0,0
+143309,mazowieckie,węgrowski,Wierzbno,0,0,0,0,0
+143401,mazowieckie,wołomiński,Kobyłka,17,0,15,0,2
+143402,mazowieckie,wołomiński,Marki,36,1,34,0,1
+143403,mazowieckie,wołomiński,Ząbki,8,0,7,0,1
+143404,mazowieckie,wołomiński,Zielonka,21,0,21,0,0
+143405,mazowieckie,wołomiński,Dąbrówka,17,0,17,0,0
+143406,mazowieckie,wołomiński,Jadów,19,0,19,0,0
+143407,mazowieckie,wołomiński,Klembów,16,1,15,0,0
+143408,mazowieckie,wołomiński,Poświętne,16,0,15,0,1
+143409,mazowieckie,wołomiński,Radzymin,55,1,54,0,0
+143410,mazowieckie,wołomiński,Strachówka,2,0,2,0,0
+143411,mazowieckie,wołomiński,Tłuszcz,41,1,40,0,0
+143412,mazowieckie,wołomiński,Wołomin,44,3,41,0,0
+143501,mazowieckie,wyszkowski,Brańszczyk,3,0,3,0,0
+143502,mazowieckie,wyszkowski,Długosiodło,6,0,6,0,0
+143503,mazowieckie,wyszkowski,Rząśnik,4,0,3,0,1
+143504,mazowieckie,wyszkowski,Somianka,1,0,1,0,0
+143505,mazowieckie,wyszkowski,Wyszków,15,0,15,0,0
+143506,mazowieckie,wyszkowski,Zabrodzie,6,0,6,0,0
+143601,mazowieckie,zwoleński,Kazanów,5,0,4,1,0
+143602,mazowieckie,zwoleński,Policzna,0,0,0,0,0
+143603,mazowieckie,zwoleński,Przyłęk,3,0,3,0,0
+143604,mazowieckie,zwoleński,Tczów,1,0,1,0,0
+143605,mazowieckie,zwoleński,Zwoleń,7,3,4,0,0
+143701,mazowieckie,żuromiński,Bieżuń,2,0,2,0,0
+143702,mazowieckie,żuromiński,Kuczbork-Osada,4,0,4,0,0
+143703,mazowieckie,żuromiński,Lubowidz,6,0,6,0,0
+143704,mazowieckie,żuromiński,Lutocin,0,0,0,0,0
+143705,mazowieckie,żuromiński,Siemiątkowo,2,0,2,0,0
+143706,mazowieckie,żuromiński,Żuromin,0,0,0,0,0
+143801,mazowieckie,żyrardowski,Żyrardów,2,0,2,0,0
+143802,mazowieckie,żyrardowski,Mszczonów,8,0,8,0,0
+143803,mazowieckie,żyrardowski,Puszcza Mariańska,8,0,8,0,0
+143804,mazowieckie,żyrardowski,Radziejowice,1,0,1,0,0
+143805,mazowieckie,żyrardowski,Wiskitki,5,1,4,0,0
+146101,mazowieckie,Ostrołęka,Ostrołęka,4,0,2,0,2
+146201,mazowieckie,Płock,Płock,4,0,2,0,2
+146301,mazowieckie,Radom,Radom,30,1,28,1,0
+146401,mazowieckie,Siedlce,Siedlce,6,0,4,0,2
+146501,mazowieckie,Warszawa,Warszawa,14,0,14,0,0
+146502,mazowieckie,Warszawa,Warszawa,2,0,1,0,1
+146503,mazowieckie,Warszawa,Warszawa,12,0,12,0,0
+146504,mazowieckie,Warszawa,Warszawa,2,0,2,0,0
+146505,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146506,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146507,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146508,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146509,mazowieckie,Warszawa,Warszawa,11,0,11,0,0
+146510,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146511,mazowieckie,Warszawa,Warszawa,1,0,1,0,0
+146512,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146513,mazowieckie,Warszawa,Warszawa,3,0,2,0,1
+146514,mazowieckie,Warszawa,Warszawa,31,3,28,0,0
+146515,mazowieckie,Warszawa,Warszawa,9,1,8,0,0
+146516,mazowieckie,Warszawa,Warszawa,2,0,1,0,1
+146517,mazowieckie,Warszawa,Warszawa,0,0,0,0,0
+146518,mazowieckie,Warszawa,Warszawa,3,0,2,0,1
+146519,mazowieckie,Warszawa,Warszawa,1,0,1,0,0
+160101,opolskie,brzeski,Brzeg,0,0,0,0,0
+160102,opolskie,brzeski,Skarbimierz,0,0,0,0,0
+160103,opolskie,brzeski,Grodków,0,0,0,0,0
+160104,opolskie,brzeski,Lewin Brzeski,0,0,0,0,0
+160105,opolskie,brzeski,Lubsza,2,0,2,0,0
+160106,opolskie,brzeski,Olszanka,0,0,0,0,0
+160201,opolskie,głubczycki,Baborów,0,0,0,0,0
+160202,opolskie,głubczycki,Branice,0,0,0,0,0
+160203,opolskie,głubczycki,Głubczyce,0,0,0,0,0
+160204,opolskie,głubczycki,Kietrz,0,0,0,0,0
+160301,opolskie,kędzierzyńsko-kozielski,Kędzierzyn-Koźle,18,2,11,5,0
+160302,opolskie,kędzierzyńsko-kozielski,Bierawa,1,0,1,0,0
+160303,opolskie,kędzierzyńsko-kozielski,Cisek,0,0,0,0,0
+160304,opolskie,kędzierzyńsko-kozielski,Pawłowiczki,0,0,0,0,0
+160305,opolskie,kędzierzyńsko-kozielski,Polska Cerekiew,0,0,0,0,0
+160306,opolskie,kędzierzyńsko-kozielski,Reńska Wieś,1,0,1,0,0
+160401,opolskie,kluczborski,Byczyna,1,0,1,0,0
+160402,opolskie,kluczborski,Kluczbork,3,0,1,0,2
+160403,opolskie,kluczborski,Lasowice Wielkie,2,0,2,0,0
+160404,opolskie,kluczborski,Wołczyn,5,0,2,0,3
+160501,opolskie,krapkowicki,Gogolin,3,0,3,0,0
+160502,opolskie,krapkowicki,Krapkowice,0,0,0,0,0
+160503,opolskie,krapkowicki,Strzeleczki,0,0,0,0,0
+160504,opolskie,krapkowicki,Walce,0,0,0,0,0
+160505,opolskie,krapkowicki,Zdzieszowice,0,0,0,0,0
+160601,opolskie,namysłowski,Domaszowice,1,0,0,0,1
+160602,opolskie,namysłowski,Namysłów,0,0,0,0,0
+160603,opolskie,namysłowski,Pokój,1,0,0,0,1
+160604,opolskie,namysłowski,Świerczów,0,0,0,0,0
+160605,opolskie,namysłowski,Wilków,1,0,1,0,0
+160701,opolskie,nyski,Głuchołazy,7,0,7,0,0
+160702,opolskie,nyski,Kamiennik,0,0,0,0,0
+160703,opolskie,nyski,Korfantów,1,0,1,0,0
+160704,opolskie,nyski,Łambinowice,1,0,1,0,0
+160705,opolskie,nyski,Nysa,4,0,2,0,2
+160706,opolskie,nyski,Otmuchów,0,0,0,0,0
+160707,opolskie,nyski,Paczków,0,0,0,0,0
+160708,opolskie,nyski,Pakosławice,0,0,0,0,0
+160709,opolskie,nyski,Skoroszyce,0,0,0,0,0
+160801,opolskie,oleski,Dobrodzień,0,0,0,0,0
+160802,opolskie,oleski,Gorzów Śląski,0,0,0,0,0
+160803,opolskie,oleski,Olesno,0,0,0,0,0
+160804,opolskie,oleski,Praszka,1,0,1,0,0
+160805,opolskie,oleski,Radłów,0,0,0,0,0
+160806,opolskie,oleski,Rudniki,0,0,0,0,0
+160807,opolskie,oleski,Zębowice,0,0,0,0,0
+160901,opolskie,opolski,Chrząstowice,0,0,0,0,0
+160902,opolskie,opolski,Dąbrowa,2,0,1,0,1
+160903,opolskie,opolski,Dobrzeń Wielki,1,0,1,0,0
+160904,opolskie,opolski,Komprachcice,1,0,1,0,0
+160905,opolskie,opolski,Łubniany,1,0,1,0,0
+160906,opolskie,opolski,Murów,1,0,1,0,0
+160907,opolskie,opolski,Niemodlin,1,0,1,0,0
+160908,opolskie,opolski,Ozimek,0,0,0,0,0
+160909,opolskie,opolski,Popielów,2,0,1,0,1
+160910,opolskie,opolski,Prószków,1,0,1,0,0
+160911,opolskie,opolski,Tarnów Opolski,2,1,1,0,0
+160912,opolskie,opolski,Tułowice,2,0,2,0,0
+160913,opolskie,opolski,Turawa,3,0,3,0,0
+161001,opolskie,prudnicki,Biała,0,0,0,0,0
+161002,opolskie,prudnicki,Głogówek,0,0,0,0,0
+161003,opolskie,prudnicki,Lubrza,0,0,0,0,0
+161004,opolskie,prudnicki,Prudnik,0,0,0,0,0
+161101,opolskie,strzelecki,Izbicko,0,0,0,0,0
+161102,opolskie,strzelecki,Jemielnica,0,0,0,0,0
+161103,opolskie,strzelecki,Kolonowskie,2,0,1,0,1
+161104,opolskie,strzelecki,Leśnica,1,0,1,0,0
+161105,opolskie,strzelecki,Strzelce Opolskie,0,0,0,0,0
+161106,opolskie,strzelecki,Ujazd,0,0,0,0,0
+161107,opolskie,strzelecki,Zawadzkie,1,0,0,0,1
+166101,opolskie,Opole,Opole,3,0,3,0,0
+180103,podkarpackie,bieszczadzki,Czarna,0,0,0,0,0
+180105,podkarpackie,bieszczadzki,Lutowiska,1,0,0,0,1
+180108,podkarpackie,bieszczadzki,Ustrzyki Dolne,0,0,0,0,0
+180201,podkarpackie,brzozowski,Brzozów,0,0,0,0,0
+180202,podkarpackie,brzozowski,Domaradz,1,0,1,0,0
+180203,podkarpackie,brzozowski,Dydnia,0,0,0,0,0
+180204,podkarpackie,brzozowski,Haczów,0,0,0,0,0
+180205,podkarpackie,brzozowski,Jasienica Rosielna,0,0,0,0,0
+180206,podkarpackie,brzozowski,Nozdrzec,2,0,2,0,0
+180301,podkarpackie,dębicki,Dębica,0,0,0,0,0
+180302,podkarpackie,dębicki,Brzostek,0,0,0,0,0
+180303,podkarpackie,dębicki,Czarna,2,0,2,0,0
+180304,podkarpackie,dębicki,Dębica,0,0,0,0,0
+180305,podkarpackie,dębicki,Jodłowa,2,0,2,0,0
+180306,podkarpackie,dębicki,Pilzno,0,0,0,0,0
+180307,podkarpackie,dębicki,Żyraków,1,0,1,0,0
+180401,podkarpackie,jarosławski,Jarosław,0,0,0,0,0
+180402,podkarpackie,jarosławski,Radymno,0,0,0,0,0
+180403,podkarpackie,jarosławski,Chłopice,0,0,0,0,0
+180404,podkarpackie,jarosławski,Jarosław,0,0,0,0,0
+180405,podkarpackie,jarosławski,Laszki,0,0,0,0,0
+180406,podkarpackie,jarosławski,Pawłosiów,0,0,0,0,0
+180407,podkarpackie,jarosławski,Pruchnik,0,0,0,0,0
+180408,podkarpackie,jarosławski,Radymno,1,0,1,0,0
+180409,podkarpackie,jarosławski,Rokietnica,1,0,0,0,1
+180410,podkarpackie,jarosławski,Roźwienica,0,0,0,0,0
+180411,podkarpackie,jarosławski,Wiązownica,0,0,0,0,0
+180501,podkarpackie,jasielski,Jasło,0,0,0,0,0
+180502,podkarpackie,jasielski,Brzyska,0,0,0,0,0
+180503,podkarpackie,jasielski,Dębowiec,0,0,0,0,0
+180504,podkarpackie,jasielski,Jasło,0,0,0,0,0
+180505,podkarpackie,jasielski,Kołaczyce,1,0,1,0,0
+180506,podkarpackie,jasielski,Krempna,0,0,0,0,0
+180507,podkarpackie,jasielski,Nowy Żmigród,2,0,1,0,1
+180508,podkarpackie,jasielski,Osiek Jasielski,0,0,0,0,0
+180509,podkarpackie,jasielski,Skołyszyn,0,0,0,0,0
+180511,podkarpackie,jasielski,Tarnowiec,0,0,0,0,0
+180601,podkarpackie,kolbuszowski,Cmolas,4,0,4,0,0
+180602,podkarpackie,kolbuszowski,Kolbuszowa,2,0,2,0,0
+180603,podkarpackie,kolbuszowski,Majdan Królewski,8,0,8,0,0
+180604,podkarpackie,kolbuszowski,Niwiska,1,0,1,0,0
+180605,podkarpackie,kolbuszowski,Raniżów,6,0,5,0,1
+180606,podkarpackie,kolbuszowski,Dzikowiec,2,0,2,0,0
+180701,podkarpackie,krośnieński,Chorkówka,0,0,0,0,0
+180702,podkarpackie,krośnieński,Dukla,1,0,1,0,0
+180703,podkarpackie,krośnieński,Iwonicz-Zdrój,0,0,0,0,0
+180704,podkarpackie,krośnieński,Jedlicze,0,0,0,0,0
+180705,podkarpackie,krośnieński,Korczyna,0,0,0,0,0
+180706,podkarpackie,krośnieński,Krościenko Wyżne,0,0,0,0,0
+180707,podkarpackie,krośnieński,Miejsce Piastowe,0,0,0,0,0
+180708,podkarpackie,krośnieński,Rymanów,0,0,0,0,0
+180709,podkarpackie,krośnieński,Wojaszówka,0,0,0,0,0
+180710,podkarpackie,krośnieński,Jaśliska,0,0,0,0,0
+180801,podkarpackie,leżajski,Leżajsk,4,1,3,0,0
+180802,podkarpackie,leżajski,Grodzisko Dolne,1,0,1,0,0
+180803,podkarpackie,leżajski,Kuryłówka,7,3,3,1,0
+180804,podkarpackie,leżajski,Leżajsk,4,0,4,0,0
+180805,podkarpackie,leżajski,Nowa Sarzyna,17,1,14,2,0
+180901,podkarpackie,lubaczowski,Lubaczów,0,0,0,0,0
+180902,podkarpackie,lubaczowski,Cieszanów,2,0,2,0,0
+180903,podkarpackie,lubaczowski,Horyniec-Zdrój,2,0,1,0,1
+180904,podkarpackie,lubaczowski,Lubaczów,0,0,0,0,0
+180905,podkarpackie,lubaczowski,Narol,1,0,1,0,0
+180906,podkarpackie,lubaczowski,Oleszyce,0,0,0,0,0
+180907,podkarpackie,lubaczowski,Stary Dzików,1,0,1,0,0
+180908,podkarpackie,lubaczowski,Wielkie Oczy,0,0,0,0,0
+181001,podkarpackie,łańcucki,Łańcut,0,0,0,0,0
+181002,podkarpackie,łańcucki,Białobrzegi,0,0,0,0,0
+181003,podkarpackie,łańcucki,Czarna,0,0,0,0,0
+181004,podkarpackie,łańcucki,Łańcut,0,0,0,0,0
+181005,podkarpackie,łańcucki,Markowa,0,0,0,0,0
+181006,podkarpackie,łańcucki,Rakszawa,1,0,1,0,0
+181007,podkarpackie,łańcucki,Żołynia,1,0,1,0,0
+181101,podkarpackie,mielecki,Mielec,2,0,1,1,0
+181102,podkarpackie,mielecki,Borowa,0,0,0,0,0
+181103,podkarpackie,mielecki,Czermin,1,0,1,0,0
+181104,podkarpackie,mielecki,Gawłuszowice,0,0,0,0,0
+181105,podkarpackie,mielecki,Mielec,4,0,4,0,0
+181106,podkarpackie,mielecki,Padew Narodowa,0,0,0,0,0
+181107,podkarpackie,mielecki,Przecław,2,0,1,1,0
+181108,podkarpackie,mielecki,Radomyśl Wielki,3,0,1,2,0
+181109,podkarpackie,mielecki,Tuszów Narodowy,3,0,3,0,0
+181110,podkarpackie,mielecki,Wadowice Górne,2,0,1,1,0
+181201,podkarpackie,niżański,Harasiuki,6,1,5,0,0
+181202,podkarpackie,niżański,Jarocin,5,0,5,0,0
+181203,podkarpackie,niżański,Jeżowe,10,0,10,0,0
+181204,podkarpackie,niżański,Krzeszów,0,0,0,0,0
+181205,podkarpackie,niżański,Nisko,11,0,11,0,0
+181206,podkarpackie,niżański,Rudnik nad Sanem,6,0,6,0,0
+181207,podkarpackie,niżański,Ulanów,12,0,12,0,0
+181301,podkarpackie,przemyski,Bircza,0,0,0,0,0
+181302,podkarpackie,przemyski,Dubiecko,0,0,0,0,0
+181303,podkarpackie,przemyski,Fredropol,0,0,0,0,0
+181304,podkarpackie,przemyski,Krasiczyn,0,0,0,0,0
+181305,podkarpackie,przemyski,Krzywcza,0,0,0,0,0
+181306,podkarpackie,przemyski,Medyka,0,0,0,0,0
+181307,podkarpackie,przemyski,Orły,0,0,0,0,0
+181308,podkarpackie,przemyski,Przemyśl,0,0,0,0,0
+181309,podkarpackie,przemyski,Stubno,0,0,0,0,0
+181310,podkarpackie,przemyski,Żurawica,0,0,0,0,0
+181401,podkarpackie,przeworski,Przeworsk,0,0,0,0,0
+181402,podkarpackie,przeworski,Adamówka,1,0,1,0,0
+181403,podkarpackie,przeworski,Gać,0,0,0,0,0
+181404,podkarpackie,przeworski,Jawornik Polski,0,0,0,0,0
+181405,podkarpackie,przeworski,Kańczuga,0,0,0,0,0
+181406,podkarpackie,przeworski,Przeworsk,0,0,0,0,0
+181407,podkarpackie,przeworski,Sieniawa,0,0,0,0,0
+181408,podkarpackie,przeworski,Tryńcza,0,0,0,0,0
+181409,podkarpackie,przeworski,Zarzecze,0,0,0,0,0
+181501,podkarpackie,ropczycko-sędziszowski,Iwierzyce,0,0,0,0,0
+181502,podkarpackie,ropczycko-sędziszowski,Ostrów,5,0,5,0,0
+181503,podkarpackie,ropczycko-sędziszowski,Ropczyce,0,0,0,0,0
+181504,podkarpackie,ropczycko-sędziszowski,Sędziszów Małopolski,2,0,2,0,0
+181505,podkarpackie,ropczycko-sędziszowski,Wielopole Skrzyńskie,1,0,1,0,0
+181601,podkarpackie,rzeszowski,Dynów,0,0,0,0,0
+181602,podkarpackie,rzeszowski,Błażowa,0,0,0,0,0
+181603,podkarpackie,rzeszowski,Boguchwała,0,0,0,0,0
+181604,podkarpackie,rzeszowski,Chmielnik,0,0,0,0,0
+181605,podkarpackie,rzeszowski,Dynów,0,0,0,0,0
+181606,podkarpackie,rzeszowski,Głogów Małopolski,6,0,6,0,0
+181607,podkarpackie,rzeszowski,Hyżne,0,0,0,0,0
+181608,podkarpackie,rzeszowski,Kamień,1,0,1,0,0
+181609,podkarpackie,rzeszowski,Krasne,1,0,1,0,0
+181610,podkarpackie,rzeszowski,Lubenia,0,0,0,0,0
+181611,podkarpackie,rzeszowski,Sokołów Małopolski,3,0,3,0,0
+181612,podkarpackie,rzeszowski,Świlcza,3,1,1,1,0
+181613,podkarpackie,rzeszowski,Trzebownisko,0,0,0,0,0
+181614,podkarpackie,rzeszowski,Tyczyn,0,0,0,0,0
+181701,podkarpackie,sanocki,Sanok,0,0,0,0,0
+181702,podkarpackie,sanocki,Besko,0,0,0,0,0
+181703,podkarpackie,sanocki,Bukowsko,0,0,0,0,0
+181704,podkarpackie,sanocki,Komańcza,0,0,0,0,0
+181705,podkarpackie,sanocki,Sanok,0,0,0,0,0
+181706,podkarpackie,sanocki,Tyrawa Wołoska,0,0,0,0,0
+181707,podkarpackie,sanocki,Zagórz,0,0,0,0,0
+181708,podkarpackie,sanocki,Zarszyn,0,0,0,0,0
+181801,podkarpackie,stalowowolski,Stalowa Wola,19,2,17,0,0
+181802,podkarpackie,stalowowolski,Bojanów,7,0,7,0,0
+181803,podkarpackie,stalowowolski,Pysznica,8,0,7,0,1
+181804,podkarpackie,stalowowolski,Radomyśl nad Sanem,15,1,13,1,0
+181805,podkarpackie,stalowowolski,Zaklików,5,0,5,0,0
+181806,podkarpackie,stalowowolski,Zaleszany,4,0,4,0,0
+181901,podkarpackie,strzyżowski,Czudec,0,0,0,0,0
+181902,podkarpackie,strzyżowski,Frysztak,0,0,0,0,0
+181903,podkarpackie,strzyżowski,Niebylec,0,0,0,0,0
+181904,podkarpackie,strzyżowski,Strzyżów,0,0,0,0,0
+181905,podkarpackie,strzyżowski,Wiśniowa,0,0,0,0,0
+182001,podkarpackie,tarnobrzeski,Baranów Sandomierski,2,0,2,0,0
+182002,podkarpackie,tarnobrzeski,Gorzyce,1,0,1,0,0
+182003,podkarpackie,tarnobrzeski,Grębów,4,0,4,0,0
+182004,podkarpackie,tarnobrzeski,Nowa Dęba,10,0,9,1,0
+182101,podkarpackie,leski,Baligród,1,0,0,0,1
+182102,podkarpackie,leski,Cisna,0,0,0,0,0
+182103,podkarpackie,leski,Lesko,0,0,0,0,0
+182104,podkarpackie,leski,Olszanica,2,0,1,0,1
+182105,podkarpackie,leski,Solina,0,0,0,0,0
+186101,podkarpackie,Krosno,Krosno,0,0,0,0,0
+186201,podkarpackie,Przemyśl,Przemyśl,0,0,0,0,0
+186301,podkarpackie,Rzeszów,Rzeszów,0,0,0,0,0
+186401,podkarpackie,Tarnobrzeg,Tarnobrzeg,1,0,1,0,0
+200101,podlaskie,augustowski,Augustów,1,0,1,0,0
+200102,podlaskie,augustowski,Augustów,0,0,0,0,0
+200103,podlaskie,augustowski,Bargłów Kościelny,1,0,1,0,0
+200104,podlaskie,augustowski,Lipsk,2,0,2,0,0
+200105,podlaskie,augustowski,Nowinka,0,0,0,0,0
+200106,podlaskie,augustowski,Płaska,0,0,0,0,0
+200107,podlaskie,augustowski,Sztabin,3,0,3,0,0
+200201,podlaskie,białostocki,Choroszcz,11,0,11,0,0
+200202,podlaskie,białostocki,Czarna Białostocka,6,0,6,0,0
+200203,podlaskie,białostocki,Dobrzyniewo Duże,7,0,5,2,0
+200204,podlaskie,białostocki,Gródek,4,0,4,0,0
+200205,podlaskie,białostocki,Juchnowiec Kościelny,8,0,8,0,0
+200206,podlaskie,białostocki,Łapy,1,0,1,0,0
+200207,podlaskie,białostocki,Michałowo,7,1,6,0,0
+200208,podlaskie,białostocki,Poświętne,0,0,0,0,0
+200209,podlaskie,białostocki,Grabówka,0,0,0,0,0
+200209,podlaskie,białostocki,Supraśl,3,0,3,0,0
+200210,podlaskie,białostocki,Suraż,0,0,0,0,0
+200211,podlaskie,białostocki,Turośń Kościelna,3,0,3,0,0
+200212,podlaskie,białostocki,Tykocin,2,0,2,0,0
+200213,podlaskie,białostocki,Wasilków,12,0,12,0,0
+200214,podlaskie,białostocki,Zabłudów,1,0,1,0,0
+200215,podlaskie,białostocki,Zawady,2,0,2,0,0
+200216,podlaskie,białostocki,Supraśl,0,0,0,0,0
+200301,podlaskie,bielski,Bielsk Podlaski,0,0,0,0,0
+200302,podlaskie,bielski,Brańsk,1,0,1,0,0
+200303,podlaskie,bielski,Bielsk Podlaski,1,0,1,0,0
+200304,podlaskie,bielski,Boćki,1,0,1,0,0
+200305,podlaskie,bielski,Brańsk,0,0,0,0,0
+200306,podlaskie,bielski,Orla,2,0,2,0,0
+200307,podlaskie,bielski,Rudka,0,0,0,0,0
+200308,podlaskie,bielski,Wyszki,3,0,3,0,0
+200401,podlaskie,grajewski,Grajewo,2,0,2,0,0
+200402,podlaskie,grajewski,Grajewo,3,0,3,0,0
+200403,podlaskie,grajewski,Radziłów,2,0,2,0,0
+200404,podlaskie,grajewski,Rajgród,1,1,0,0,0
+200405,podlaskie,grajewski,Szczuczyn,1,0,0,0,1
+200406,podlaskie,grajewski,Wąsosz,2,0,2,0,0
+200501,podlaskie,hajnowski,Hajnówka,1,0,1,0,0
+200502,podlaskie,hajnowski,Białowieża,0,0,0,0,0
+200503,podlaskie,hajnowski,Czeremcha,3,0,3,0,0
+200504,podlaskie,hajnowski,Czyże,2,0,2,0,0
+200505,podlaskie,hajnowski,Dubicze Cerkiewne,8,0,8,0,0
+200506,podlaskie,hajnowski,Hajnówka,5,0,5,0,0
+200507,podlaskie,hajnowski,Kleszczele,5,0,4,1,0
+200508,podlaskie,hajnowski,Narew,1,0,1,0,0
+200509,podlaskie,hajnowski,Narewka,6,0,6,0,0
+200601,podlaskie,kolneński,Kolno,0,0,0,0,0
+200602,podlaskie,kolneński,Grabowo,0,0,0,0,0
+200603,podlaskie,kolneński,Kolno,1,0,1,0,0
+200604,podlaskie,kolneński,Mały Płock,0,0,0,0,0
+200605,podlaskie,kolneński,Stawiski,6,0,4,1,1
+200606,podlaskie,kolneński,Turośl,1,0,1,0,0
+200701,podlaskie,łomżyński,Jedwabne,0,0,0,0,0
+200702,podlaskie,łomżyński,Łomża,2,0,2,0,0
+200703,podlaskie,łomżyński,Miastkowo,0,0,0,0,0
+200704,podlaskie,łomżyński,Nowogród,0,0,0,0,0
+200705,podlaskie,łomżyński,Piątnica,7,0,7,0,0
+200706,podlaskie,łomżyński,Przytuły,0,0,0,0,0
+200707,podlaskie,łomżyński,Śniadowo,4,1,2,1,0
+200708,podlaskie,łomżyński,Wizna,15,1,14,0,0
+200709,podlaskie,łomżyński,Zbójna,1,0,1,0,0
+200801,podlaskie,moniecki,Goniądz,3,0,3,0,0
+200802,podlaskie,moniecki,Jasionówka,1,1,0,0,0
+200803,podlaskie,moniecki,Jaświły,0,0,0,0,0
+200804,podlaskie,moniecki,Knyszyn,0,0,0,0,0
+200805,podlaskie,moniecki,Krypno,1,0,1,0,0
+200806,podlaskie,moniecki,Mońki,10,0,9,1,0
+200807,podlaskie,moniecki,Trzcianne,3,0,3,0,0
+200901,podlaskie,sejneński,Sejny,0,0,0,0,0
+200902,podlaskie,sejneński,Giby,2,0,2,0,0
+200903,podlaskie,sejneński,Krasnopol,4,2,2,0,0
+200904,podlaskie,sejneński,Puńsk,0,0,0,0,0
+200905,podlaskie,sejneński,Sejny,2,0,2,0,0
+201001,podlaskie,siemiatycki,Siemiatycze,0,0,0,0,0
+201002,podlaskie,siemiatycki,Drohiczyn,3,0,3,0,0
+201003,podlaskie,siemiatycki,Dziadkowice,0,0,0,0,0
+201004,podlaskie,siemiatycki,Grodzisk,0,0,0,0,0
+201005,podlaskie,siemiatycki,Mielnik,11,0,6,3,2
+201006,podlaskie,siemiatycki,Milejczyce,2,0,2,0,0
+201007,podlaskie,siemiatycki,Nurzec-Stacja,2,0,2,0,0
+201008,podlaskie,siemiatycki,Perlejewo,0,0,0,0,0
+201009,podlaskie,siemiatycki,Siemiatycze,1,0,1,0,0
+201101,podlaskie,sokólski,Dąbrowa Białostocka,0,0,0,0,0
+201102,podlaskie,sokólski,Janów,0,0,0,0,0
+201103,podlaskie,sokólski,Korycin,0,0,0,0,0
+201104,podlaskie,sokólski,Krynki,0,0,0,0,0
+201105,podlaskie,sokólski,Kuźnica,1,0,1,0,0
+201106,podlaskie,sokólski,Nowy Dwór,0,0,0,0,0
+201107,podlaskie,sokólski,Sidra,0,0,0,0,0
+201108,podlaskie,sokólski,Sokółka,7,0,5,2,0
+201109,podlaskie,sokólski,Suchowola,0,0,0,0,0
+201110,podlaskie,sokólski,Szudziałowo,1,0,1,0,0
+201201,podlaskie,suwalski,Bakałarzewo,0,0,0,0,0
+201202,podlaskie,suwalski,Filipów,0,0,0,0,0
+201203,podlaskie,suwalski,Jeleniewo,0,0,0,0,0
+201204,podlaskie,suwalski,Przerośl,0,0,0,0,0
+201205,podlaskie,suwalski,Raczki,0,0,0,0,0
+201206,podlaskie,suwalski,Rutka-Tartak,0,0,0,0,0
+201207,podlaskie,suwalski,Suwałki,1,0,1,0,0
+201208,podlaskie,suwalski,Szypliszki,1,0,1,0,0
+201209,podlaskie,suwalski,Wiżajny,1,1,0,0,0
+201301,podlaskie,wysokomazowiecki,Wysokie Mazowieckie,0,0,0,0,0
+201302,podlaskie,wysokomazowiecki,Ciechanowiec,2,0,2,0,0
+201303,podlaskie,wysokomazowiecki,Czyżew,0,0,0,0,0
+201304,podlaskie,wysokomazowiecki,Klukowo,0,0,0,0,0
+201305,podlaskie,wysokomazowiecki,Kobylin-Borzymy,3,0,3,0,0
+201306,podlaskie,wysokomazowiecki,Kulesze Kościelne,0,0,0,0,0
+201307,podlaskie,wysokomazowiecki,Nowe Piekuty,1,0,1,0,0
+201308,podlaskie,wysokomazowiecki,Sokoły,5,0,5,0,0
+201309,podlaskie,wysokomazowiecki,Szepietowo,1,0,1,0,0
+201310,podlaskie,wysokomazowiecki,Wysokie Mazowieckie,0,0,0,0,0
+201401,podlaskie,zambrowski,Zambrów,0,0,0,0,0
+201402,podlaskie,zambrowski,Kołaki Kościelne,2,0,2,0,0
+201403,podlaskie,zambrowski,Rutki,1,0,1,0,0
+201404,podlaskie,zambrowski,Szumowo,1,0,1,0,0
+201405,podlaskie,zambrowski,Zambrów,1,0,1,0,0
+206101,podlaskie,Białystok,Białystok,4,0,4,0,0
+206201,podlaskie,Łomża,Łomża,0,0,0,0,0
+206301,podlaskie,Suwałki,Suwałki,0,0,0,0,0
+220101,pomorskie,bytowski,Borzytuchom,1,0,1,0,0
+220102,pomorskie,bytowski,Bytów,1,0,1,0,0
+220103,pomorskie,bytowski,Czarna Dąbrówka,1,0,1,0,0
+220104,pomorskie,bytowski,Kołczygłowy,0,0,0,0,0
+220105,pomorskie,bytowski,Lipnica,0,0,0,0,0
+220106,pomorskie,bytowski,Miastko,6,0,6,0,0
+220107,pomorskie,bytowski,Parchowo,0,0,0,0,0
+220108,pomorskie,bytowski,Studzienice,0,0,0,0,0
+220109,pomorskie,bytowski,Trzebielino,1,0,1,0,0
+220110,pomorskie,bytowski,Tuchomie,0,0,0,0,0
+220201,pomorskie,chojnicki,Chojnice,0,0,0,0,0
+220202,pomorskie,chojnicki,Brusy,2,0,2,0,0
+220203,pomorskie,chojnicki,Chojnice,7,0,7,0,0
+220204,pomorskie,chojnicki,Czersk,7,1,6,0,0
+220205,pomorskie,chojnicki,Konarzyny,0,0,0,0,0
+220301,pomorskie,człuchowski,Człuchów,0,0,0,0,0
+220302,pomorskie,człuchowski,Czarne,1,0,1,0,0
+220303,pomorskie,człuchowski,Człuchów,1,0,1,0,0
+220304,pomorskie,człuchowski,Debrzno,0,0,0,0,0
+220305,pomorskie,człuchowski,Koczała,1,0,1,0,0
+220306,pomorskie,człuchowski,Przechlewo,1,0,1,0,0
+220307,pomorskie,człuchowski,Rzeczenica,1,0,1,0,0
+220401,pomorskie,gdański,Pruszcz Gdański,0,0,0,0,0
+220402,pomorskie,gdański,Cedry Wielkie,0,0,0,0,0
+220403,pomorskie,gdański,Kolbudy,0,0,0,0,0
+220404,pomorskie,gdański,Pruszcz Gdański,0,0,0,0,0
+220405,pomorskie,gdański,Przywidz,1,0,1,0,0
+220406,pomorskie,gdański,Pszczółki,0,0,0,0,0
+220407,pomorskie,gdański,Suchy Dąb,0,0,0,0,0
+220408,pomorskie,gdański,Trąbki Wielkie,0,0,0,0,0
+220501,pomorskie,kartuski,Chmielno,0,0,0,0,0
+220502,pomorskie,kartuski,Kartuzy,1,0,1,0,0
+220503,pomorskie,kartuski,Przodkowo,0,0,0,0,0
+220504,pomorskie,kartuski,Sierakowice,1,0,1,0,0
+220505,pomorskie,kartuski,Somonino,2,0,2,0,0
+220506,pomorskie,kartuski,Stężyca,2,0,2,0,0
+220507,pomorskie,kartuski,Sulęczyno,0,0,0,0,0
+220508,pomorskie,kartuski,Żukowo,4,0,4,0,0
+220601,pomorskie,kościerski,Kościerzyna,0,0,0,0,0
+220602,pomorskie,kościerski,Dziemiany,0,0,0,0,0
+220603,pomorskie,kościerski,Karsin,1,0,1,0,0
+220604,pomorskie,kościerski,Kościerzyna,2,0,2,0,0
+220605,pomorskie,kościerski,Liniewo,0,0,0,0,0
+220606,pomorskie,kościerski,Lipusz,1,0,1,0,0
+220607,pomorskie,kościerski,Nowa Karczma,1,0,1,0,0
+220608,pomorskie,kościerski,Stara Kiszewa,1,0,1,0,0
+220701,pomorskie,kwidzyński,Kwidzyn,1,0,1,0,0
+220702,pomorskie,kwidzyński,Gardeja,0,0,0,0,0
+220703,pomorskie,kwidzyński,Kwidzyn,2,0,2,0,0
+220704,pomorskie,kwidzyński,Prabuty,0,0,0,0,0
+220705,pomorskie,kwidzyński,Ryjewo,0,0,0,0,0
+220706,pomorskie,kwidzyński,Sadlinki,0,0,0,0,0
+220801,pomorskie,lęborski,Lębork,0,0,0,0,0
+220802,pomorskie,lęborski,Łeba,0,0,0,0,0
+220803,pomorskie,lęborski,Cewice,0,0,0,0,0
+220804,pomorskie,lęborski,Nowa Wieś Lęborska,3,0,2,1,0
+220805,pomorskie,lęborski,Wicko,0,0,0,0,0
+220901,pomorskie,malborski,Malbork,1,0,1,0,0
+220903,pomorskie,malborski,Lichnowy,0,0,0,0,0
+220904,pomorskie,malborski,Malbork,0,0,0,0,0
+220906,pomorskie,malborski,Miłoradz,0,0,0,0,0
+220907,pomorskie,malborski,Nowy Staw,0,0,0,0,0
+220908,pomorskie,malborski,Stare Pole,0,0,0,0,0
+221001,pomorskie,nowodworski,Krynica Morska,0,0,0,0,0
+221002,pomorskie,nowodworski,Nowy Dwór Gdański,0,0,0,0,0
+221003,pomorskie,nowodworski,Ostaszewo,0,0,0,0,0
+221004,pomorskie,nowodworski,Stegna,7,0,7,0,0
+221005,pomorskie,nowodworski,Sztutowo,2,0,2,0,0
+221101,pomorskie,pucki,Hel,1,0,1,0,0
+221102,pomorskie,pucki,Jastarnia,0,0,0,0,0
+221103,pomorskie,pucki,Puck,0,0,0,0,0
+221104,pomorskie,pucki,Władysławowo,0,0,0,0,0
+221105,pomorskie,pucki,Kosakowo,0,0,0,0,0
+221106,pomorskie,pucki,Krokowa,1,0,1,0,0
+221107,pomorskie,pucki,Puck,0,0,0,0,0
+221201,pomorskie,słupski,Ustka,2,0,2,0,0
+221202,pomorskie,słupski,Damnica,0,0,0,0,0
+221203,pomorskie,słupski,Dębnica Kaszubska,3,0,3,0,0
+221204,pomorskie,słupski,Główczyce,1,0,1,0,0
+221205,pomorskie,słupski,Kępice,0,0,0,0,0
+221206,pomorskie,słupski,Kobylnica,1,0,1,0,0
+221207,pomorskie,słupski,Potęgowo,0,0,0,0,0
+221208,pomorskie,słupski,Redzikowo,1,0,1,0,0
+221209,pomorskie,słupski,Smołdzino,1,0,1,0,0
+221210,pomorskie,słupski,Ustka,3,0,3,0,0
+221301,pomorskie,starogardzki,Czarna Woda,2,0,2,0,0
+221302,pomorskie,starogardzki,Skórcz,0,0,0,0,0
+221303,pomorskie,starogardzki,Starogard Gdański,0,0,0,0,0
+221304,pomorskie,starogardzki,Bobowo,0,0,0,0,0
+221305,pomorskie,starogardzki,Kaliska,0,0,0,0,0
+221306,pomorskie,starogardzki,Lubichowo,2,0,2,0,0
+221307,pomorskie,starogardzki,Osieczna,0,0,0,0,0
+221308,pomorskie,starogardzki,Osiek,5,0,5,0,0
+221309,pomorskie,starogardzki,Skarszewy,0,0,0,0,0
+221310,pomorskie,starogardzki,Skórcz,0,0,0,0,0
+221311,pomorskie,starogardzki,Smętowo Graniczne,0,0,0,0,0
+221312,pomorskie,starogardzki,Starogard Gdański,6,0,6,0,0
+221313,pomorskie,starogardzki,Zblewo,0,0,0,0,0
+221401,pomorskie,tczewski,Tczew,0,0,0,0,0
+221402,pomorskie,tczewski,Gniew,1,0,1,0,0
+221403,pomorskie,tczewski,Morzeszczyn,0,0,0,0,0
+221404,pomorskie,tczewski,Pelplin,0,0,0,0,0
+221405,pomorskie,tczewski,Subkowy,1,0,1,0,0
+221406,pomorskie,tczewski,Tczew,3,0,2,1,0
+221501,pomorskie,wejherowski,Reda,1,0,1,0,0
+221502,pomorskie,wejherowski,Rumia,5,1,3,0,1
+221503,pomorskie,wejherowski,Wejherowo,3,0,3,0,0
+221504,pomorskie,wejherowski,Choczewo,3,0,3,0,0
+221505,pomorskie,wejherowski,Gniewino,0,0,0,0,0
+221506,pomorskie,wejherowski,Linia,0,0,0,0,0
+221507,pomorskie,wejherowski,Luzino,1,0,1,0,0
+221508,pomorskie,wejherowski,Łęczyce,0,0,0,0,0
+221509,pomorskie,wejherowski,Szemud,1,1,0,0,0
+221510,pomorskie,wejherowski,Wejherowo,7,1,6,0,0
+221601,pomorskie,sztumski,Dzierzgoń,0,0,0,0,0
+221602,pomorskie,sztumski,Mikołajki Pomorskie,0,0,0,0,0
+221603,pomorskie,sztumski,Stary Dzierzgoń,1,0,1,0,0
+221604,pomorskie,sztumski,Stary Targ,0,0,0,0,0
+221605,pomorskie,sztumski,Sztum,1,0,1,0,0
+226101,pomorskie,Gdańsk,Gdańsk,27,1,15,0,11
+226201,pomorskie,Gdynia,Gdynia,13,0,10,0,3
+226301,pomorskie,Słupsk,Słupsk,4,0,4,0,0
+226401,pomorskie,Sopot,Sopot,0,0,0,0,0
+240101,śląskie,będziński,Będzin,1,0,1,0,0
+240102,śląskie,będziński,Czeladź,0,0,0,0,0
+240103,śląskie,będziński,Wojkowice,0,0,0,0,0
+240104,śląskie,będziński,Bobrowniki,1,0,1,0,0
+240105,śląskie,będziński,Mierzęcice,5,0,4,0,1
+240106,śląskie,będziński,Psary,1,0,1,0,0
+240107,śląskie,będziński,Siewierz,1,0,1,0,0
+240108,śląskie,będziński,Sławków,2,0,2,0,0
+240201,śląskie,bielski,Szczyrk,0,0,0,0,0
+240202,śląskie,bielski,Bestwina,0,0,0,0,0
+240203,śląskie,bielski,Buczkowice,0,0,0,0,0
+240204,śląskie,bielski,Czechowice-Dziedzice,0,0,0,0,0
+240205,śląskie,bielski,Jasienica,0,0,0,0,0
+240206,śląskie,bielski,Jaworze,0,0,0,0,0
+240207,śląskie,bielski,Kozy,0,0,0,0,0
+240208,śląskie,bielski,Porąbka,0,0,0,0,0
+240209,śląskie,bielski,Wilamowice,0,0,0,0,0
+240210,śląskie,bielski,Wilkowice,0,0,0,0,0
+240301,śląskie,cieszyński,Cieszyn,0,0,0,0,0
+240302,śląskie,cieszyński,Ustroń,0,0,0,0,0
+240303,śląskie,cieszyński,Wisła,1,0,1,0,0
+240304,śląskie,cieszyński,Brenna,0,0,0,0,0
+240305,śląskie,cieszyński,Chybie,1,0,0,0,1
+240306,śląskie,cieszyński,Dębowiec,1,0,1,0,0
+240307,śląskie,cieszyński,Goleszów,0,0,0,0,0
+240308,śląskie,cieszyński,Hażlach,0,0,0,0,0
+240309,śląskie,cieszyński,Istebna,0,0,0,0,0
+240310,śląskie,cieszyński,Skoczów,0,0,0,0,0
+240311,śląskie,cieszyński,Strumień,0,0,0,0,0
+240312,śląskie,cieszyński,Zebrzydowice,0,0,0,0,0
+240401,śląskie,częstochowski,Blachownia,1,0,1,0,0
+240402,śląskie,częstochowski,Dąbrowa Zielona,9,3,5,0,1
+240403,śląskie,częstochowski,Janów,5,1,4,0,0
+240404,śląskie,częstochowski,Kamienica Polska,1,0,1,0,0
+240405,śląskie,częstochowski,Kłomnice,4,0,4,0,0
+240406,śląskie,częstochowski,Koniecpol,2,0,2,0,0
+240407,śląskie,częstochowski,Konopiska,2,0,2,0,0
+240408,śląskie,częstochowski,Kruszyna,13,0,12,1,0
+240409,śląskie,częstochowski,Lelów,4,0,4,0,0
+240410,śląskie,częstochowski,Mstów,1,0,1,0,0
+240411,śląskie,częstochowski,Mykanów,7,0,7,0,0
+240412,śląskie,częstochowski,Olsztyn,1,0,1,0,0
+240413,śląskie,częstochowski,Poczesna,11,2,7,2,0
+240414,śląskie,częstochowski,Przyrów,0,0,0,0,0
+240415,śląskie,częstochowski,Rędziny,0,0,0,0,0
+240416,śląskie,częstochowski,Starcza,1,0,1,0,0
+240501,śląskie,gliwicki,Knurów,0,0,0,0,0
+240502,śląskie,gliwicki,Pyskowice,0,0,0,0,0
+240503,śląskie,gliwicki,Gierałtowice,0,0,0,0,0
+240504,śląskie,gliwicki,Pilchowice,1,0,1,0,0
+240505,śląskie,gliwicki,Rudziniec,0,0,0,0,0
+240506,śląskie,gliwicki,Sośnicowice,2,0,2,0,0
+240507,śląskie,gliwicki,Toszek,0,0,0,0,0
+240508,śląskie,gliwicki,Wielowieś,0,0,0,0,0
+240601,śląskie,kłobucki,Kłobuck,0,0,0,0,0
+240602,śląskie,kłobucki,Krzepice,2,0,2,0,0
+240603,śląskie,kłobucki,Lipie,0,0,0,0,0
+240604,śląskie,kłobucki,Miedźno,2,0,2,0,0
+240605,śląskie,kłobucki,Opatów,1,0,1,0,0
+240606,śląskie,kłobucki,Panki,0,0,0,0,0
+240607,śląskie,kłobucki,Popów,4,0,4,0,0
+240608,śląskie,kłobucki,Przystajń,1,0,1,0,0
+240609,śląskie,kłobucki,Wręczyca Wielka,3,0,3,0,0
+240701,śląskie,lubliniecki,Lubliniec,4,0,4,0,0
+240702,śląskie,lubliniecki,Boronów,1,0,1,0,0
+240703,śląskie,lubliniecki,Ciasna,0,0,0,0,0
+240704,śląskie,lubliniecki,Herby,1,0,1,0,0
+240705,śląskie,lubliniecki,Kochanowice,1,0,1,0,0
+240706,śląskie,lubliniecki,Koszęcin,0,0,0,0,0
+240707,śląskie,lubliniecki,Pawonków,0,0,0,0,0
+240708,śląskie,lubliniecki,Woźniki,1,0,1,0,0
+240801,śląskie,mikołowski,Łaziska Górne,0,0,0,0,0
+240802,śląskie,mikołowski,Mikołów,4,2,2,0,0
+240803,śląskie,mikołowski,Orzesze,9,0,7,2,0
+240804,śląskie,mikołowski,Ornontowice,0,0,0,0,0
+240805,śląskie,mikołowski,Wyry,1,0,1,0,0
+240901,śląskie,myszkowski,Myszków,2,0,2,0,0
+240902,śląskie,myszkowski,Koziegłowy,10,5,5,0,0
+240903,śląskie,myszkowski,Niegowa,0,0,0,0,0
+240904,śląskie,myszkowski,Poraj,3,0,3,0,0
+240905,śląskie,myszkowski,Żarki,15,4,11,0,0
+241001,śląskie,pszczyński,Goczałkowice-Zdrój,0,0,0,0,0
+241002,śląskie,pszczyński,Kobiór,0,0,0,0,0
+241003,śląskie,pszczyński,Miedźna,0,0,0,0,0
+241004,śląskie,pszczyński,Pawłowice,0,0,0,0,0
+241005,śląskie,pszczyński,Pszczyna,1,0,1,0,0
+241006,śląskie,pszczyński,Suszec,0,0,0,0,0
+241101,śląskie,raciborski,Racibórz,1,0,1,0,0
+241102,śląskie,raciborski,Kornowac,0,0,0,0,0
+241103,śląskie,raciborski,Krzanowice,0,0,0,0,0
+241104,śląskie,raciborski,Krzyżanowice,0,0,0,0,0
+241105,śląskie,raciborski,Kuźnia Raciborska,4,0,2,0,2
+241106,śląskie,raciborski,Nędza,3,0,2,1,0
+241107,śląskie,raciborski,Pietrowice Wielkie,1,0,1,0,0
+241108,śląskie,raciborski,Rudnik,0,0,0,0,0
+241201,śląskie,rybnicki,Czerwionka-Leszczyny,2,1,1,0,0
+241202,śląskie,rybnicki,Gaszowice,0,0,0,0,0
+241203,śląskie,rybnicki,Jejkowice,0,0,0,0,0
+241204,śląskie,rybnicki,Lyski,2,0,2,0,0
+241205,śląskie,rybnicki,Świerklany,0,0,0,0,0
+241301,śląskie,tarnogórski,Kalety,2,0,2,0,0
+241302,śląskie,tarnogórski,Miasteczko Śląskie,2,1,1,0,0
+241303,śląskie,tarnogórski,Radzionków,1,0,1,0,0
+241304,śląskie,tarnogórski,Tarnowskie Góry,6,0,6,0,0
+241305,śląskie,tarnogórski,Krupski Młyn,1,0,1,0,0
+241306,śląskie,tarnogórski,Ożarowice,1,0,1,0,0
+241307,śląskie,tarnogórski,Świerklaniec,6,0,6,0,0
+241308,śląskie,tarnogórski,Tworóg,4,0,4,0,0
+241309,śląskie,tarnogórski,Zbrosławice,0,0,0,0,0
+241401,śląskie,bieruńsko-lędziński,Bieruń,0,0,0,0,0
+241402,śląskie,bieruńsko-lędziński,Imielin,0,0,0,0,0
+241403,śląskie,bieruńsko-lędziński,Lędziny,1,0,1,0,0
+241404,śląskie,bieruńsko-lędziński,Bojszowy,1,0,1,0,0
+241405,śląskie,bieruńsko-lędziński,Chełm Śląski,0,0,0,0,0
+241501,śląskie,wodzisławski,Pszów,0,0,0,0,0
+241502,śląskie,wodzisławski,Radlin,0,0,0,0,0
+241503,śląskie,wodzisławski,Rydułtowy,0,0,0,0,0
+241504,śląskie,wodzisławski,Wodzisław Śląski,0,0,0,0,0
+241505,śląskie,wodzisławski,Godów,0,0,0,0,0
+241506,śląskie,wodzisławski,Gorzyce,0,0,0,0,0
+241507,śląskie,wodzisławski,Lubomia,0,0,0,0,0
+241508,śląskie,wodzisławski,Marklowice,0,0,0,0,0
+241509,śląskie,wodzisławski,Mszana,0,0,0,0,0
+241601,śląskie,zawierciański,Poręba,0,0,0,0,0
+241602,śląskie,zawierciański,Zawiercie,0,0,0,0,0
+241603,śląskie,zawierciański,Irządze,0,0,0,0,0
+241604,śląskie,zawierciański,Kroczyce,2,0,2,0,0
+241605,śląskie,zawierciański,Łazy,0,0,0,0,0
+241606,śląskie,zawierciański,Ogrodzieniec,3,0,3,0,0
+241607,śląskie,zawierciański,Pilica,1,0,1,0,0
+241608,śląskie,zawierciański,Szczekociny,1,0,1,0,0
+241609,śląskie,zawierciański,Włodowice,2,0,2,0,0
+241610,śląskie,zawierciański,Żarnowiec,6,0,6,0,0
+241701,śląskie,żywiecki,Żywiec,0,0,0,0,0
+241702,śląskie,żywiecki,Czernichów,2,0,2,0,0
+241703,śląskie,żywiecki,Gilowice,0,0,0,0,0
+241704,śląskie,żywiecki,Jeleśnia,0,0,0,0,0
+241705,śląskie,żywiecki,Koszarawa,0,0,0,0,0
+241706,śląskie,żywiecki,Lipowa,0,0,0,0,0
+241707,śląskie,żywiecki,Łękawica,0,0,0,0,0
+241708,śląskie,żywiecki,Łodygowice,0,0,0,0,0
+241709,śląskie,żywiecki,Milówka,0,0,0,0,0
+241710,śląskie,żywiecki,Radziechowy-Wieprz,1,0,1,0,0
+241711,śląskie,żywiecki,Rajcza,1,0,1,0,0
+241712,śląskie,żywiecki,Ślemień,0,0,0,0,0
+241713,śląskie,żywiecki,Świnna,0,0,0,0,0
+241714,śląskie,żywiecki,Ujsoły,1,0,1,0,0
+241715,śląskie,żywiecki,Węgierska Górka,1,0,1,0,0
+246101,śląskie,Bielsko-Biała,Bielsko-Biała,3,1,2,0,0
+246201,śląskie,Bytom,Bytom,0,0,0,0,0
+246301,śląskie,Chorzów,Chorzów,0,0,0,0,0
+246401,śląskie,Częstochowa,Częstochowa,10,3,7,0,0
+246501,śląskie,Dąbrowa Górnicza,Dąbrowa Górnicza,4,2,2,0,0
+246601,śląskie,Gliwice,Gliwice,1,0,1,0,0
+246701,śląskie,Jastrzębie-Zdrój,Jastrzębie-Zdrój,0,0,0,0,0
+246801,śląskie,Jaworzno,Jaworzno,12,3,9,0,0
+246901,śląskie,Katowice,Katowice,10,0,9,0,1
+247001,śląskie,Mysłowice,Mysłowice,0,0,0,0,0
+247101,śląskie,Piekary Śląskie,Piekary Śląskie,0,0,0,0,0
+247201,śląskie,Ruda Śląska,Ruda Śląska,10,4,5,1,0
+247301,śląskie,Rybnik,Rybnik,6,0,5,1,0
+247401,śląskie,Siemianowice Śląskie,Siemianowice Śląskie,0,0,0,0,0
+247501,śląskie,Sosnowiec,Sosnowiec,7,1,6,0,0
+247601,śląskie,Świętochłowice,Świętochłowice,1,0,1,0,0
+247701,śląskie,Tychy,Tychy,5,0,4,0,1
+247801,śląskie,Zabrze,Zabrze,1,0,1,0,0
+247901,śląskie,Żory,Żory,2,0,1,0,1
+260101,świętokrzyskie,buski,Busko-Zdrój,5,0,5,0,0
+260102,świętokrzyskie,buski,Gnojno,0,0,0,0,0
+260103,świętokrzyskie,buski,Nowy Korczyn,0,0,0,0,0
+260104,świętokrzyskie,buski,Pacanów,0,0,0,0,0
+260105,świętokrzyskie,buski,Solec-Zdrój,1,0,1,0,0
+260106,świętokrzyskie,buski,Stopnica,5,0,5,0,0
+260107,świętokrzyskie,buski,Tuczępy,1,0,1,0,0
+260108,świętokrzyskie,buski,Wiślica,2,0,2,0,0
+260201,świętokrzyskie,jędrzejowski,Imielno,3,0,3,0,0
+260202,świętokrzyskie,jędrzejowski,Jędrzejów,4,0,4,0,0
+260203,świętokrzyskie,jędrzejowski,Małogoszcz,3,0,3,0,0
+260204,świętokrzyskie,jędrzejowski,Nagłowice,2,0,2,0,0
+260205,świętokrzyskie,jędrzejowski,Oksa,0,0,0,0,0
+260206,świętokrzyskie,jędrzejowski,Sędziszów,2,0,2,0,0
+260207,świętokrzyskie,jędrzejowski,Słupia,2,0,2,0,0
+260208,świętokrzyskie,jędrzejowski,Sobków,4,0,4,0,0
+260209,świętokrzyskie,jędrzejowski,Wodzisław,0,0,0,0,0
+260301,świętokrzyskie,kazimierski,Bejsce,0,0,0,0,0
+260302,świętokrzyskie,kazimierski,Czarnocin,0,0,0,0,0
+260303,świętokrzyskie,kazimierski,Kazimierza Wielka,0,0,0,0,0
+260304,świętokrzyskie,kazimierski,Opatowiec,0,0,0,0,0
+260305,świętokrzyskie,kazimierski,Skalbmierz,0,0,0,0,0
+260401,świętokrzyskie,kielecki,Bieliny,0,0,0,0,0
+260402,świętokrzyskie,kielecki,Bodzentyn,5,0,4,0,1
+260403,świętokrzyskie,kielecki,Chęciny,10,0,10,0,0
+260404,świętokrzyskie,kielecki,Chmielnik,3,0,2,1,0
+260405,świętokrzyskie,kielecki,Daleszyce,8,2,6,0,0
+260406,świętokrzyskie,kielecki,Górno,3,0,3,0,0
+260407,świętokrzyskie,kielecki,Łagów,0,0,0,0,0
+260408,świętokrzyskie,kielecki,Łopuszno,6,1,4,1,0
+260409,świętokrzyskie,kielecki,Masłów,4,0,4,0,0
+260410,świętokrzyskie,kielecki,Miedziana Góra,3,0,3,0,0
+260411,świętokrzyskie,kielecki,Mniów,1,0,1,0,0
+260412,świętokrzyskie,kielecki,Morawica,6,0,6,0,0
+260413,świętokrzyskie,kielecki,Nowa Słupia,0,0,0,0,0
+260414,świętokrzyskie,kielecki,Piekoszów,8,0,8,0,0
+260415,świętokrzyskie,kielecki,Pierzchnica,1,0,1,0,0
+260416,świętokrzyskie,kielecki,Raków,3,0,3,0,0
+260417,świętokrzyskie,kielecki,Nowiny,2,0,1,0,1
+260418,świętokrzyskie,kielecki,Strawczyn,0,0,0,0,0
+260419,świętokrzyskie,kielecki,Zagnańsk,35,2,33,0,0
+260501,świętokrzyskie,konecki,Fałków,3,0,3,0,0
+260502,świętokrzyskie,konecki,Gowarczów,0,0,0,0,0
+260503,świętokrzyskie,konecki,Końskie,31,0,31,0,0
+260504,świętokrzyskie,konecki,Radoszyce,25,2,23,0,0
+260505,świętokrzyskie,konecki,Ruda Maleniecka,11,2,8,1,0
+260506,świętokrzyskie,konecki,Słupia Konecka,13,0,13,0,0
+260507,świętokrzyskie,konecki,Smyków,2,0,2,0,0
+260508,świętokrzyskie,konecki,Stąporków,37,2,35,0,0
+260601,świętokrzyskie,opatowski,Baćkowice,0,0,0,0,0
+260602,świętokrzyskie,opatowski,Iwaniska,0,0,0,0,0
+260603,świętokrzyskie,opatowski,Lipnik,0,0,0,0,0
+260604,świętokrzyskie,opatowski,Opatów,0,0,0,0,0
+260605,świętokrzyskie,opatowski,Ożarów,3,1,2,0,0
+260606,świętokrzyskie,opatowski,Sadowie,0,0,0,0,0
+260607,świętokrzyskie,opatowski,Tarłów,10,0,9,1,0
+260608,świętokrzyskie,opatowski,Wojciechowice,0,0,0,0,0
+260701,świętokrzyskie,ostrowiecki,Ostrowiec Świętokrzyski,2,1,1,0,0
+260702,świętokrzyskie,ostrowiecki,Bałtów,0,0,0,0,0
+260703,świętokrzyskie,ostrowiecki,Bodzechów,1,0,1,0,0
+260704,świętokrzyskie,ostrowiecki,Ćmielów,0,0,0,0,0
+260705,świętokrzyskie,ostrowiecki,Kunów,2,0,2,0,0
+260706,świętokrzyskie,ostrowiecki,Waśniów,0,0,0,0,0
+260801,świętokrzyskie,pińczowski,Działoszyce,0,0,0,0,0
+260802,świętokrzyskie,pińczowski,Kije,2,0,1,0,1
+260803,świętokrzyskie,pińczowski,Michałów,0,0,0,0,0
+260804,świętokrzyskie,pińczowski,Pińczów,4,0,4,0,0
+260805,świętokrzyskie,pińczowski,Złota,0,0,0,0,0
+260901,świętokrzyskie,sandomierski,Sandomierz,0,0,0,0,0
+260902,świętokrzyskie,sandomierski,Dwikozy,0,0,0,0,0
+260903,świętokrzyskie,sandomierski,Klimontów,0,0,0,0,0
+260904,świętokrzyskie,sandomierski,Koprzywnica,4,0,4,0,0
+260905,świętokrzyskie,sandomierski,Łoniów,6,0,6,0,0
+260906,świętokrzyskie,sandomierski,Obrazów,0,0,0,0,0
+260907,świętokrzyskie,sandomierski,Samborzec,2,0,2,0,0
+260908,świętokrzyskie,sandomierski,Wilczyce,0,0,0,0,0
+260909,świętokrzyskie,sandomierski,Zawichost,0,0,0,0,0
+261001,świętokrzyskie,skarżyski,Skarżysko-Kamienna,2,0,2,0,0
+261002,świętokrzyskie,skarżyski,Bliżyn,6,0,6,0,0
+261003,świętokrzyskie,skarżyski,Łączna,0,0,0,0,0
+261004,świętokrzyskie,skarżyski,Skarżysko Kościelne,2,0,2,0,0
+261005,świętokrzyskie,skarżyski,Suchedniów,5,0,5,0,0
+261101,świętokrzyskie,starachowicki,Starachowice,3,0,3,0,0
+261102,świętokrzyskie,starachowicki,Brody,4,0,4,0,0
+261103,świętokrzyskie,starachowicki,Mirzec,1,0,1,0,0
+261104,świętokrzyskie,starachowicki,Pawłów,0,0,0,0,0
+261105,świętokrzyskie,starachowicki,Wąchock,5,0,4,0,1
+261201,świętokrzyskie,staszowski,Bogoria,0,0,0,0,0
+261202,świętokrzyskie,staszowski,Łubnice,2,0,2,0,0
+261203,świętokrzyskie,staszowski,Oleśnica,2,0,2,0,0
+261204,świętokrzyskie,staszowski,Osiek,2,0,1,0,1
+261205,świętokrzyskie,staszowski,Połaniec,6,0,6,0,0
+261206,świętokrzyskie,staszowski,Rytwiany,2,0,2,0,0
+261207,świętokrzyskie,staszowski,Staszów,9,0,7,1,1
+261208,świętokrzyskie,staszowski,Szydłów,2,0,2,0,0
+261301,świętokrzyskie,włoszczowski,Kluczewsko,1,0,1,0,0
+261302,świętokrzyskie,włoszczowski,Krasocin,8,1,7,0,0
+261303,świętokrzyskie,włoszczowski,Moskorzew,1,0,1,0,0
+261304,świętokrzyskie,włoszczowski,Radków,0,0,0,0,0
+261305,świętokrzyskie,włoszczowski,Secemin,3,0,3,0,0
+261306,świętokrzyskie,włoszczowski,Włoszczowa,0,0,0,0,0
+266101,świętokrzyskie,Kielce,Kielce,4,0,4,0,0
+280101,warmińsko-mazurskie,bartoszycki,Bartoszyce,0,0,0,0,0
+280102,warmińsko-mazurskie,bartoszycki,Górowo Iławeckie,1,0,0,0,1
+280103,warmińsko-mazurskie,bartoszycki,Bartoszyce,3,1,2,0,0
+280104,warmińsko-mazurskie,bartoszycki,Bisztynek,0,0,0,0,0
+280105,warmińsko-mazurskie,bartoszycki,Górowo Iławeckie,0,0,0,0,0
+280106,warmińsko-mazurskie,bartoszycki,Sępopol,0,0,0,0,0
+280201,warmińsko-mazurskie,braniewski,Braniewo,0,0,0,0,0
+280202,warmińsko-mazurskie,braniewski,Braniewo,4,2,2,0,0
+280203,warmińsko-mazurskie,braniewski,Frombork,1,0,1,0,0
+280204,warmińsko-mazurskie,braniewski,Lelkowo,0,0,0,0,0
+280205,warmińsko-mazurskie,braniewski,Pieniężno,0,0,0,0,0
+280206,warmińsko-mazurskie,braniewski,Płoskinia,0,0,0,0,0
+280207,warmińsko-mazurskie,braniewski,Wilczęta,0,0,0,0,0
+280301,warmińsko-mazurskie,działdowski,Działdowo,2,0,2,0,0
+280302,warmińsko-mazurskie,działdowski,Działdowo,2,1,1,0,0
+280303,warmińsko-mazurskie,działdowski,Iłowo-Osada,0,0,0,0,0
+280304,warmińsko-mazurskie,działdowski,Lidzbark,1,0,1,0,0
+280305,warmińsko-mazurskie,działdowski,Płośnica,0,0,0,0,0
+280306,warmińsko-mazurskie,działdowski,Rybno,0,0,0,0,0
+280401,warmińsko-mazurskie,elbląski,Elbląg,0,0,0,0,0
+280402,warmińsko-mazurskie,elbląski,Godkowo,0,0,0,0,0
+280403,warmińsko-mazurskie,elbląski,Gronowo Elbląskie,0,0,0,0,0
+280404,warmińsko-mazurskie,elbląski,Markusy,0,0,0,0,0
+280405,warmińsko-mazurskie,elbląski,Milejewo,0,0,0,0,0
+280406,warmińsko-mazurskie,elbląski,Młynary,0,0,0,0,0
+280407,warmińsko-mazurskie,elbląski,Pasłęk,0,0,0,0,0
+280408,warmińsko-mazurskie,elbląski,Rychliki,0,0,0,0,0
+280409,warmińsko-mazurskie,elbląski,Tolkmicko,0,0,0,0,0
+280501,warmińsko-mazurskie,ełcki,Ełk,3,0,3,0,0
+280502,warmińsko-mazurskie,ełcki,Ełk,5,0,5,0,0
+280503,warmińsko-mazurskie,ełcki,Kalinowo,0,0,0,0,0
+280504,warmińsko-mazurskie,ełcki,Prostki,2,0,2,0,0
+280505,warmińsko-mazurskie,ełcki,Stare Juchy,0,0,0,0,0
+280601,warmińsko-mazurskie,giżycki,Giżycko,0,0,0,0,0
+280604,warmińsko-mazurskie,giżycki,Giżycko,0,0,0,0,0
+280605,warmińsko-mazurskie,giżycki,Kruklanki,0,0,0,0,0
+280606,warmińsko-mazurskie,giżycki,Miłki,2,0,1,0,1
+280608,warmińsko-mazurskie,giżycki,Ryn,0,0,0,0,0
+280610,warmińsko-mazurskie,giżycki,Wydminy,0,0,0,0,0
+280701,warmińsko-mazurskie,iławski,Iława,0,0,0,0,0
+280702,warmińsko-mazurskie,iławski,Lubawa,0,0,0,0,0
+280703,warmińsko-mazurskie,iławski,Iława,1,0,1,0,0
+280704,warmińsko-mazurskie,iławski,Kisielice,0,0,0,0,0
+280705,warmińsko-mazurskie,iławski,Lubawa,0,0,0,0,0
+280706,warmińsko-mazurskie,iławski,Susz,1,0,1,0,0
+280707,warmińsko-mazurskie,iławski,Zalewo,0,0,0,0,0
+280801,warmińsko-mazurskie,kętrzyński,Kętrzyn,0,0,0,0,0
+280802,warmińsko-mazurskie,kętrzyński,Barciany,0,0,0,0,0
+280803,warmińsko-mazurskie,kętrzyński,Kętrzyn,1,0,1,0,0
+280804,warmińsko-mazurskie,kętrzyński,Korsze,0,0,0,0,0
+280805,warmińsko-mazurskie,kętrzyński,Reszel,0,0,0,0,0
+280806,warmińsko-mazurskie,kętrzyński,Srokowo,0,0,0,0,0
+280901,warmińsko-mazurskie,lidzbarski,Lidzbark Warmiński,1,0,1,0,0
+280902,warmińsko-mazurskie,lidzbarski,Kiwity,0,0,0,0,0
+280903,warmińsko-mazurskie,lidzbarski,Lidzbark Warmiński,0,0,0,0,0
+280904,warmińsko-mazurskie,lidzbarski,Lubomino,0,0,0,0,0
+280905,warmińsko-mazurskie,lidzbarski,Orneta,0,0,0,0,0
+281001,warmińsko-mazurskie,mrągowski,Mrągowo,0,0,0,0,0
+281002,warmińsko-mazurskie,mrągowski,Mikołajki,0,0,0,0,0
+281003,warmińsko-mazurskie,mrągowski,Mrągowo,0,0,0,0,0
+281004,warmińsko-mazurskie,mrągowski,Piecki,1,0,1,0,0
+281005,warmińsko-mazurskie,mrągowski,Sorkwity,0,0,0,0,0
+281101,warmińsko-mazurskie,nidzicki,Janowiec Kościelny,0,0,0,0,0
+281102,warmińsko-mazurskie,nidzicki,Janowo,0,0,0,0,0
+281103,warmińsko-mazurskie,nidzicki,Kozłowo,2,0,2,0,0
+281104,warmińsko-mazurskie,nidzicki,Nidzica,2,0,2,0,0
+281201,warmińsko-mazurskie,nowomiejski,Nowe Miasto Lubawskie,0,0,0,0,0
+281202,warmińsko-mazurskie,nowomiejski,Biskupiec,0,0,0,0,0
+281203,warmińsko-mazurskie,nowomiejski,Grodziczno,3,0,3,0,0
+281204,warmińsko-mazurskie,nowomiejski,Kurzętnik,0,0,0,0,0
+281205,warmińsko-mazurskie,nowomiejski,Nowe Miasto Lubawskie,1,0,1,0,0
+281303,warmińsko-mazurskie,olecki,Kowale Oleckie,0,0,0,0,0
+281304,warmińsko-mazurskie,olecki,Olecko,0,0,0,0,0
+281305,warmińsko-mazurskie,olecki,Świętajno,0,0,0,0,0
+281306,warmińsko-mazurskie,olecki,Wieliczki,0,0,0,0,0
+281401,warmińsko-mazurskie,olsztyński,Barczewo,3,0,3,0,0
+281402,warmińsko-mazurskie,olsztyński,Biskupiec,4,0,4,0,0
+281403,warmińsko-mazurskie,olsztyński,Dobre Miasto,0,0,0,0,0
+281404,warmińsko-mazurskie,olsztyński,Dywity,2,1,1,0,0
+281405,warmińsko-mazurskie,olsztyński,Gietrzwałd,2,0,2,0,0
+281406,warmińsko-mazurskie,olsztyński,Jeziorany,0,0,0,0,0
+281407,warmińsko-mazurskie,olsztyński,Jonkowo,0,0,0,0,0
+281408,warmińsko-mazurskie,olsztyński,Kolno,0,0,0,0,0
+281409,warmińsko-mazurskie,olsztyński,Olsztynek,3,0,3,0,0
+281410,warmińsko-mazurskie,olsztyński,Purda,2,0,2,0,0
+281411,warmińsko-mazurskie,olsztyński,Stawiguda,6,0,6,0,0
+281412,warmińsko-mazurskie,olsztyński,Świątki,0,0,0,0,0
+281501,warmińsko-mazurskie,ostródzki,Ostróda,2,2,0,0,0
+281502,warmińsko-mazurskie,ostródzki,Dąbrówno,0,0,0,0,0
+281503,warmińsko-mazurskie,ostródzki,Grunwald,0,0,0,0,0
+281504,warmińsko-mazurskie,ostródzki,Łukta,3,0,1,0,2
+281505,warmińsko-mazurskie,ostródzki,Małdyty,1,0,1,0,0
+281506,warmińsko-mazurskie,ostródzki,Miłakowo,0,0,0,0,0
+281507,warmińsko-mazurskie,ostródzki,Miłomłyn,1,0,1,0,0
+281508,warmińsko-mazurskie,ostródzki,Morąg,0,0,0,0,0
+281509,warmińsko-mazurskie,ostródzki,Ostróda,1,0,1,0,0
+281601,warmińsko-mazurskie,piski,Biała Piska,9,0,9,0,0
+281602,warmińsko-mazurskie,piski,Orzysz,2,0,2,0,0
+281603,warmińsko-mazurskie,piski,Pisz,4,0,4,0,0
+281604,warmińsko-mazurskie,piski,Ruciane-Nida,3,0,3,0,0
+281701,warmińsko-mazurskie,szczycieński,Szczytno,0,0,0,0,0
+281702,warmińsko-mazurskie,szczycieński,Dźwierzuty,4,0,4,0,0
+281703,warmińsko-mazurskie,szczycieński,Jedwabno,2,0,2,0,0
+281704,warmińsko-mazurskie,szczycieński,Pasym,0,0,0,0,0
+281705,warmińsko-mazurskie,szczycieński,Rozogi,4,0,4,0,0
+281706,warmińsko-mazurskie,szczycieński,Szczytno,9,0,9,0,0
+281707,warmińsko-mazurskie,szczycieński,Świętajno,0,0,0,0,0
+281708,warmińsko-mazurskie,szczycieński,Wielbark,3,0,3,0,0
+281801,warmińsko-mazurskie,gołdapski,Banie Mazurskie,0,0,0,0,0
+281802,warmińsko-mazurskie,gołdapski,Dubeninki,0,0,0,0,0
+281803,warmińsko-mazurskie,gołdapski,Gołdap,0,0,0,0,0
+281901,warmińsko-mazurskie,węgorzewski,Budry,0,0,0,0,0
+281902,warmińsko-mazurskie,węgorzewski,Pozezdrze,3,0,2,0,1
+281903,warmińsko-mazurskie,węgorzewski,Węgorzewo,2,0,2,0,0
+286101,warmińsko-mazurskie,Elbląg,Elbląg,0,0,0,0,0
+286201,warmińsko-mazurskie,Olsztyn,Olsztyn,17,4,12,0,1
+300101,wielkopolskie,chodzieski,Chodzież,0,0,0,0,0
+300102,wielkopolskie,chodzieski,Budzyń,1,0,1,0,0
+300103,wielkopolskie,chodzieski,Chodzież,2,0,2,0,0
+300104,wielkopolskie,chodzieski,Margonin,0,0,0,0,0
+300105,wielkopolskie,chodzieski,Szamocin,1,0,1,0,0
+300201,wielkopolskie,czarnkowsko-trzcianecki,Czarnków,0,0,0,0,0
+300202,wielkopolskie,czarnkowsko-trzcianecki,Czarnków,5,0,4,1,0
+300203,wielkopolskie,czarnkowsko-trzcianecki,Drawsko,3,0,3,0,0
+300204,wielkopolskie,czarnkowsko-trzcianecki,Krzyż Wielkopolski,3,0,3,0,0
+300205,wielkopolskie,czarnkowsko-trzcianecki,Lubasz,9,0,9,0,0
+300206,wielkopolskie,czarnkowsko-trzcianecki,Połajewo,0,0,0,0,0
+300207,wielkopolskie,czarnkowsko-trzcianecki,Trzcianka,7,0,5,2,0
+300208,wielkopolskie,czarnkowsko-trzcianecki,Wieleń,3,0,3,0,0
+300301,wielkopolskie,gnieźnieński,Gniezno,0,0,0,0,0
+300302,wielkopolskie,gnieźnieński,Czerniejewo,1,0,1,0,0
+300303,wielkopolskie,gnieźnieński,Gniezno,1,0,0,0,1
+300304,wielkopolskie,gnieźnieński,Kiszkowo,0,0,0,0,0
+300305,wielkopolskie,gnieźnieński,Kłecko,0,0,0,0,0
+300306,wielkopolskie,gnieźnieński,Łubowo,0,0,0,0,0
+300307,wielkopolskie,gnieźnieński,Mieleszyn,0,0,0,0,0
+300308,wielkopolskie,gnieźnieński,Niechanowo,2,0,1,1,0
+300309,wielkopolskie,gnieźnieński,Trzemeszno,1,0,1,0,0
+300310,wielkopolskie,gnieźnieński,Witkowo,0,0,0,0,0
+300401,wielkopolskie,gostyński,Borek Wielkopolski,0,0,0,0,0
+300402,wielkopolskie,gostyński,Gostyń,0,0,0,0,0
+300403,wielkopolskie,gostyński,Krobia,0,0,0,0,0
+300404,wielkopolskie,gostyński,Pępowo,0,0,0,0,0
+300405,wielkopolskie,gostyński,Piaski,0,0,0,0,0
+300406,wielkopolskie,gostyński,Pogorzela,0,0,0,0,0
+300407,wielkopolskie,gostyński,Poniec,1,0,1,0,0
+300501,wielkopolskie,grodziski,Granowo,0,0,0,0,0
+300502,wielkopolskie,grodziski,Grodzisk Wielkopolski,7,0,7,0,0
+300503,wielkopolskie,grodziski,Kamieniec,0,0,0,0,0
+300504,wielkopolskie,grodziski,Rakoniewice,3,0,2,0,1
+300505,wielkopolskie,grodziski,Wielichowo,0,0,0,0,0
+300601,wielkopolskie,jarociński,Jaraczewo,2,0,2,0,0
+300602,wielkopolskie,jarociński,Jarocin,1,0,1,0,0
+300603,wielkopolskie,jarociński,Kotlin,1,0,1,0,0
+300604,wielkopolskie,jarociński,Żerków,2,0,2,0,0
+300701,wielkopolskie,kaliski,Blizanów,0,0,0,0,0
+300702,wielkopolskie,kaliski,Brzeziny,6,0,5,1,0
+300703,wielkopolskie,kaliski,Ceków-Kolonia,1,0,1,0,0
+300704,wielkopolskie,kaliski,Godziesze Wielkie,13,0,13,0,0
+300705,wielkopolskie,kaliski,Koźminek,2,0,2,0,0
+300706,wielkopolskie,kaliski,Lisków,4,0,4,0,0
+300707,wielkopolskie,kaliski,Mycielin,0,0,0,0,0
+300708,wielkopolskie,kaliski,Opatówek,0,0,0,0,0
+300709,wielkopolskie,kaliski,Stawiszyn,2,0,2,0,0
+300710,wielkopolskie,kaliski,Szczytniki,0,0,0,0,0
+300711,wielkopolskie,kaliski,Żelazków,0,0,0,0,0
+300801,wielkopolskie,kępiński,Baranów,2,0,2,0,0
+300802,wielkopolskie,kępiński,Bralin,6,0,5,1,0
+300803,wielkopolskie,kępiński,Kępno,0,0,0,0,0
+300804,wielkopolskie,kępiński,Łęka Opatowska,3,0,3,0,0
+300805,wielkopolskie,kępiński,Perzów,0,0,0,0,0
+300806,wielkopolskie,kępiński,Rychtal,0,0,0,0,0
+300807,wielkopolskie,kępiński,Trzcinica,0,0,0,0,0
+300901,wielkopolskie,kolski,Koło,0,0,0,0,0
+300902,wielkopolskie,kolski,Babiak,16,0,16,0,0
+300903,wielkopolskie,kolski,Chodów,0,0,0,0,0
+300904,wielkopolskie,kolski,Dąbie,3,0,3,0,0
+300905,wielkopolskie,kolski,Grzegorzew,1,0,0,1,0
+300906,wielkopolskie,kolski,Kłodawa,2,0,2,0,0
+300907,wielkopolskie,kolski,Koło,0,0,0,0,0
+300908,wielkopolskie,kolski,Kościelec,0,0,0,0,0
+300909,wielkopolskie,kolski,Olszówka,3,0,3,0,0
+300910,wielkopolskie,kolski,Osiek Mały,1,0,1,0,0
+300911,wielkopolskie,kolski,Przedecz,0,0,0,0,0
+301001,wielkopolskie,koniński,Golina,6,0,6,0,0
+301002,wielkopolskie,koniński,Grodziec,0,0,0,0,0
+301003,wielkopolskie,koniński,Kazimierz Biskupi,0,0,0,0,0
+301004,wielkopolskie,koniński,Kleczew,0,0,0,0,0
+301005,wielkopolskie,koniński,Kramsk,3,1,2,0,0
+301006,wielkopolskie,koniński,Krzymów,2,0,2,0,0
+301007,wielkopolskie,koniński,Rychwał,0,0,0,0,0
+301008,wielkopolskie,koniński,Rzgów,0,0,0,0,0
+301009,wielkopolskie,koniński,Skulsk,0,0,0,0,0
+301010,wielkopolskie,koniński,Sompolno,1,0,1,0,0
+301011,wielkopolskie,koniński,Stare Miasto,3,0,3,0,0
+301012,wielkopolskie,koniński,Ślesin,0,0,0,0,0
+301013,wielkopolskie,koniński,Wierzbinek,4,0,4,0,0
+301014,wielkopolskie,koniński,Wilczyn,1,0,0,0,1
+301101,wielkopolskie,kościański,Kościan,0,0,0,0,0
+301102,wielkopolskie,kościański,Czempiń,0,0,0,0,0
+301103,wielkopolskie,kościański,Kościan,0,0,0,0,0
+301104,wielkopolskie,kościański,Krzywiń,0,0,0,0,0
+301105,wielkopolskie,kościański,Śmigiel,0,0,0,0,0
+301201,wielkopolskie,krotoszyński,Sulmierzyce,0,0,0,0,0
+301202,wielkopolskie,krotoszyński,Kobylin,0,0,0,0,0
+301203,wielkopolskie,krotoszyński,Koźmin Wielkopolski,0,0,0,0,0
+301204,wielkopolskie,krotoszyński,Krotoszyn,0,0,0,0,0
+301206,wielkopolskie,krotoszyński,Zduny,6,0,4,1,1
+301301,wielkopolskie,leszczyński,Krzemieniewo,0,0,0,0,0
+301302,wielkopolskie,leszczyński,Lipno,0,0,0,0,0
+301303,wielkopolskie,leszczyński,Osieczna,0,0,0,0,0
+301304,wielkopolskie,leszczyński,Rydzyna,2,0,2,0,0
+301305,wielkopolskie,leszczyński,Święciechowa,2,0,2,0,0
+301306,wielkopolskie,leszczyński,Wijewo,0,0,0,0,0
+301307,wielkopolskie,leszczyński,Włoszakowice,1,0,1,0,0
+301401,wielkopolskie,międzychodzki,Chrzypsko Wielkie,0,0,0,0,0
+301402,wielkopolskie,międzychodzki,Kwilcz,1,0,1,0,0
+301403,wielkopolskie,międzychodzki,Międzychód,2,0,2,0,0
+301404,wielkopolskie,międzychodzki,Sieraków,5,0,5,0,0
+301501,wielkopolskie,nowotomyski,Kuślin,0,0,0,0,0
+301502,wielkopolskie,nowotomyski,Lwówek,3,0,3,0,0
+301503,wielkopolskie,nowotomyski,Miedzichowo,3,0,3,0,0
+301504,wielkopolskie,nowotomyski,Nowy Tomyśl,4,0,3,0,1
+301505,wielkopolskie,nowotomyski,Opalenica,1,0,1,0,0
+301506,wielkopolskie,nowotomyski,Zbąszyń,3,0,3,0,0
+301601,wielkopolskie,obornicki,Oborniki,7,0,7,0,0
+301602,wielkopolskie,obornicki,Rogoźno,1,0,1,0,0
+301603,wielkopolskie,obornicki,Ryczywół,7,0,7,0,0
+301701,wielkopolskie,ostrowski,Ostrów Wielkopolski,0,0,0,0,0
+301702,wielkopolskie,ostrowski,Nowe Skalmierzyce,0,0,0,0,0
+301703,wielkopolskie,ostrowski,Odolanów,2,0,2,0,0
+301704,wielkopolskie,ostrowski,Ostrów Wielkopolski,0,0,0,0,0
+301705,wielkopolskie,ostrowski,Przygodzice,2,0,2,0,0
+301706,wielkopolskie,ostrowski,Raszków,0,0,0,0,0
+301707,wielkopolskie,ostrowski,Sieroszewice,0,0,0,0,0
+301708,wielkopolskie,ostrowski,Sośnie,0,0,0,0,0
+301801,wielkopolskie,ostrzeszowski,Czajków,1,0,1,0,0
+301802,wielkopolskie,ostrzeszowski,Doruchów,0,0,0,0,0
+301803,wielkopolskie,ostrzeszowski,Grabów nad Prosną,0,0,0,0,0
+301804,wielkopolskie,ostrzeszowski,Kobyla Góra,5,1,4,0,0
+301805,wielkopolskie,ostrzeszowski,Kraszewice,1,0,1,0,0
+301806,wielkopolskie,ostrzeszowski,Mikstat,1,0,1,0,0
+301807,wielkopolskie,ostrzeszowski,Ostrzeszów,3,1,2,0,0
+301901,wielkopolskie,pilski,Piła,10,0,8,0,2
+301902,wielkopolskie,pilski,Białośliwie,0,0,0,0,0
+301903,wielkopolskie,pilski,Kaczory,2,0,2,0,0
+301904,wielkopolskie,pilski,Łobżenica,0,0,0,0,0
+301905,wielkopolskie,pilski,Miasteczko Krajeńskie,0,0,0,0,0
+301906,wielkopolskie,pilski,Szydłowo,0,0,0,0,0
+301907,wielkopolskie,pilski,Ujście,2,0,2,0,0
+301908,wielkopolskie,pilski,Wyrzysk,0,0,0,0,0
+301909,wielkopolskie,pilski,Wysoka,0,0,0,0,0
+302001,wielkopolskie,pleszewski,Chocz,1,0,1,0,0
+302002,wielkopolskie,pleszewski,Czermin,0,0,0,0,0
+302003,wielkopolskie,pleszewski,Dobrzyca,0,0,0,0,0
+302004,wielkopolskie,pleszewski,Gizałki,0,0,0,0,0
+302005,wielkopolskie,pleszewski,Gołuchów,0,0,0,0,0
+302006,wielkopolskie,pleszewski,Pleszew,0,0,0,0,0
+302101,wielkopolskie,poznański,Luboń,2,1,1,0,0
+302102,wielkopolskie,poznański,Puszczykowo,2,0,2,0,0
+302103,wielkopolskie,poznański,Buk,0,0,0,0,0
+302104,wielkopolskie,poznański,Czerwonak,5,0,3,0,2
+302105,wielkopolskie,poznański,Dopiewo,1,0,1,0,0
+302106,wielkopolskie,poznański,Kleszczewo,0,0,0,0,0
+302107,wielkopolskie,poznański,Komorniki,1,0,1,0,0
+302108,wielkopolskie,poznański,Kostrzyn,0,0,0,0,0
+302109,wielkopolskie,poznański,Kórnik,2,0,2,0,0
+302110,wielkopolskie,poznański,Mosina,8,0,7,0,1
+302111,wielkopolskie,poznański,Murowana Goślina,0,0,0,0,0
+302112,wielkopolskie,poznański,Pobiedziska,16,0,16,0,0
+302113,wielkopolskie,poznański,Rokietnica,0,0,0,0,0
+302114,wielkopolskie,poznański,Stęszew,0,0,0,0,0
+302115,wielkopolskie,poznański,Suchy Las,1,0,1,0,0
+302116,wielkopolskie,poznański,Swarzędz,4,0,4,0,0
+302117,wielkopolskie,poznański,Tarnowo Podgórne,0,0,0,0,0
+302201,wielkopolskie,rawicki,Bojanowo,0,0,0,0,0
+302202,wielkopolskie,rawicki,Jutrosin,1,0,1,0,0
+302203,wielkopolskie,rawicki,Miejska Górka,0,0,0,0,0
+302204,wielkopolskie,rawicki,Pakosław,0,0,0,0,0
+302205,wielkopolskie,rawicki,Rawicz,1,0,1,0,0
+302301,wielkopolskie,słupecki,Słupca,0,0,0,0,0
+302302,wielkopolskie,słupecki,Lądek,0,0,0,0,0
+302303,wielkopolskie,słupecki,Orchowo,1,0,1,0,0
+302304,wielkopolskie,słupecki,Ostrowite,0,0,0,0,0
+302305,wielkopolskie,słupecki,Powidz,1,0,1,0,0
+302306,wielkopolskie,słupecki,Słupca,1,0,1,0,0
+302307,wielkopolskie,słupecki,Strzałkowo,0,0,0,0,0
+302308,wielkopolskie,słupecki,Zagórów,2,0,2,0,0
+302401,wielkopolskie,szamotulski,Obrzycko,0,0,0,0,0
+302402,wielkopolskie,szamotulski,Duszniki,0,0,0,0,0
+302403,wielkopolskie,szamotulski,Kaźmierz,2,0,2,0,0
+302404,wielkopolskie,szamotulski,Obrzycko,3,0,3,0,0
+302405,wielkopolskie,szamotulski,Ostroróg,0,0,0,0,0
+302406,wielkopolskie,szamotulski,Pniewy,0,0,0,0,0
+302407,wielkopolskie,szamotulski,Szamotuły,1,0,1,0,0
+302408,wielkopolskie,szamotulski,Wronki,4,1,3,0,0
+302501,wielkopolskie,średzki,Dominowo,0,0,0,0,0
+302502,wielkopolskie,średzki,Krzykosy,9,0,9,0,0
+302503,wielkopolskie,średzki,Nowe Miasto nad Wartą,7,1,3,0,3
+302504,wielkopolskie,średzki,Środa Wielkopolska,2,0,2,0,0
+302505,wielkopolskie,średzki,Zaniemyśl,1,0,1,0,0
+302601,wielkopolskie,śremski,Brodnica,0,0,0,0,0
+302602,wielkopolskie,śremski,Dolsk,0,0,0,0,0
+302603,wielkopolskie,śremski,Książ Wielkopolski,7,1,6,0,0
+302604,wielkopolskie,śremski,Śrem,2,1,1,0,0
+302701,wielkopolskie,turecki,Turek,0,0,0,0,0
+302702,wielkopolskie,turecki,Brudzew,1,0,1,0,0
+302703,wielkopolskie,turecki,Dobra,0,0,0,0,0
+302704,wielkopolskie,turecki,Kawęczyn,4,0,4,0,0
+302705,wielkopolskie,turecki,Malanów,0,0,0,0,0
+302706,wielkopolskie,turecki,Przykona,0,0,0,0,0
+302707,wielkopolskie,turecki,Tuliszków,0,0,0,0,0
+302708,wielkopolskie,turecki,Turek,0,0,0,0,0
+302709,wielkopolskie,turecki,Władysławów,11,0,10,0,1
+302801,wielkopolskie,wągrowiecki,Wągrowiec,0,0,0,0,0
+302802,wielkopolskie,wągrowiecki,Damasławek,0,0,0,0,0
+302803,wielkopolskie,wągrowiecki,Gołańcz,0,0,0,0,0
+302804,wielkopolskie,wągrowiecki,Mieścisko,0,0,0,0,0
+302805,wielkopolskie,wągrowiecki,Skoki,2,0,2,0,0
+302806,wielkopolskie,wągrowiecki,Wapno,0,0,0,0,0
+302807,wielkopolskie,wągrowiecki,Wągrowiec,2,0,2,0,0
+302901,wielkopolskie,wolsztyński,Przemęt,4,0,4,0,0
+302902,wielkopolskie,wolsztyński,Siedlec,0,0,0,0,0
+302903,wielkopolskie,wolsztyński,Wolsztyn,5,0,5,0,0
+303001,wielkopolskie,wrzesiński,Kołaczkowo,1,0,1,0,0
+303002,wielkopolskie,wrzesiński,Miłosław,0,0,0,0,0
+303003,wielkopolskie,wrzesiński,Nekla,0,0,0,0,0
+303004,wielkopolskie,wrzesiński,Pyzdry,0,0,0,0,0
+303005,wielkopolskie,wrzesiński,Września,0,0,0,0,0
+303101,wielkopolskie,złotowski,Złotów,0,0,0,0,0
+303102,wielkopolskie,złotowski,Jastrowie,4,0,3,1,0
+303103,wielkopolskie,złotowski,Krajenka,1,0,1,0,0
+303104,wielkopolskie,złotowski,Lipka,1,0,1,0,0
+303105,wielkopolskie,złotowski,Okonek,0,0,0,0,0
+303106,wielkopolskie,złotowski,Tarnówka,0,0,0,0,0
+303107,wielkopolskie,złotowski,Zakrzewo,1,0,1,0,0
+303108,wielkopolskie,złotowski,Złotów,0,0,0,0,0
+306101,wielkopolskie,Kalisz,Kalisz,0,0,0,0,0
+306201,wielkopolskie,Konin,Konin,0,0,0,0,0
+306301,wielkopolskie,Leszno,Leszno,2,0,2,0,0
+306401,wielkopolskie,Poznań,Poznań,1,0,0,0,1
+306402,wielkopolskie,Poznań,Poznań,1,0,1,0,0
+306403,wielkopolskie,Poznań,Poznań,3,0,2,0,1
+306404,wielkopolskie,Poznań,Poznań,1,0,1,0,0
+306405,wielkopolskie,Poznań,Poznań,1,0,1,0,0
+306406,wielkopolskie,Poznań,Poznań,0,0,0,0,0
+320101,zachodniopomorskie,białogardzki,Białogard,0,0,0,0,0
+320102,zachodniopomorskie,białogardzki,Białogard,0,0,0,0,0
+320103,zachodniopomorskie,białogardzki,Karlino,0,0,0,0,0
+320104,zachodniopomorskie,białogardzki,Tychowo,0,0,0,0,0
+320201,zachodniopomorskie,choszczeński,Bierzwnik,3,0,3,0,0
+320202,zachodniopomorskie,choszczeński,Choszczno,1,0,1,0,0
+320203,zachodniopomorskie,choszczeński,Drawno,2,0,2,0,0
+320204,zachodniopomorskie,choszczeński,Krzęcin,0,0,0,0,0
+320205,zachodniopomorskie,choszczeński,Pełczyce,3,1,2,0,0
+320206,zachodniopomorskie,choszczeński,Recz,1,0,1,0,0
+320301,zachodniopomorskie,drawski,Czaplinek,0,0,0,0,0
+320302,zachodniopomorskie,drawski,Drawsko Pomorskie,6,0,5,0,1
+320303,zachodniopomorskie,drawski,Kalisz Pomorski,1,1,0,0,0
+320305,zachodniopomorskie,drawski,Wierzchowo,0,0,0,0,0
+320306,zachodniopomorskie,drawski,Złocieniec,3,1,2,0,0
+320402,zachodniopomorskie,goleniowski,Goleniów,32,1,28,3,0
+320403,zachodniopomorskie,goleniowski,Maszewo,8,0,8,0,0
+320404,zachodniopomorskie,goleniowski,Nowogard,3,0,3,0,0
+320405,zachodniopomorskie,goleniowski,Osina,1,0,1,0,0
+320406,zachodniopomorskie,goleniowski,Przybiernów,0,0,0,0,0
+320407,zachodniopomorskie,goleniowski,Stepnica,1,0,0,0,1
+320501,zachodniopomorskie,gryficki,Brojce,1,0,0,0,1
+320502,zachodniopomorskie,gryficki,Gryfice,0,0,0,0,0
+320503,zachodniopomorskie,gryficki,Karnice,0,0,0,0,0
+320504,zachodniopomorskie,gryficki,Płoty,0,0,0,0,0
+320507,zachodniopomorskie,gryficki,Rewal,0,0,0,0,0
+320508,zachodniopomorskie,gryficki,Trzebiatów,1,0,0,0,1
+320601,zachodniopomorskie,gryfiński,Banie,0,0,0,0,0
+320602,zachodniopomorskie,gryfiński,Cedynia,2,0,2,0,0
+320603,zachodniopomorskie,gryfiński,Chojna,1,0,1,0,0
+320604,zachodniopomorskie,gryfiński,Gryfino,1,0,1,0,0
+320605,zachodniopomorskie,gryfiński,Mieszkowice,6,0,4,2,0
+320606,zachodniopomorskie,gryfiński,Moryń,2,0,2,0,0
+320607,zachodniopomorskie,gryfiński,Stare Czarnowo,0,0,0,0,0
+320608,zachodniopomorskie,gryfiński,Trzcińsko-Zdrój,1,0,1,0,0
+320609,zachodniopomorskie,gryfiński,Widuchowa,4,1,3,0,0
+320701,zachodniopomorskie,kamieński,Dziwnów,2,0,1,0,1
+320702,zachodniopomorskie,kamieński,Golczewo,0,0,0,0,0
+320703,zachodniopomorskie,kamieński,Kamień Pomorski,0,0,0,0,0
+320704,zachodniopomorskie,kamieński,Międzyzdroje,0,0,0,0,0
+320705,zachodniopomorskie,kamieński,Świerzno,0,0,0,0,0
+320706,zachodniopomorskie,kamieński,Wolin,0,0,0,0,0
+320801,zachodniopomorskie,kołobrzeski,Kołobrzeg,0,0,0,0,0
+320802,zachodniopomorskie,kołobrzeski,Dygowo,0,0,0,0,0
+320803,zachodniopomorskie,kołobrzeski,Gościno,0,0,0,0,0
+320804,zachodniopomorskie,kołobrzeski,Kołobrzeg,0,0,0,0,0
+320805,zachodniopomorskie,kołobrzeski,Rymań,2,0,2,0,0
+320806,zachodniopomorskie,kołobrzeski,Siemyśl,1,0,1,0,0
+320807,zachodniopomorskie,kołobrzeski,Ustronie Morskie,0,0,0,0,0
+320901,zachodniopomorskie,koszaliński,Będzino,0,0,0,0,0
+320902,zachodniopomorskie,koszaliński,Biesiekierz,0,0,0,0,0
+320903,zachodniopomorskie,koszaliński,Bobolice,1,0,1,0,0
+320904,zachodniopomorskie,koszaliński,Manowo,1,1,0,0,0
+320905,zachodniopomorskie,koszaliński,Mielno,0,0,0,0,0
+320906,zachodniopomorskie,koszaliński,Polanów,0,0,0,0,0
+320907,zachodniopomorskie,koszaliński,Sianów,4,0,4,0,0
+320908,zachodniopomorskie,koszaliński,Świeszyno,1,0,1,0,0
+321001,zachodniopomorskie,myśliborski,Barlinek,1,0,0,0,1
+321002,zachodniopomorskie,myśliborski,Boleszkowice,5,0,4,1,0
+321003,zachodniopomorskie,myśliborski,Dębno,3,0,2,0,1
+321004,zachodniopomorskie,myśliborski,Myślibórz,0,0,0,0,0
+321005,zachodniopomorskie,myśliborski,Nowogródek Pomorski,2,1,1,0,0
+321101,zachodniopomorskie,policki,Dobra (Szczecińska),1,0,1,0,0
+321102,zachodniopomorskie,policki,Kołbaskowo,4,0,3,0,1
+321103,zachodniopomorskie,policki,Nowe Warpno,5,1,4,0,0
+321104,zachodniopomorskie,policki,Police,8,1,7,0,0
+321201,zachodniopomorskie,pyrzycki,Bielice,0,0,0,0,0
+321202,zachodniopomorskie,pyrzycki,Kozielice,0,0,0,0,0
+321203,zachodniopomorskie,pyrzycki,Lipiany,0,0,0,0,0
+321204,zachodniopomorskie,pyrzycki,Przelewice,0,0,0,0,0
+321205,zachodniopomorskie,pyrzycki,Pyrzyce,0,0,0,0,0
+321206,zachodniopomorskie,pyrzycki,Warnice,0,0,0,0,0
+321301,zachodniopomorskie,sławieński,Darłowo,0,0,0,0,0
+321302,zachodniopomorskie,sławieński,Sławno,0,0,0,0,0
+321303,zachodniopomorskie,sławieński,Darłowo,0,0,0,0,0
+321304,zachodniopomorskie,sławieński,Malechowo,0,0,0,0,0
+321305,zachodniopomorskie,sławieński,Postomino,0,0,0,0,0
+321306,zachodniopomorskie,sławieński,Sławno,1,1,0,0,0
+321401,zachodniopomorskie,stargardzki,Stargard,1,0,0,0,1
+321402,zachodniopomorskie,stargardzki,Chociwel,0,0,0,0,0
+321403,zachodniopomorskie,stargardzki,Dobrzany,1,0,1,0,0
+321404,zachodniopomorskie,stargardzki,Dolice,1,0,1,0,0
+321405,zachodniopomorskie,stargardzki,Ińsko,0,0,0,0,0
+321406,zachodniopomorskie,stargardzki,Kobylanka,1,0,1,0,0
+321408,zachodniopomorskie,stargardzki,Marianowo,0,0,0,0,0
+321409,zachodniopomorskie,stargardzki,Stara Dąbrowa,0,0,0,0,0
+321410,zachodniopomorskie,stargardzki,Stargard,1,0,1,0,0
+321411,zachodniopomorskie,stargardzki,Suchań,0,0,0,0,0
+321501,zachodniopomorskie,szczecinecki,Szczecinek,0,0,0,0,0
+321502,zachodniopomorskie,szczecinecki,Barwice,1,0,1,0,0
+321503,zachodniopomorskie,szczecinecki,Biały Bór,1,0,1,0,0
+321504,zachodniopomorskie,szczecinecki,Borne Sulinowo,3,0,3,0,0
+321505,zachodniopomorskie,szczecinecki,Grzmiąca,2,0,2,0,0
+321506,zachodniopomorskie,szczecinecki,Szczecinek,1,0,1,0,0
+321601,zachodniopomorskie,świdwiński,Świdwin,0,0,0,0,0
+321602,zachodniopomorskie,świdwiński,Brzeżno,1,0,1,0,0
+321603,zachodniopomorskie,świdwiński,Połczyn-Zdrój,2,0,2,0,0
+321604,zachodniopomorskie,świdwiński,Rąbino,0,0,0,0,0
+321605,zachodniopomorskie,świdwiński,Sławoborze,0,0,0,0,0
+321606,zachodniopomorskie,świdwiński,Świdwin,3,0,2,0,1
+321701,zachodniopomorskie,wałecki,Wałcz,0,0,0,0,0
+321702,zachodniopomorskie,wałecki,Człopa,1,0,0,1,0
+321703,zachodniopomorskie,wałecki,Mirosławiec,1,0,1,0,0
+321704,zachodniopomorskie,wałecki,Tuczno,0,0,0,0,0
+321705,zachodniopomorskie,wałecki,Wałcz,6,1,5,0,0
+321801,zachodniopomorskie,łobeski,Dobra,0,0,0,0,0
+321802,zachodniopomorskie,łobeski,Łobez,1,0,1,0,0
+321803,zachodniopomorskie,łobeski,Radowo Małe,1,0,1,0,0
+321804,zachodniopomorskie,łobeski,Resko,0,0,0,0,0
+321805,zachodniopomorskie,łobeski,Węgorzyno,0,0,0,0,0
+326101,zachodniopomorskie,Koszalin,Koszalin,3,0,3,0,0
+326201,zachodniopomorskie,Szczecin,Szczecin,9,1,6,0,2
+326301,zachodniopomorskie,Świnoujście,Świnoujście,15,0,14,0,1

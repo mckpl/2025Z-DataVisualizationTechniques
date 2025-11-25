@@ -1,0 +1,195 @@
+---
+title: "Praca domowa 2"
+author: "Imię Nazwisko - Antoni Kobosz"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+### Wczytanie danych
+df <- read.csv("../StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% select(Matematyka=math.score,Czytanie=reading.score,Pisanie=writing.score) %>% 
+  pivot_longer(cols = everything(),names_to = "Kategoria",values_to = "wynik") %>% 
+  mutate(Kategoria = factor(Kategoria,levels = c("Matematyka","Czytanie","Pisanie"))) %>% # Ustawiam factor recznie zeby przedmioty byly wyswielone w takiej kolejnosci
+  ggplot(aes(x=wynik,fill=Kategoria)) + geom_boxplot() + theme_bw() + 
+  labs(x="Wynik",y="",fill="Przedmiot",title = "Rozkład wyników uczniów dla poszczególnych przedmiotów") + 
+  theme(axis.text.y = element_blank(),axis.ticks.y = element_blank()) +
+  scale_fill_brewer(palette=4,type = "qual",guide=guide_legend(reverse = TRUE))  
+
+```
+
+**Komentarz:** Najgorzej idzie uczniom matematyka. Najlepsze wyniki sa w czytaniu.
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% select(gender=gender,Matematyka=math.score,Czytanie=reading.score,Pisanie=writing.score) %>% 
+  mutate(gender = factor(gender,levels = c("male","female"),labels = c("Chłopcy","Dziewczynki"))) %>% 
+  pivot_longer(!gender,names_to = "Kategoria",values_to = "wynik") %>% 
+  ggplot(aes(x=wynik,y=Kategoria,fill=gender)) +
+  geom_boxplot() + theme_bw() + ylab("") + labs(fill="Płeć") +
+  scale_fill_manual(values=c("deepskyblue2","plum"),guide=guide_legend(reverse = TRUE)) + 
+  labs(title = "Wyniki uczniów w poszczególnych przedmiotach z podziałem na płeć")
+
+```
+
+**Komentarz:** Dziewczynki lepiej sobie radzą w czytaniu i pisaniu, a chłopcy mają lepsze wyniki w matematyce.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% select(Kurs=test.preparation.course,Matematyka=math.score,Pisanie=writing.score,Czytanie=reading.score) %>% 
+  mutate(Kurs = factor(ifelse(Kurs=="none","brak","ukończony"))) %>% 
+  pivot_longer(!Kurs,names_to = "Przedmiot",values_to = "Wynik") %>% 
+  ggplot(aes(fill=Kurs,x=Wynik,y = Przedmiot)) + geom_boxplot() + theme_bw() +
+  labs(y="",title = "Jak ukończenie kursu przygotowawczego wpłynęło na wyniki") +
+  scale_fill_manual(values = c("coral2","chartreuse3"),guide=guide_legend(reverse = TRUE))
+```
+
+**Komentarz:** Uczniowie, ktorzy ukonczyli kurs osiagaja srednio lepsze wyniki niz pozostali.
+
+## Zadanie 4
+```{r}
+
+```
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+
+
+df %>%
+  select(WykRodz=parental.level.of.education,
+         Matematyka=math.score,
+         Pisanie=writing.score,
+         Czytanie=reading.score) %>% 
+  mutate(WykRodz = factor(WykRodz,levels = c(
+  "some high school",
+  "high school",
+  "some college",
+  "associate's degree",
+  "bachelor's degree",
+  "master's degree"
+))) %>% 
+  group_by(WykRodz) %>% 
+  summarise_all(mean) %>%
+  pivot_longer(!WykRodz) %>% 
+  ggplot(aes(fill=WykRodz,y=value,x=name)) + 
+  geom_col(position = "dodge") + coord_cartesian(ylim = c(60, 76))+
+  #geom_point(size=4) +
+  theme_bw() + 
+  labs(x="",
+       y="Średni wynik (na 100)",
+       fill="Wyksztalcenie\nrodzica",
+       title="Związek między poziomem wykształcenia \nrodziców a średnimi wynikami uczniów \ndla poszczególnych przedmiotów") +
+  scale_fill_brewer(palette="Blues")
+
+
+#df$parental.level.of.education %>% unique()
+  
+```
+
+**Komentarz:** Widać, że im większy poziom wykształcenia rodziców, tym lepsze wyniki w nauce. Wyjątek stanowi „high school”, który z jakiegoś powodu ma niższą średnią niż „some high school”.
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% 
+  select(WykRodz=parental.level.of.education,gender,Matematyka=math.score) %>% 
+  mutate(WykRodz = factor(WykRodz,levels = c(
+  "some high school",
+  "high school",
+  "some college",
+  "associate's degree",
+  "bachelor's degree",
+  "master's degree"
+))) %>%
+  mutate(gender = factor(gender,levels = c("male","female"),labels = c("Chłopcy","Dziewczynki"))) %>% 
+  group_by(WykRodz,gender) %>% 
+  summarise(SredWynik=mean(Matematyka)) %>% 
+  ggplot(aes(y=SredWynik,fill=WykRodz,x=gender)) + 
+  #geom_point(size=4) + 
+  geom_col(position = "dodge")+ 
+  coord_cartesian(ylim = c(55, 75))+
+  theme_bw() + 
+  labs(y="Średni wynik (na 100)",x="",fill="Wyksztalcenie\nrodzica",
+       title = "Średni wynik z matematyki w zależnosci od\nwykształcenia rodzica z podziałem na płeć") +
+  scale_fill_brewer("Blues")
+```
+
+**Komentarz:** Im wyższe wykształcenie rodzica, tym na ogól wyższy średni wynik z matematyki. Chłopcy mają średnio lepsze wyniki od dziewczynek.
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  select(Matematyka=math.score,Czytanie=reading.score,Pisanie=writing.score) %>% 
+  ggplot(aes(y=Czytanie,x=Pisanie,colour = Matematyka)) + 
+  geom_point() +
+  labs(x="Wynik z czytania",y="Wynik z pisania",color="Wynik z\nmatematyki",
+       title="Zaleznosc wyniku z matematyki\nod wynikow z czytania i pisania") +
+  theme_bw() + 
+  scale_color_viridis_c()
+
+```
+
+**Komentarz:** Wynik z matematyki jest zalezny od wynikow z czytania i pisania. Im lepszy wynik z matematyki, typ lepsze wyniki z pozostalych.

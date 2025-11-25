@@ -1,0 +1,181 @@
+---
+title: "Praca domowa 2"
+author: "Michał Kalwas"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: united
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(forcats)
+
+### Wczytanie danych
+df <- read.csv("StudentsPerformance.csv")
+
+```
+
+## Dane 
+Dane wykorzystane w Pracy domowej 2 dotyczą wyników egzaminów z 3 umiejętności: czytania, pisania i operacji matematycznych. Dodatkowo dostępne są podstawowe informacje o studentach i ich rodzicach. Opis wszystkich kolumn znajduje się również w pliku `README.md`.
+
+#### 
+|Zmienna|Opis|
+|-|-|
+| **gender**| płeć|
+|**race.ethnicity**| pochodzenie etniczne |
+|**parental.level.of.education**| wykształcenie rodziców |
+|**lunch**| jaki obiad jedli uczniowie w dniu egzaminu|
+|**test.preparation.course**| czy uczeń odbył kurs przygotowujący |
+|**math.score**| wynik egzaminu z matematyki |
+|**reading.score** | wynik egzaminu z czytania |
+|**writing.score** | wynik egzaminu z pisania|
+
+
+
+## Zadanie 1
+
+Jak wyglądają rozkłady wyników uczniów z trzech przedmiotów (matematyka, czytanie, pisanie)?
+
+
+```{r zadanie 1, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  pivot_longer(cols=c(math.score,writing.score,reading.score),names_to = "Type",values_to = "Score") %>% 
+  group_by(Type,Score) %>% 
+  summarise(n=n()) %>% 
+  ggplot(aes(x=Score,y=n,color=Type))+
+  geom_point()+
+  geom_line()+
+  labs(x="Wynik",y="Ilość",title="Rozkład wyników z egzaminów")+
+  scale_color_discrete(name="Rodzaj egzaminu",labels=c("Matematyka","Czytanie","Pisanie"))
+  
+  
+
+
+
+```
+
+**Komentarz:**
+Można zauważyć, że wyniki z matematyki były gorsze od pisania i czytania. Można także zauważyć nienaturalna wzrotst wyników 100%. 
+
+## Zadanie 2
+
+Czy istnieje zauważalna różnica w wynikach między uczniami i uczennicami?
+
+
+```{r zadanie 2, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  group_by(gender) %>% 
+  summarise(math.mean=mean(math.score),writing.mean=mean(writing.score),reading.mean= mean(reading.score)) %>% 
+  pivot_longer(cols=c(math.mean:reading.mean),names_to = "Type",values_to = "Mean") %>% 
+  ggplot(aes(x=Type,y=Mean,fill=gender)) +
+  geom_col(position = "dodge") +
+  labs(x="Rodzaj egzaminu", y="Średni wynik",title="Wyniki egzaminów z podziałe mna płeć") +
+  scale_fill_discrete(name="Płeć",labels=c("Kobiety","Mężczyźni"))+
+  scale_x_discrete(labels=c("Matematyka","Czytanie","Pisanie"))
+  
+
+```
+
+**Komentarz:**
+Łatwo zauważyć, że mężczyźni osiągali lepsze wyniki z matematyki, gdy kobiety osiągały lepsze wyniki z pisania i czytania.
+
+## Zadanie 3
+
+Czy uczniowie, którzy ukończyli kurs przygotowawczy, osiągają lepsze wyniki niż pozostali?
+
+```{r zadanie 3, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+
+df %>% 
+  group_by(test.preparation.course) %>% 
+  summarise(math.mean=mean(math.score),writing.mean=mean(writing.score),reading.mean= mean(reading.score)) %>% 
+  pivot_longer(cols=c(math.mean:reading.mean),names_to = "Type",values_to = "Mean") %>% 
+  mutate(test.preparation.course=ifelse(test.preparation.course=="none","notCompleted",test.preparation.course)) %>% ggplot(aes(x=test.preparation.course,y=Mean,fill=Type))+
+  geom_col(position = "dodge")+
+  coord_cartesian(ylim=c(40,80))+
+  scale_x_discrete(name="Test przygotowywujący",labels=c("Ukończony","Nieukończony"))+
+  scale_fill_discrete(name="Rodzaj egzaminu",labels=c("Matematyka","Czytanie","Pisanie"))+
+  labs(title="Wyniki uczniów z podziałem na ukończenie kursu przygotowawczego ")
+  
+
+
+
+```
+
+**Komentarz:**
+Łatwo zauważyć, że uczniowie, którzy ukończyli test przygotowujący osiągnęli lepsze wyniki, ze wszystkich 3 egzaminów.
+
+## Zadanie 4
+
+ Jaki jest związek między poziomem wykształcenia rodziców a średnimi wynikami uczniów?
+
+```{r zadanie 4, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% 
+  mutate(score.mean=(math.score+writing.score+reading.score)/3) %>% 
+  group_by(parental.level.of.education) %>% 
+  summarise(score.mean=mean(score.mean)) %>% 
+  mutate(parental.level.of.education=fct_reorder(parental.level.of.education,score.mean)) %>% 
+  ggplot(aes(x=parental.level.of.education,y=score.mean))+
+  geom_point()+
+  labs(titlr="Średni wynik w zależności od wykształcenia rodzica",y="Średni wynik egzaminu",x="Wykształcenie rodzica")
+  
+```
+
+**Komentarz:**
+Można zauważyć, że z wyjątkiem high school i some high school, wyższe wykształcenie rodzica korelowało z wyższym średnim wynikiem ucznia.
+
+## Zadanie 5
+
+Czy płeć i wykształcenie rodzica wpływa na wynik z matematyki? 
+
+
+```{r zadanie 5, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% 
+  group_by(gender,parental.level.of.education) %>% 
+  summarise(math.mean=mean(math.score)) %>% 
+  ggplot(aes(x=parental.level.of.education,y=math.mean,colour = gender,group = gender))+
+  geom_point()+
+  geom_line()+
+  labs(x="Poziom wykształcenia rodzica",y="Średni wynik z matematyki")+
+  scale_color_discrete(name="Płeć",labels=c("Kobiety","Mężczyźni"))
+
+
+```
+
+**Komentarz:**
+Można zauważyć, że mężczyźni osiągają lepsze wyniki od kobiet. Także wyższe wykształcenie rodzica koreluje z lepszy wynikiem z matematyki.
+
+## Zadanie 6
+Czy istnieje zależność między wynikami z matematyki a wynikami z czytania lub pisania?
+
+```{r zadanie 6, message=FALSE}
+
+# Tu umieść kod do wygenerowania odpowiedzi do zadania.
+df %>% 
+  mutate(reading.writing.mean=(reading.score+writing.score)/2) %>% 
+  ggplot(aes(x=math.score,y=reading.writing.mean))+
+  geom_point()+
+  geom_smooth(method="lm",se=TRUE)+
+  labs(title="Zależność wyników z czytania i pisania w zależności od wyniku z matematyki",x="Wynik z egzaminuz matematyki",y="Średnia z czytania i pisania")
+```
+
+**Komentarz:**
+Łatwo zauważyć, że im wyższy wynik z egzaminu z matematyki tym wyższy średni wynik z pisania i czytania.
