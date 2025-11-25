@@ -1,0 +1,13 @@
+data/*
+!data/classification-randomized
+data/classification-randomized/*
+!data/classification-randomized/output
+*.db
+.DS_Store
+__pycache__
+.Rproj.user
+*.Rproj
+.RData
+.Rhistory
+.RDataTmp
+.RDataTmp1
