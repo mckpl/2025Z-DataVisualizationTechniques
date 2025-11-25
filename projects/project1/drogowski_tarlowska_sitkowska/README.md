@@ -33,4 +33,7 @@ Politechnika Warszawska
 - https://obserwatoriumbrd.pl/mapa-wypadkow/  
 - https://mapy.geoportal.gov.pl/iMapLite/KMZBPublic.html  
 
+
 ---
+
+![Plakat Fast & Fined](/Projekt TWD.png)
