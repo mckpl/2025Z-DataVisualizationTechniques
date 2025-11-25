@@ -43,7 +43,12 @@ wyroznione <- samoboje %>%
   filter(SuicideRateMaleCountries_2023==max(SuicideRateMaleCountries_2023) | SuicideRateMaleCountries_2023==min(SuicideRateMaleCountries_2023) )
 wyr_swiat <- right_join(swiat2, wyroznione, by=join_by("region"=="country") ) %>% 
   group_by(region) %>% 
-  summarise(szer=mean(lat), dl=mean(long))
+  summarise(szer=mean(lat), dl=mean(long)) %>% 
+  mutate(region=case_when(
+    region=="Greenland" ~ "Grenlandia",
+    region=="Palestine"~ "Palestyna",
+    TRUE~ region)
+  )
 
 mapa <- ggplot() + 
   geom_polygon(data = swiat_samoboj2, aes(x = long, y = lat, group = group, fill=SuicideRateMaleCountries_2023), color="black")+
@@ -53,4 +58,5 @@ mapa <- ggplot() +
     data = wyr_swiat,
     aes(y= szer, x = dl, label = region), fill = "black", color = "white", alpha = 0.5, size = 3)
 mapa
+
 
