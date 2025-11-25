@@ -1,5 +1,5 @@
 
-Zielone płuca Polski
+## Zielone płuca Polski
 
 Plakat przedstawia analizę lasów i drzew jako ogółu w Polsce. Jego celem ma być pokazanie zmian w lesistości kraju wraz z jej przyczynami, podkreślenie działań na rzecz zarówno odbudowy, jak i zmniejszenia ilości drzew w kraju, a także opowiedzenia o składzie gatunkowym polskich lasów oraz ukazanie ich struktury własnościowej.
 Całość ma na celu przejrzystą prezentację danych oraz podkreślenie roli lasów jako ważnego wskaźnika poziomu bioróżnorodności.
