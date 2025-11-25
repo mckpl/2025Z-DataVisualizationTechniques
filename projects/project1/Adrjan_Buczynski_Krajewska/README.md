@@ -18,8 +18,10 @@ https://opendata.geoportal.gov.pl/prg/granice_archiwalne/PRG_jednostki_administr
 
 Pliki wrzucić do folderu data bez zmiany nazw plików, wszystkie do jednego folderu.
 
-Autorzy:
+**Autorzy:**
 
 Jerzy Adrjan
+
 Paweł Buczyński
+
 Natalia Krajewska
