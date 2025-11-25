@@ -36,4 +36,5 @@ Politechnika Warszawska
 
 ---
 
-![Plakat Fast & Fined](/Projekt TWD.png)
+![Plakat Fast & Fined](Projekt%20TWD.png)
+
