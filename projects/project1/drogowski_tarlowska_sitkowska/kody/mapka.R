@@ -21,17 +21,18 @@ agg <- joined %>%
   group_by(NUTS_NAME) %>%
   summarise(count = sum(clusterCount, na.rm = TRUE))
 
-agg$count_clipped <- ifelse(agg$count > 20000, 20000, agg$count)
+agg$count_clipped <- ifelse(agg$count > 20000, 20000, agg$count) # aby mniejsze wyniki miały znaczenie musiałem ograniczyć do 20k
+# czasem klastry były po 59k i wtedy 3,8 wyglądało jak 10k, więc 
 
 map_data <- powiaty %>%
   left_join(agg, by = "NUTS_NAME")
 
-top5_regions <- agg %>%
+top5_regions <- agg %>% # top5 to nazwa robocza
   arrange(desc(count)) %>%
   slice(1:200) %>%
   pull(NUTS_NAME)
 
-map_labels <- map_data %>%
+map_labels <- map_data %>% # numerki
   filter(NUTS_NAME %in% top5_regions) %>%
   mutate(label = count)
 
@@ -55,6 +56,8 @@ p <- ggplot(map_data) +
     panel.grid = element_blank(),
     plot.title = element_text(hjust = 0.5, face = "bold")
   ) 
+
+# tutaj dodałem te numery o których Pani pisała, jednak poszliśmy na kompromis niżej opisane jak
 
 p <- p +
   geom_sf_text(
@@ -80,10 +83,10 @@ p
 
 
 
-# clean mapa
+# clean mapa która znajduje sie na plakacie
 
 p <- ggplot(map_data) +
-  geom_sf(aes(fill = count), color = "white", linewidth = 0.2) +
+  geom_sf(aes(fill = count_clipped), color = "white", linewidth = 0.2) +
   scale_fill_gradient(
     low = "#ecc8bb", 
     high = "#c5647b",
@@ -104,9 +107,13 @@ p <- ggplot(map_data) +
 
 ggsave("wykres.png", plot = p, bg = "transparent", width = 8, height = 6, dpi = 300)
 
+# uznalismy ze najladniej bedzie podpisac pare wojewodztw (te na wykresie powyżej na plakacie), dzielac mape na wojewodztwa ta biblioteka robi 17
+# i nie wygladalo tak ladnie jak powiaty, bo jednak wartosci mimo iz ogromne, byly w miare zblizone więc
+# przy standaryzacji kolorki byly gorsze :(
+
 wojewodztwa_counts <- map_data %>%
   st_drop_geometry() %>%
-  group_by(NUTS_ID = substr(NUTS_ID, 1, 4)) %>%  # NUTS2 = pierwsze 4 znaki NUTS3
+  group_by(NUTS_ID = substr(NUTS_ID, 1, 4)) %>%  
   summarise(total = sum(count, na.rm = TRUE)) %>%
   arrange(desc(total))
 
@@ -121,7 +128,7 @@ wojewodztwa_counts <- wojewodztwa_counts %>%
   select(Wojewodztwo = NUTS_NAME, total) %>%
   arrange(desc(total))
 
-print(wojewodztwa_counts)
+wojewodztwa_counts
 
 
 
