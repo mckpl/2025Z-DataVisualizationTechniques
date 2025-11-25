@@ -103,4 +103,5 @@ ggplot(coffee_map, aes(x = long, y = lat, group = group, fill = CoffeeConsumptio
     legend.title = element_text(face = "bold"),
     legend.key.height = unit(1.5, "lines"),
     legend.background = element_rect(fill = "white", color = "gray70", size = 0.5)
+
   )
