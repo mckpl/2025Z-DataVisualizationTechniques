@@ -25,7 +25,11 @@
 # 
 # 4) Nakładanie się elementów
 # Wizualizacja zawiera etykiety wyraźnie nachodzące na inne elementy graficzne.
-
+# 
+# Przygotowany na nowo wykres unika tych wszystkich błędów oraz
+# zawiera więcej informacji (Poza sfałszowanymi minimalnymi wartościami zmiennej, których nowa wizualizacja nie zawiera)
+#
+#
 
 biblioteki <- c("ggplot2","dplyr","showtext","ggtext")
 
