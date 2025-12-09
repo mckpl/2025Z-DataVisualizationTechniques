@@ -1,3 +1,8 @@
+# link do posta https://x.com/simisani10/status/1774780110538690799
+# Co jest nie tak z wykresem?
+# 1. Jest to wykres kołowy
+# 2. Wykres nie posiada legendy i w żaden sposób nie tłumaczy czego dotyczą dane
+# link do danych: https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-03-26/public-picks.csv
 library(tidyverse)
 
 data <- readr::read_csv(
@@ -33,3 +38,4 @@ p <- ggplot(data_long, aes(x = Round, y = Percentage, fill = TEAM)) +
   )
 
 ggsave("Poprawiony_Wykres.png", p, width = 10, height = 10)
+
