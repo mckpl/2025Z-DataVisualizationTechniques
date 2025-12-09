@@ -39,3 +39,7 @@ p <- ggplot(data_long, aes(x = Round, y = Percentage, fill = TEAM)) +
 
 ggsave("Poprawiony_Wykres.png", p, width = 10, height = 10)
 
+# Czemu mój wykres jest lepszy od poprzedniego?
+# Przede wszystkim nie jest to wykres kołowy
+# Kolejna sprawa to jasny opis słupków na wykresie i czytelna reprezentacja na przyjemnym kolorystycznie tle
+# Z poprzednieog wykresu nie dało się odczytać czego dotyczą "kawałki" koła, tutaj natomiast wszystko jest zapisane w profesjonalnie skonstruowanej legendzie
