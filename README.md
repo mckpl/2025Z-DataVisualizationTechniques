@@ -169,7 +169,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">17.12, 18.12, 12.12</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
-    <td class="tg-c3ow">Python: pandas, numpy</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab11">Python: pandas, numpy</a></td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
