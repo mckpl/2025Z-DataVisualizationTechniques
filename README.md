@@ -142,7 +142,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
     <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/labs/lab09">R: Shiny 1</a></td>
-    <td class="tg-c3ow">PD4 (6p)</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/issues/295">PD4 (6p)</a></td>
   </tr>
   <tr>
     <td class="tg-c3ow">03.12</td>
@@ -184,7 +184,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">lab</td>
     <td class="tg-c3ow">Python: matplotlib, seaborn</td>
-    <td class="tg-c3ow">PD5 (6p)</td>
+    <td class="tg-c3ow"><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/issues/364">PD5</a> (6p)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">07.01</td>
