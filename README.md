@@ -130,7 +130,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow" rowspan="2">26.11</td>
     <td class="tg-c3ow">1</td>
     <td class="tg-c3ow">wykład</td>
-    <td class="tg-c3ow" rowspan="2">Oddanie P1</td>
+    <td class="tg-c3ow" rowspan="2"><i><a href="https://github.com/kozaka93/2025Z-DataVisualizationTechniques/tree/main/projects/project1">Oddanie P1</a></i></td>
     <td class="tg-c3ow" rowspan="2">P1 (20p)</td>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">03.12</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">projekt</td>
-    <td class="tg-c3ow">P2: pomysł, źródło danych</td>
+    <td class="tg-c3ow"><i>P2: pomysł, źródło danych</i></td>
     <td class="tg-c3ow">P2 (1p)</td>
   </tr>
   <tr>
