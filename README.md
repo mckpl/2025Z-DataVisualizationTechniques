@@ -176,7 +176,7 @@ Techniki Wizualizacji Danych składają się z:
     <td class="tg-c3ow">17.12</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">projekt</td>
-    <td class="tg-c3ow">P2: eksploracja danych, pomysły na wykresy, prototypy wykresów</td>
+    <td class="tg-c3ow"><i>P2: eksploracja danych, pomysły na wykresy, prototypy wykresów</i></td>
     <td class="tg-c3ow">P2 (2p)</td>
   </tr>
   <tr>
